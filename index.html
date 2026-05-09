@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Theo K Laurent - CS Student</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">TL</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+
+        <main>
+            <section class="hero">
+                <div class="hero-inner">
+                    <p class="hero-eyebrow">
+                        CS Student | Aspiring Cloud Sec Architect
+                    </p>
+                    <h1 class="hero-title">Theo K Laurent</h1>
+                    <blockquote class="hero-quote">
+                        Là où le temps s'efface,<br />les songes deviennent
+                        réels.
+                    </blockquote>
+                    <div class="hero-cta">
+                        <a href="projects.html" class="btn-primary"
+                            >View Projects</a
+                        >
+                        <a href="about.html" class="btn-ghost">About Me</a>
+                    </div>
+                </div>
+                <div class="hero-deco" aria-hidden="true">
+                    <div class="deco-line"></div>
+                    <div class="deco-circle"></div>
+                </div>
+            </section>
+
+            <section class="section-featured">
+                <div class="section-label">Selected Work</div>
+                <div class="projects-grid">
+                    <a href="projects.html" class="project-card">
+                        <div class="project-num">01</div>
+                        <div class="project-info">
+                            <h3>Project Alpha</h3>
+                            <p>
+                                A distributed systems tool built with Go and
+                                Kubernetes. Handles real-time orchestration at
+                                scale.
+                            </p>
+                            <span class="tag">Go</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">gRPC</span>
+                        </div>
+                        <div class="project-arrow">→</div>
+                    </a>
+                    <a href="projects.html" class="project-card">
+                        <div class="project-num">02</div>
+                        <div class="project-info">
+                            <h3>Obsidian CLI</h3>
+                            <p>
+                                Terminal-based note-taking system with semantic
+                                search powered by local embeddings.
+                            </p>
+                            <span class="tag">Rust</span>
+                            <span class="tag">WASM</span>
+                            <span class="tag">Embeddings</span>
+                        </div>
+                        <div class="project-arrow">→</div>
+                    </a>
+                    <a href="projects.html" class="project-card">
+                        <div class="project-num">03</div>
+                        <div class="project-info">
+                            <h3>Neural Canvas</h3>
+                            <p>
+                                Generative art engine using diffusion models.
+                                Open-source, runs entirely in-browser.
+                            </p>
+                            <span class="tag">Python</span>
+                            <span class="tag">React</span>
+                            <span class="tag">ONNX</span>
+                        </div>
+                        <div class="project-arrow">→</div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="section-blog-preview">
+                <div class="section-label">Recent Writing</div>
+                <div class="posts-list">
+                    <a href="blog.html" class="post-row">
+                        <span class="post-date">Apr 2025</span>
+                        <span class="post-title"
+                            >On Building Systems That Think Slowly</span
+                        >
+                        <span class="post-arrow">→</span>
+                    </a>
+                    <a href="blog.html" class="post-row">
+                        <span class="post-date">Mar 2025</span>
+                        <span class="post-title"
+                            >The Quiet Beauty of Memory-Safe Code</span
+                        >
+                        <span class="post-arrow">→</span>
+                    </a>
+                    <a href="blog.html" class="post-row">
+                        <span class="post-date">Jan 2025</span>
+                        <span class="post-title"
+                            >Why I Rewrote My Tools in Rust</span
+                        >
+                        <span class="post-arrow">→</span>
+                    </a>
+                </div>
+                <a href="blog.html" class="view-all">All posts →</a>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>© 2025 Your Name</span>
+            <div class="footer-links">
+                <a href="https://github.com/itheo" target="_blank">GitHub</a>
+                <a href="mailto:theoklaurent@gmail.com">Email</a>
+            </div>
+        </footer>
+
+        <script src="nav.js"></script>
+    </body>
+</html>

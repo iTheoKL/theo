@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog — Theo K Laurent</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">TL</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+
+        <main>
+            <div class="page-header">
+                <div class="section-label">Writing</div>
+                <h1>Blog</h1>
+            </div>
+
+            <div class="blog-grid">
+                <a href="#" class="blog-card featured">
+                    <div class="blog-meta">
+                        <span class="blog-date">Apr 2025</span>
+                        <span class="blog-category">Systems</span>
+                    </div>
+                    <h2>On Building Systems That Think Slowly</h2>
+                    <p>
+                        There's a kind of software that benefits from
+                        deliberation — systems that pause before acting, that
+                        accumulate context before responding. Most of what we
+                        build is the opposite. Here's what I've learned from
+                        designing both.
+                    </p>
+                    <span class="read-more">Read more →</span>
+                </a>
+
+                <a href="#" class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">Mar 2025</span>
+                        <span class="blog-category">Languages</span>
+                    </div>
+                    <h2>The Quiet Beauty of Memory-Safe Code</h2>
+                    <p>
+                        Rust's ownership model forces you to think about your
+                        program in a new way. Once you stop fighting it,
+                        something clicks.
+                    </p>
+                    <span class="read-more">Read more →</span>
+                </a>
+
+                <a href="#" class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">Jan 2025</span>
+                        <span class="blog-category">Tools</span>
+                    </div>
+                    <h2>Why I Rewrote My Tools in Rust</h2>
+                    <p>
+                        Not for performance. Not for the hype. For the clarity
+                        that comes from building something close to the metal.
+                    </p>
+                    <span class="read-more">Read more →</span>
+                </a>
+
+                <a href="#" class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">Nov 2024</span>
+                        <span class="blog-category">Design</span>
+                    </div>
+                    <h2>API Design as Literature</h2>
+                    <p>
+                        Good APIs tell a story. They have a voice, a rhythm, a
+                        logic that reveals itself over time. Bad ones make you
+                        feel like you're reading the wrong book.
+                    </p>
+                    <span class="read-more">Read more →</span>
+                </a>
+
+                <a href="#" class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">Sep 2024</span>
+                        <span class="blog-category">Ops</span>
+                    </div>
+                    <h2>The Observability Trap</h2>
+                    <p>
+                        More metrics doesn't mean more insight. Sometimes the
+                        most useful dashboard is a blank one with a single
+                        number you actually understand.
+                    </p>
+                    <span class="read-more">Read more →</span>
+                </a>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <span>© 2025 Your Name</span>
+            <div class="footer-links">
+                <a href="https://github.com/itheokl" target="_blank">GitHub</a>
+                <a href="mailto:theoklaurent@gmail.com">Email</a>
+            </div>
+        </footer>
+
+        <script src="nav.js"></script>
+    </body>
+</html>
