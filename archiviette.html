@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Archiviette - Theo K Laurent</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            :root {
+                --bg: #0d0d0d;
+                --surface: #2a1f1b;
+                --accent: #5a1e2b;
+                --plum: #4a314d;
+                --text: #c8c6c2;
+                --dim: #7a7875;
+                --faint: #3e3c3a;
+                --border: rgba(200, 198, 194, 0.08);
+                --border-md: rgba(200, 198, 194, 0.14);
+                --ease: cubic-bezier(0.16, 1, 0.3, 1);
+                --font-head: "Cormorant Garamond", Georgia, serif;
+                --font-body: "Inter", system-ui, sans-serif;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                background: var(--bg);
+                color: var(--text);
+                font-family: var(--font-body);
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.75;
+                -webkit-font-smoothing: antialiased;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+            ::selection {
+                background: rgba(90, 30, 43, 0.4);
+                color: var(--text);
+            }
+            ::-webkit-scrollbar {
+                width: 4px;
+            }
+            ::-webkit-scrollbar-track {
+                background: var(--bg);
+            }
+            ::-webkit-scrollbar-thumb {
+                background: var(--faint);
+                border-radius: 2px;
+            }
+
+            .nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 2.5rem;
+                height: 64px;
+                background: rgba(13, 13, 13, 0.88);
+                backdrop-filter: blur(12px);
+                border-bottom: 1px solid var(--border);
+            }
+            .nav-logo {
+                font-family: var(--font-head);
+                font-size: 1.2rem;
+                font-weight: 500;
+                letter-spacing: 0.12em;
+                color: var(--text);
+                opacity: 0.9;
+            }
+            .nav-logo:hover {
+                opacity: 1;
+            }
+            .nav-back {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.72rem;
+                font-weight: 400;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--dim);
+                transition: color 0.2s;
+            }
+            .nav-back:hover {
+                color: var(--text);
+            }
+            .nav-back::before {
+                content: "←";
+                font-size: 0.9rem;
+            }
+
+            main {
+                padding-top: 64px;
+            }
+
+            .post-header {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 5rem 2.5rem 3.5rem;
+                border-bottom: 1px solid var(--border);
+                animation: fadeUp 0.7s var(--ease) both;
+            }
+
+            .post-meta {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1.75rem;
+                flex-wrap: wrap;
+            }
+
+            .post-category {
+                font-size: 0.62rem;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--accent);
+                border: 1px solid rgba(90, 30, 43, 0.45);
+                padding: 3px 10px;
+            }
+
+            .post-date {
+                font-size: 0.7rem;
+                letter-spacing: 0.1em;
+                color: var(--dim);
+            }
+
+            .post-read-time {
+                font-size: 0.7rem;
+                letter-spacing: 0.08em;
+                color: var(--faint);
+            }
+
+            .post-title {
+                font-family: var(--font-head);
+                font-size: clamp(2rem, 5vw, 3.6rem);
+                font-weight: 300;
+                line-height: 1.05;
+                letter-spacing: -0.01em;
+                color: var(--text);
+                margin-bottom: 1.5rem;
+            }
+
+            .post-subtitle {
+                font-family: var(--font-head);
+                font-style: italic;
+                font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+                font-weight: 300;
+                color: var(--dim);
+                line-height: 1.65;
+            }
+
+            .post-body {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 3.5rem 2.5rem 6rem;
+                animation: fadeUp 0.75s var(--ease) 0.1s both;
+            }
+
+            /* ─── Typography ─── */
+            .post-body p {
+                font-size: 1rem;
+                color: var(--dim);
+                line-height: 1.85;
+                margin-bottom: 1.6rem;
+            }
+            .post-body p:first-child {
+                color: var(--text);
+                font-size: 1.05rem;
+            }
+
+            .post-body h2 {
+                font-family: var(--font-head);
+                font-size: clamp(1.4rem, 3vw, 2rem);
+                font-weight: 400;
+                color: var(--text);
+                line-height: 1.2;
+                margin: 3rem 0 1.2rem;
+            }
+            .post-body h3 {
+                font-family: var(--font-head);
+                font-size: clamp(1.1rem, 2vw, 1.4rem);
+                font-weight: 400;
+                color: var(--text);
+                line-height: 1.3;
+                margin: 2.5rem 0 1rem;
+            }
+
+            .post-body a {
+                color: var(--text);
+                border-bottom: 1px solid rgba(200, 198, 194, 0.2);
+                transition:
+                    border-color 0.2s,
+                    color 0.2s;
+            }
+            .post-body a:hover {
+                border-color: var(--accent);
+                color: var(--text);
+            }
+
+            .post-body strong {
+                font-weight: 500;
+                color: var(--text);
+            }
+
+            .post-body em {
+                font-style: italic;
+                color: var(--text);
+            }
+
+            .post-body ul,
+            .post-body ol {
+                padding-left: 1.5rem;
+                margin-bottom: 1.6rem;
+                color: var(--dim);
+            }
+            .post-body li {
+                margin-bottom: 0.5rem;
+                line-height: 1.8;
+            }
+            .post-body ul li::marker {
+                color: var(--faint);
+            }
+            .post-body ol li::marker {
+                color: var(--dim);
+                font-variant-numeric: tabular-nums;
+            }
+
+            .post-body blockquote {
+                border-left: 2px solid var(--accent);
+                padding: 0.25rem 0 0.25rem 1.5rem;
+                margin: 2.5rem 0;
+            }
+            .post-body blockquote p {
+                font-family: var(--font-head);
+                font-style: italic;
+                font-size: clamp(1rem, 1.8vw, 1.2rem);
+                color: var(--text);
+                line-height: 1.6;
+                margin: 0;
+            }
+            .post-body blockquote cite {
+                display: block;
+                font-size: 0.75rem;
+                color: var(--dim);
+                margin-top: 0.6rem;
+                font-style: normal;
+                letter-spacing: 0.06em;
+            }
+
+            .post-body hr {
+                border: none;
+                border-top: 1px solid var(--border);
+                margin: 3rem 0;
+            }
+
+            .post-body code {
+                font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+                font-size: 0.82em;
+                background: rgba(200, 198, 194, 0.06);
+                border: 1px solid var(--border-md);
+                padding: 0.15em 0.45em;
+                color: var(--text);
+            }
+
+            .post-body pre {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                padding: 1.5rem;
+                margin: 2rem 0;
+                overflow-x: auto;
+            }
+            .post-body pre code {
+                background: none;
+                border: none;
+                padding: 0;
+                font-size: 0.83rem;
+                line-height: 1.7;
+                color: var(--text);
+            }
+
+            .post-body img {
+                width: 100%;
+                display: block;
+                margin: 2.5rem 0;
+                border: 1px solid var(--border);
+            }
+            .post-body figure {
+                margin: 2.5rem 0;
+            }
+            .post-body figcaption {
+                font-size: 0.75rem;
+                color: var(--dim);
+                text-align: center;
+                margin-top: 0.75rem;
+                letter-spacing: 0.06em;
+            }
+
+            .post-body .aside {
+                border: 1px solid var(--border);
+                background: rgba(42, 31, 27, 0.3);
+                padding: 1.25rem 1.5rem;
+                margin: 2.5rem 0;
+                font-size: 0.85rem;
+                color: var(--dim);
+                line-height: 1.75;
+            }
+            .post-body .aside p {
+                font-size: 0.85rem;
+                margin-bottom: 0;
+                color: var(--dim);
+            }
+            .post-body .aside p:first-child {
+                color: var(--dim);
+            }
+
+            .post-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 3.5rem;
+                padding-top: 2.5rem;
+                border-top: 1px solid var(--border);
+            }
+            .post-tags span {
+                font-size: 0.65rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: var(--dim);
+                border: 1px solid var(--border-md);
+                padding: 3px 10px;
+            }
+
+            .post-nav {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 0 2.5rem 5rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1px;
+                border-top: 1px solid var(--border);
+            }
+            .post-nav a {
+                padding: 1.75rem 0;
+                border: none;
+                transition: background 0.2s;
+            }
+            .post-nav a:hover {
+                background: rgba(255, 255, 255, 0.02);
+            }
+            .post-nav .nav-dir {
+                display: block;
+                font-size: 0.65rem;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: var(--faint);
+                margin-bottom: 0.6rem;
+            }
+            .post-nav .nav-title {
+                font-family: var(--font-head);
+                font-size: 1.1rem;
+                font-weight: 300;
+                color: var(--dim);
+                line-height: 1.3;
+                transition: color 0.2s;
+            }
+            .post-nav a:hover .nav-title {
+                color: var(--text);
+            }
+            .post-nav .next {
+                text-align: right;
+                border-left: 1px solid var(--border);
+                padding-left: 2rem;
+            }
+            .post-nav .prev {
+                padding-right: 2rem;
+            }
+
+            .footer {
+                padding: 1.75rem 2.5rem;
+                border-top: 1px solid var(--border);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 0.7rem;
+                color: var(--dim);
+                letter-spacing: 0.08em;
+            }
+            .footer-links {
+                display: flex;
+                gap: 2rem;
+            }
+            .footer-links a:hover {
+                color: var(--text);
+                transition: color 0.2s;
+            }
+
+            @keyframes fadeUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(16px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @media (max-width: 640px) {
+                .nav {
+                    padding: 0 1.25rem;
+                }
+                .post-header,
+                .post-body,
+                .post-nav {
+                    padding-left: 1.25rem;
+                    padding-right: 1.25rem;
+                }
+                .post-nav {
+                    grid-template-columns: 1fr;
+                }
+                .post-nav .next {
+                    text-align: left;
+                    border-left: none;
+                    border-top: 1px solid var(--border);
+                    padding-left: 0;
+                    padding-top: 1.5rem;
+                }
+                .footer {
+                    flex-direction: column;
+                    gap: 0.75rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="nav">
+            <a href="index.html" class="nav-logo">TKL</a>
+            <a href="blog.html" class="nav-back">All Posts</a>
+        </header>
+
+        <main>
+            <header class="post-header">
+                <div class="post-meta">
+                    <span class="post-category">Tools</span>
+                    <span class="post-date">Feb 06, 2026</span>
+                    <span class="post-read-time">· 5 min read</span>
+                </div>
+
+                <h1 class="post-title">Archiviette</h1>
+
+                <p class="post-subtitle">
+                    Project Archiviette - A Student Tracker Project <br />
+                    Three Idiots Who Know Nothing Try to Build Something
+                </p>
+            </header>
+            <article class="post-body">
+                <p>
+                    We decided to build Archiviette, a student attendance and
+                    marks tracking system for our class. Why? Because
+                    spreadsheets are boring, nobody maintains them properly, and
+                    also because our collective resume currently peaks at “can
+                    print Hello World” and then immediately falls off a cliff.
+                </p>
+
+                <p>
+                    The team is me, Pacman, and Dino. Three people whose entire
+                    programming experience is knowing how to print "Hello,
+                    world!" in Python and feeling way too accomplished
+                    afterward. We don’t know Flask. We don’t know React. We
+                    don’t know SQLite. We don’t even know what the fuck JSON is,
+                    we just know it’s pronounced the same as Jason. And somehow,
+                    this felt like a good time to start a real project.
+                </p>
+
+                <h2>The Current State - Empty Folders and Delusion</h2>
+
+                <p>
+                    Right now, Archiviette exists as a GitHub repository with
+                    four empty folders (frontend/, backend/, database/, docs/),
+                    a default README, and an MIT license we added because every
+                    serious-looking repo has one and we didn’t want to look
+                    unserious.
+                </p>
+                <p>
+                    No code. No logic. No features. Just empty directories,
+                    misplaced confidence, and the belief that this will
+                    eventually become something usable.
+                </p>
+
+                <h2>Division of Labor (Mostly Guessing)</h2>
+                <p>
+                    We split things up in the most logical way we could think
+                    of, which is impressive considering we barely know what
+                    we’re doing.
+                </p>
+                <p>
+                    Pacman is handling the database, which means learning SQL,
+                    designing tables, and understanding why foreign keys exist
+                    instead of just free-balling it. Dino is on frontend duty
+                    with React, which means figuring out JSX, components, state,
+                    and why missing one bracket can destroy your entire app. I’m
+                    doing the backend with Flask, which mostly involves learning
+                    routing, APIs, and why nothing works the first time you run
+                    it.
+                </p>
+                <p>
+                    None of us are specialists. We’re learning just enough to
+                    move forward, breaking things constantly, Googling like
+                    maniacs, and slowly piecing together how all these parts are
+                    supposed to communicate without collapsing.
+                </p>
+
+                <h2>The Tech Stack</h2>
+                <p>
+                    We’re using React, Flask, and SQLite mostly because every
+                    beginner tutorial on the internet said they were “simple”
+                    and “beginner-friendly.” Right now, beginner-friendly just
+                    means “there are enough Stack Overflow threads that someone
+                    else has already suffered through this exact problem.”
+                </p>
+                <p>
+                    The goal is to keep it aggressively simple. No fancy
+                    dashboards. No overengineered analytics. Just login,
+                    attendance tracking, and exam marks. If those three things
+                    work reliably without nuking the database, we’re calling it
+                    a success.
+                </p>
+
+                <h2>The Learning Strategy</h2>
+                <p>
+                    We’re using AI tools like ChatGPT, Copilot, and Claude as
+                    explanations and guardrails, not as “do everything for me”
+                    buttons. The idea is to understand what’s happening, write
+                    most of the code ourselves, and suffer through fixing our
+                    own mistakes.
+                </p>
+                <p>
+                    Is this the fastest way to learn? Probably not. Is it
+                    honest? Yeah. We’re not trying to speedrun competence, we’re
+                    just trying not to quit halfway through.
+                </p>
+
+                <h2>Git & GitHub</h2>
+                <p>
+                    We know the basics: clone, add, commit, push. Everything
+                    beyond that currently feels like unexplored territory. Merge
+                    conflicts sound horrifying. Branching feels unnecessary
+                    until the exact moment it becomes mandatory. Commit messages
+                    are mostly vibes.
+                </p>
+                <p>
+                    We are fully expecting to mess this up at least once.
+                    Possibly in a very public and educational way.
+                </p>
+
+                <h2>The Timeline (Very Optimistic)</h2>
+                <p>
+                    Week 1: Get Flask running, render literally anything in
+                    React, and create a SQLite table without breaking it.
+                </p>
+                <p>
+                    Week 2: Make everything talk to each other. Frontend to
+                    backend. Backend to database. Minimal screaming.
+                </p>
+                <p>
+                    Week 3+: Start building actual features - login, records,
+                    attendance, marks.
+                </p>
+                <p>
+                    We have absolutely no idea if this timeline is realistic.
+                    Reality will let us know very soon.
+                </p>
+
+                <h2>Why This Matters</h2>
+                <p>
+                    Archiviette isn’t going to change the world. It probably
+                    won’t even look impressive for a while. But it’s ours. It’s
+                    the jump from “I followed tutorials” to “I built something
+                    people can actually use.”
+                </p>
+                <p>
+                    We’re okay with being bad at this for a bit. That’s how
+                    learning actually works, even if it sucks.
+                </p>
+
+                <h2>What Happens Next</h2>
+                <p>
+                    We’ll keep updating this as we go. When things work, we’ll
+                    write about it. When things break, and they definitely will,
+                    we’ll write about that too.
+                </p>
+                <p>
+                    And we'll include the repo link once we have something to
+                    show. For now, it's just an empty private repo.
+                </p>
+
+                <div class="post-tags">
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>Backend</span>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <span>© 2026 Theo K Laurent</span>
+            <div class="footer-links">
+                <a href="https://github.com/itheokl" target="_blank">GitHub</a>
+                <a href="mailto:theoklaurent@gmail.com">Email</a>
+            </div>
+        </footer>
+    </body>
+</html>
