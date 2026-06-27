@@ -41,7 +41,7 @@
                     </p>
                     <p>
                         Whether it's a project, a question, or just a thought
-                        you couldn't shake — feel free to reach out. I read
+                        you couldn't shake, feel free to reach out. I read
                         everything, and I reply to most things.
                     </p>
                     <p>
@@ -76,45 +76,6 @@
                     </div>
                 </div>
 
-                <div class="contact-form-block">
-                    <h3>Send a message</h3>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Your name"
-                            autocomplete="off"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="you@example.com"
-                            autocomplete="off"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="6"
-                            placeholder="What's on your mind?"
-                        ></textarea>
-                    </div>
-                    <button
-                        type="button"
-                        class="form-submit"
-                        onclick="handleSubmit()"
-                    >
-                        Send Message
-                    </button>
-                </div>
             </div>
         </main>
 
@@ -127,21 +88,5 @@
         </footer>
 
         <script src="nav.js"></script>
-        <script>
-            function handleSubmit() {
-                const name = document.getElementById("name").value.trim();
-                const email = document.getElementById("email").value.trim();
-                const message = document.getElementById("message").value.trim();
-                if (!name || !email || !message) {
-                    alert("Please fill in all fields.");
-                    return;
-                }
-                const btn = document.querySelector(".form-submit");
-                btn.textContent = "Sent ✓";
-                btn.style.background = "#2A1F1B";
-                btn.style.border = "1px solid rgba(200,198,194,0.2)";
-                btn.disabled = true;
-            }
-        </script>
     </body>
 </html>
