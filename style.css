@@ -2,20 +2,80 @@
    TOKENS
 ───────────────────────────────────────── */
 :root {
-  --bg:        #0D0D0D;
-  --surface:   #2A1F1B;
-  --accent:    #5A1E2B;
-  --plum:      #4A314D;
-  --text:      #C8C6C2;
-  --text-dim:  #7A7875;
-  --text-faint:#3E3C3A;
-  --border:    rgba(200,198,194,0.08);
-  --border-md: rgba(200,198,194,0.14);
+  --bg:        #050308;
+  --surface:   #130E1F;
+  --accent:    #7C5CC1;
+  --accent-bright: #9B7FDE;
+  --plum:      #241A38;
+  --text:      #D9DAE6;
+  --text-dim:  #8B879E;
+  --text-faint:#372F4A;
+  --border:    rgba(160,150,196,0.10);
+  --border-md: rgba(160,150,196,0.18);
 
-  --font-head: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-head:   'Cinzel', Georgia, serif;
+  --font-accent: 'Cormorant Garamond', Georgia, serif;
+  --font-body:   'Inter', system-ui, sans-serif;
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─────────────────────────────────────────
+   STARFIELD (shared background texture)
+───────────────────────────────────────── */
+.starfield {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  background-image:
+    radial-gradient(1.5px 1.5px at 8% 22%, rgba(220,220,235,0.9), transparent),
+    radial-gradient(1px 1px at 18% 68%, rgba(220,220,235,0.7), transparent),
+    radial-gradient(1.5px 1.5px at 27% 12%, rgba(155,127,222,0.8), transparent),
+    radial-gradient(1px 1px at 36% 45%, rgba(220,220,235,0.6), transparent),
+    radial-gradient(1.5px 1.5px at 48% 78%, rgba(220,220,235,0.85), transparent),
+    radial-gradient(1px 1px at 58% 25%, rgba(220,220,235,0.5), transparent),
+    radial-gradient(1.5px 1.5px at 67% 58%, rgba(155,127,222,0.7), transparent),
+    radial-gradient(1px 1px at 76% 15%, rgba(220,220,235,0.7), transparent),
+    radial-gradient(1.5px 1.5px at 85% 70%, rgba(220,220,235,0.6), transparent),
+    radial-gradient(1px 1px at 93% 38%, rgba(220,220,235,0.8), transparent),
+    radial-gradient(1px 1px at 12% 88%, rgba(220,220,235,0.5), transparent),
+    radial-gradient(1.5px 1.5px at 62% 92%, rgba(220,220,235,0.6), transparent);
+  background-repeat: no-repeat;
+}
+
+/* ─────────────────────────────────────────
+   EAGLE / CREST MOTIFS
+───────────────────────────────────────── */
+.eagle-mark {
+  display: inline-flex;
+  flex-shrink: 0;
+  object-fit: contain;
+  color: var(--accent);
+  transition: color 0.2s, opacity 0.2s;
+}
+.nav-logo:hover .eagle-mark { color: var(--accent-bright); }
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.section-label svg { flex-shrink: 0; opacity: 0.85; }
+
+.crest-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-faint);
+  margin: 0 0 1.5rem;
+}
+.crest-divider::before,
+.crest-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border-md), transparent);
 }
 
 /* ─────────────────────────────────────────
@@ -49,22 +109,40 @@ img { display: block; max-width: 100%; }
   align-items: center;
   justify-content: space-between;
   padding: 0 3rem;
-  height: 64px;
+  height: 72px;
   background: rgba(13,13,13,0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 
 .nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
   font-family: var(--font-head);
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   color: var(--text);
   opacity: 0.9;
   transition: opacity 0.2s;
 }
 .nav-logo:hover { opacity: 1; }
+.nav-logo-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.nav-tagline {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: var(--text-dim);
+}
 
 .nav-links {
   display: flex;
@@ -115,7 +193,7 @@ img { display: block; max-width: 100%; }
    LAYOUT
 ───────────────────────────────────────── */
 main {
-  padding-top: 64px;
+  padding-top: 72px;
 }
 
 .section-label {
@@ -131,7 +209,7 @@ main {
    HERO
 ───────────────────────────────────────── */
 .hero {
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
   padding: 5rem 3rem 5rem;
@@ -144,8 +222,8 @@ main {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(90,30,43,0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 30% 70%, rgba(74,49,77,0.08) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(124,92,193,0.16) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 30% 70%, rgba(124,92,193,0.10) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -166,19 +244,29 @@ main {
 
 .hero-title {
   font-family: var(--font-head);
-  font-size: clamp(3.5rem, 8vw, 7rem);
-  font-weight: 300;
-  line-height: 0.95;
-  letter-spacing: -0.01em;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
   color: var(--text);
+  margin-bottom: 0.9rem;
+}
+
+.hero-motto {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--accent);
   margin-bottom: 2.5rem;
 }
 
 .hero-quote {
-  font-family: var(--font-head);
+  font-family: var(--font-accent);
   font-style: italic;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
-  font-weight: 300;
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-weight: 400;
   line-height: 1.6;
   color: var(--text-dim);
   border-left: 2px solid var(--accent);
@@ -198,13 +286,13 @@ main {
   background: var(--accent);
   color: var(--text);
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   transition: background 0.2s, transform 0.2s;
 }
 .btn-primary:hover {
-  background: #6e2435;
+  background: var(--accent-bright);
   transform: translateY(-1px);
 }
 
@@ -233,23 +321,43 @@ main {
 }
 .deco-line {
   width: 1px;
-  height: 240px;
+  height: 200px;
   background: linear-gradient(to bottom, transparent, var(--border-md), transparent);
   margin: 0 auto 2rem;
 }
 .deco-circle {
-  width: 80px; height: 80px;
-  border: 1px solid var(--border);
+  width: 170px; height: 170px;
+  border: 1px solid var(--border-md);
   border-radius: 50%;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .deco-circle::after {
   content: '';
   position: absolute;
-  inset: 12px;
-  border: 1px solid var(--border-md);
+  inset: 16px;
+  border: 1px solid var(--border);
   border-radius: 50%;
+}
+.deco-circle-text {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+.deco-circle-text text {
+  font-family: var(--font-head);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  fill: var(--text-dim);
+}
+.deco-stars {
+  position: absolute;
+  inset: -60px;
+  z-index: -1;
 }
 
 /* ─────────────────────────────────────────
@@ -288,7 +396,7 @@ main {
 .project-num {
   font-family: var(--font-head);
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--text-faint);
   line-height: 1;
   margin-top: 0.1rem;
@@ -321,7 +429,7 @@ main {
   transition: border-color 0.2s, color 0.2s;
 }
 .project-card:hover .tag {
-  border-color: rgba(90,30,43,0.4);
+  border-color: rgba(124,92,193,0.45);
   color: var(--text);
 }
 
@@ -409,16 +517,29 @@ main {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(ellipse 50% 80% at 80% 50%, rgba(90,30,43,0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse 50% 80% at 80% 50%, rgba(124,92,193,0.14) 0%, transparent 70%);
   pointer-events: none;
 }
 .page-header .section-label { margin-bottom: 1rem; }
 .page-header h1 {
   font-family: var(--font-head);
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 300;
+  font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+  font-weight: 500;
   line-height: 1;
   color: var(--text);
+  position: relative;
+}
+.page-header-quote {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-dim);
+  border-left: 2px solid var(--accent);
+  padding-left: 1.25rem;
+  margin-top: 1.75rem;
+  max-width: 480px;
   position: relative;
 }
 
@@ -439,9 +560,9 @@ main {
   margin-bottom: 1.5rem;
 }
 .about-text p:first-child {
-  font-family: var(--font-head);
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-family: var(--font-accent);
+  font-size: 1.6rem;
+  font-weight: 400;
   line-height: 1.5;
   color: var(--text);
   font-style: italic;
@@ -476,7 +597,7 @@ main {
 }
 .skill-list li:hover {
   color: var(--text);
-  border-color: rgba(90,30,43,0.5);
+  border-color: rgba(155,127,222,0.55);
 }
 .timeline {
   margin-top: 2.5rem;
@@ -535,7 +656,7 @@ main {
 .pfc-num {
   font-family: var(--font-head);
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--text-faint);
   line-height: 1;
   margin-top: 4px;
@@ -608,7 +729,7 @@ main {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
-  border: 1px solid rgba(90,30,43,0.4);
+  border: 1px solid rgba(124,92,193,0.45);
   padding: 2px 8px;
 }
 .blog-card h2 {
@@ -656,9 +777,9 @@ main {
   margin-bottom: 1.5rem;
 }
 .contact-text .large {
-  font-family: var(--font-head);
-  font-size: 1.6rem;
-  font-weight: 300;
+  font-family: var(--font-accent);
+  font-size: 1.8rem;
+  font-weight: 400;
   color: var(--text);
   font-style: italic;
   margin-bottom: 1.5rem;
@@ -750,7 +871,7 @@ main {
 }
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: rgba(90,30,43,0.7);
+  border-color: rgba(155,127,222,0.75);
 }
 .form-group input::placeholder,
 .form-group textarea::placeholder {
@@ -772,7 +893,7 @@ main {
   width: 100%;
   margin-top: 0.5rem;
 }
-.form-submit:hover { background: #6e2435; }
+.form-submit:hover { background: var(--accent-bright); }
 
 /* ─────────────────────────────────────────
    FOOTER
@@ -790,6 +911,13 @@ main {
 .footer-links {
   display: flex;
   gap: 2rem;
+}
+.footer-motto {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  color: var(--text-faint);
 }
 .footer-links a {
   transition: color 0.2s;
@@ -818,7 +946,7 @@ main {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 64px; left: 0; right: 0;
+    top: 72px; left: 0; right: 0;
     background: rgba(13,13,13,0.97);
     padding: 2rem 1.5rem;
     gap: 1.5rem;
@@ -849,6 +977,7 @@ main {
 
 .hero-eyebrow  { animation: fadeUp 0.7s var(--ease) 0.1s both; }
 .hero-title    { animation: fadeUp 0.8s var(--ease) 0.2s both; }
+.hero-motto    { animation: fadeUp 0.8s var(--ease) 0.28s both; }
 .hero-quote    { animation: fadeUp 0.8s var(--ease) 0.35s both; }
 .hero-cta      { animation: fadeUp 0.8s var(--ease) 0.5s both; }
 .hero-deco     { animation: fadeUp 0.8s var(--ease) 0.6s both; }
