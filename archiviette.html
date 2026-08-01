@@ -5,27 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>Archiviette - Theo K Laurent</title>
+        <link rel="icon" type="image/png" href="img/icon.png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
             rel="stylesheet"
         />
 
         <style>
             :root {
-                --bg: #0d0d0d;
-                --surface: #2a1f1b;
-                --accent: #5a1e2b;
-                --plum: #4a314d;
-                --text: #c8c6c2;
-                --dim: #7a7875;
-                --faint: #3e3c3a;
-                --border: rgba(200, 198, 194, 0.08);
-                --border-md: rgba(200, 198, 194, 0.14);
+                --bg: #050308;
+                --surface: #130e1f;
+                --accent: #7c5cc1;
+                --plum: #241a38;
+                --text: #d9dae6;
+                --dim: #8b879e;
+                --faint: #372f4a;
+                --border: rgba(160, 150, 196, 0.10);
+                --border-md: rgba(160, 150, 196, 0.18);
                 --ease: cubic-bezier(0.16, 1, 0.3, 1);
-                --font-head: "Cormorant Garamond", Georgia, serif;
+                --font-head: "Cinzel", Georgia, serif;
+                --font-accent: "Cormorant Garamond", Georgia, serif;
                 --font-body: "Inter", system-ui, sans-serif;
             }
 
@@ -53,7 +55,7 @@
                 text-decoration: none;
             }
             ::selection {
-                background: rgba(90, 30, 43, 0.4);
+                background: rgba(124, 92, 193, 0.45);
                 color: var(--text);
             }
             ::-webkit-scrollbar {
@@ -77,21 +79,39 @@
                 align-items: center;
                 justify-content: space-between;
                 padding: 0 2.5rem;
-                height: 64px;
+                height: 72px;
                 background: rgba(13, 13, 13, 0.88);
                 backdrop-filter: blur(12px);
                 border-bottom: 1px solid var(--border);
             }
             .nav-logo {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.1rem;
                 font-family: var(--font-head);
-                font-size: 1.2rem;
-                font-weight: 500;
-                letter-spacing: 0.12em;
+                font-size: 1.05rem;
+                font-weight: 600;
+                letter-spacing: 0.14em;
                 color: var(--text);
                 opacity: 0.9;
             }
             .nav-logo:hover {
                 opacity: 1;
+            }
+            .nav-logo-mark {
+                display: flex;
+                align-items: center;
+                gap: 0.55rem;
+            }
+            .nav-tagline {
+                font-family: var(--font-accent);
+                font-style: italic;
+                font-weight: 400;
+                font-size: 0.62rem;
+                letter-spacing: 0.06em;
+                text-transform: none;
+                color: var(--text-dim);
             }
             .nav-back {
                 display: flex;
@@ -113,7 +133,7 @@
             }
 
             main {
-                padding-top: 64px;
+                padding-top: 72px;
             }
 
             .post-header {
@@ -137,7 +157,7 @@
                 letter-spacing: 0.12em;
                 text-transform: uppercase;
                 color: var(--accent);
-                border: 1px solid rgba(90, 30, 43, 0.45);
+                border: 1px solid rgba(124, 92, 193, 0.5);
                 padding: 3px 10px;
             }
 
@@ -155,16 +175,16 @@
 
             .post-title {
                 font-family: var(--font-head);
-                font-size: clamp(2rem, 5vw, 3.6rem);
-                font-weight: 300;
-                line-height: 1.05;
-                letter-spacing: -0.01em;
+                font-size: clamp(1.8rem, 4.2vw, 3.1rem);
+                font-weight: 500;
+                line-height: 1.15;
+                letter-spacing: -0.005em;
                 color: var(--text);
                 margin-bottom: 1.5rem;
             }
 
             .post-subtitle {
-                font-family: var(--font-head);
+                font-family: var(--font-accent);
                 font-style: italic;
                 font-size: clamp(1.05rem, 1.8vw, 1.25rem);
                 font-weight: 300;
@@ -210,7 +230,7 @@
 
             .post-body a {
                 color: var(--text);
-                border-bottom: 1px solid rgba(200, 198, 194, 0.2);
+                border-bottom: 1px solid rgba(160, 150, 196, 0.22);
                 transition:
                     border-color 0.2s,
                     color 0.2s;
@@ -254,7 +274,7 @@
                 margin: 2.5rem 0;
             }
             .post-body blockquote p {
-                font-family: var(--font-head);
+                font-family: var(--font-accent);
                 font-style: italic;
                 font-size: clamp(1rem, 1.8vw, 1.2rem);
                 color: var(--text);
@@ -279,7 +299,7 @@
             .post-body code {
                 font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
                 font-size: 0.82em;
-                background: rgba(200, 198, 194, 0.06);
+                background: rgba(160, 150, 196, 0.08);
                 border: 1px solid var(--border-md);
                 padding: 0.15em 0.45em;
                 color: var(--text);
@@ -381,7 +401,7 @@
             .post-nav .nav-title {
                 font-family: var(--font-head);
                 font-size: 1.1rem;
-                font-weight: 300;
+                font-weight: 400;
                 color: var(--dim);
                 line-height: 1.3;
                 transition: color 0.2s;
@@ -415,6 +435,13 @@
             .footer-links a:hover {
                 color: var(--text);
                 transition: color 0.2s;
+            }
+            .footer-motto {
+                font-family: var(--font-accent);
+                font-style: italic;
+                font-size: 0.85rem;
+                letter-spacing: 0.01em;
+                color: var(--faint);
             }
 
             @keyframes fadeUp {
@@ -457,8 +484,11 @@
     </head>
     <body>
         <header class="nav">
-            <a href="index.html" class="nav-logo">TKL</a>
-            <a href="blog.html" class="nav-back">All Posts</a>
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-mark"><img src="img/icon.png" alt="" style="flex-shrink:0;width:18px;height:18px;" width="18" height="18">TKL</span>
+                <span class="nav-tagline">Wit Beyond Measure</span>
+            </a>
+            <a href="blog.html" class="nav-back">Back to the Study</a>
         </header>
 
         <main>
@@ -472,108 +502,111 @@
                 <h1 class="post-title">Archiviette</h1>
 
                 <p class="post-subtitle">
-                    Project Archiviette - A Student Tracker Project <br />
-                    Three Idiots Who Know Nothing Try to Build Something
+                    Project Archiviette — A Student Tracker Project <br />
+                    Three Apprentices Who Know Nothing Attempt to Build Something
                 </p>
             </header>
             <article class="post-body">
                 <p>
                     We decided to build Archiviette, a student attendance and
                     marks tracking system for our class. Why? Because
-                    spreadsheets are boring, nobody maintains them properly, and
-                    also because our collective resume currently peaks at “can
-                    print Hello World” and then immediately falls off a cliff.
+                    spreadsheets are dull, nobody maintains them properly, and
+                    besides, our collective résumé currently peaks at "can
+                    print Hello World" before falling promptly off a cliff.
                 </p>
 
                 <p>
-                    The team is me, Pacman, and Dino. Three people whose entire
-                    programming experience is knowing how to print "Hello,
-                    world!" in Python and feeling way too accomplished
-                    afterward. We don’t know Flask. We don’t know React. We
-                    don’t know SQLite. We don’t even know what the fuck JSON is,
-                    we just know it’s pronounced the same as Jason. And somehow,
-                    this felt like a good time to start a real project.
+                    The team is me, Pacman, and Dino. Three people whose
+                    entire programming experience amounts to printing "Hello,
+                    world!" in Python and feeling far too pleased with
+                    ourselves afterward. We don't know Flask. We don't know
+                    React. We don't know SQLite. We barely know what JSON
+                    actually is, beyond that it's pronounced the same as
+                    Jason. And somehow, this felt like precisely the right
+                    moment to start a real project.
                 </p>
 
-                <h2>The Current State - Empty Folders and Delusion</h2>
+                <h2>The Current State — Empty Folders and Delusion</h2>
 
                 <p>
                     Right now, Archiviette exists as a GitHub repository with
-                    four empty folders (frontend/, backend/, database/, docs/),
-                    a default README, and an MIT license we added because every
-                    serious-looking repo has one and we didn’t want to look
-                    unserious.
+                    four empty folders (frontend/, backend/, database/,
+                    docs/), a default README, and an MIT license we added
+                    because every serious-looking repo has one and we didn't
+                    want to look unserious.
                 </p>
                 <p>
                     No code. No logic. No features. Just empty directories,
                     misplaced confidence, and the belief that this will
-                    eventually become something usable.
+                    eventually become something worth using.
                 </p>
 
-                <h2>Division of Labor (Mostly Guessing)</h2>
+                <h2>Division of Labor (Mostly Guesswork)</h2>
                 <p>
-                    We split things up in the most logical way we could think
-                    of, which is impressive considering we barely know what
-                    we’re doing.
+                    We split things up in the most sensible way we could
+                    think of, which is impressive considering how little of
+                    this we actually understand.
                 </p>
                 <p>
                     Pacman is handling the database, which means learning SQL,
                     designing tables, and understanding why foreign keys exist
-                    instead of just free-balling it. Dino is on frontend duty
-                    with React, which means figuring out JSX, components, state,
-                    and why missing one bracket can destroy your entire app. I’m
-                    doing the backend with Flask, which mostly involves learning
-                    routing, APIs, and why nothing works the first time you run
-                    it.
+                    instead of simply winging it. Dino is on frontend duty
+                    with React, which means wrestling with JSX, components,
+                    state, and why one missing bracket can bring the whole app
+                    down. I'm doing the backend with Flask, which mostly
+                    involves learning routing, APIs, and why nothing works the
+                    first time you run it.
                 </p>
                 <p>
-                    None of us are specialists. We’re learning just enough to
-                    move forward, breaking things constantly, Googling like
-                    maniacs, and slowly piecing together how all these parts are
-                    supposed to communicate without collapsing.
+                    None of us are specialists. We're learning just enough to
+                    move forward, breaking things constantly, searching the
+                    internet like our lives depend on it, and slowly piecing
+                    together how all these parts are meant to talk to one
+                    another without collapsing.
                 </p>
 
                 <h2>The Tech Stack</h2>
                 <p>
-                    We’re using React, Flask, and SQLite mostly because every
-                    beginner tutorial on the internet said they were “simple”
-                    and “beginner-friendly.” Right now, beginner-friendly just
-                    means “there are enough Stack Overflow threads that someone
-                    else has already suffered through this exact problem.”
+                    We're using React, Flask, and SQLite, largely because
+                    every beginner tutorial on the internet insisted they were
+                    "simple" and "beginner-friendly." At this stage,
+                    beginner-friendly mostly means "there are enough forum
+                    threads out there that someone else has already suffered
+                    through this exact problem."
                 </p>
                 <p>
                     The goal is to keep it aggressively simple. No fancy
                     dashboards. No overengineered analytics. Just login,
                     attendance tracking, and exam marks. If those three things
-                    work reliably without nuking the database, we’re calling it
-                    a success.
+                    work reliably without taking the database down with them,
+                    we're calling it a success.
                 </p>
 
                 <h2>The Learning Strategy</h2>
                 <p>
-                    We’re using AI tools like ChatGPT, Copilot, and Claude as
-                    explanations and guardrails, not as “do everything for me”
-                    buttons. The idea is to understand what’s happening, write
-                    most of the code ourselves, and suffer through fixing our
-                    own mistakes.
+                    We're using AI tools like ChatGPT, Copilot, and Claude as
+                    explanations and guardrails, not as "do everything for
+                    me" buttons. The idea is to actually understand what's
+                    happening, write most of the code ourselves, and sit with
+                    the discomfort of fixing our own mistakes.
                 </p>
                 <p>
                     Is this the fastest way to learn? Probably not. Is it
-                    honest? Yeah. We’re not trying to speedrun competence, we’re
-                    just trying not to quit halfway through.
+                    honest? Yes. We're not trying to speedrun competence —
+                    we're just trying not to quit halfway through.
                 </p>
 
-                <h2>Git & GitHub</h2>
+                <h2>Git &amp; GitHub</h2>
                 <p>
                     We know the basics: clone, add, commit, push. Everything
-                    beyond that currently feels like unexplored territory. Merge
-                    conflicts sound horrifying. Branching feels unnecessary
-                    until the exact moment it becomes mandatory. Commit messages
-                    are mostly vibes.
+                    beyond that currently feels like uncharted territory.
+                    Merge conflicts sound dreadful. Branching seems
+                    unnecessary right up until the exact moment it becomes
+                    mandatory. Commit messages are mostly vibes.
                 </p>
                 <p>
-                    We are fully expecting to mess this up at least once.
-                    Possibly in a very public and educational way.
+                    We are fully expecting to get this wrong at least once.
+                    Possibly in a very public, very educational way.
                 </p>
 
                 <h2>The Timeline (Very Optimistic)</h2>
@@ -583,38 +616,38 @@
                 </p>
                 <p>
                     Week 2: Make everything talk to each other. Frontend to
-                    backend. Backend to database. Minimal screaming.
+                    backend. Backend to database. Minimal panic.
                 </p>
                 <p>
-                    Week 3+: Start building actual features - login, records,
+                    Week 3+: Start building actual features — login, records,
                     attendance, marks.
                 </p>
                 <p>
-                    We have absolutely no idea if this timeline is realistic.
-                    Reality will let us know very soon.
+                    We have absolutely no idea whether this timeline is
+                    realistic. Reality will let us know soon enough.
                 </p>
 
                 <h2>Why This Matters</h2>
                 <p>
-                    Archiviette isn’t going to change the world. It probably
-                    won’t even look impressive for a while. But it’s ours. It’s
-                    the jump from “I followed tutorials” to “I built something
-                    people can actually use.”
+                    Archiviette isn't going to change the world. It probably
+                    won't even look impressive for a while. But it's ours.
+                    It's the leap from "I followed tutorials" to "I built
+                    something people can actually use."
                 </p>
                 <p>
-                    We’re okay with being bad at this for a bit. That’s how
-                    learning actually works, even if it sucks.
+                    We're okay with being bad at this for a while. That's how
+                    learning actually works, even when it's uncomfortable.
                 </p>
 
                 <h2>What Happens Next</h2>
                 <p>
-                    We’ll keep updating this as we go. When things work, we’ll
-                    write about it. When things break, and they definitely will,
-                    we’ll write about that too.
+                    We'll keep updating this as we go. When things work,
+                    we'll write about it. When things break — and they
+                    certainly will — we'll write about that too.
                 </p>
                 <p>
-                    And we'll include the repo link once we have something to
-                    show. For now, it's just an empty private repo.
+                    And we'll include the repo link once there's something
+                    worth showing. For now, it's just an empty private repo.
                 </p>
 
                 <div class="post-tags">
@@ -627,6 +660,7 @@
 
         <footer class="footer">
             <span>© 2026 Theo K Laurent</span>
+            <span class="footer-motto">Where those of wit and learning, will always find their way.</span>
             <div class="footer-links">
                 <a href="https://github.com/itheokl" target="_blank">GitHub</a>
                 <a href="mailto:theoklaurent@icloud.com">Email</a>
