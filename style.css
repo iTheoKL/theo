@@ -185,7 +185,7 @@ main {
    HERO
 ───────────────────────────────────────── */
 .hero {
-  min-height: calc(100vh - 72px);
+  min-height: max(calc(100vh - 72px), 36rem);
   display: flex;
   align-items: center;
   padding: 5rem 3rem 5rem;
@@ -548,8 +548,6 @@ main {
 .skills-block {
   border: 1px solid var(--border);
   padding: 2rem;
-  position: sticky;
-  top: 80px;
 }
 .skills-block h3 {
   font-size: 0.7rem;
