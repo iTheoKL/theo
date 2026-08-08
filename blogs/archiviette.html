@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>Archiviette - Theo K Laurent</title>
-        <link rel="icon" type="image/png" href="img/icon.png" />
+        <link rel="icon" type="image/png" href="../img/icon.png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,6 +37,17 @@
                 box-sizing: border-box;
                 margin: 0;
                 padding: 0;
+            }
+
+            ::selection {
+                background: var(--accent-bright, #9b7fde);
+                color: var(--text);
+                text-shadow: none;
+            }
+            ::-moz-selection {
+                background: var(--accent-bright, #9b7fde);
+                color: var(--text);
+                text-shadow: none;
             }
             html {
                 scroll-behavior: smooth;
@@ -484,11 +495,11 @@
     </head>
     <body>
         <header class="nav">
-            <a href="index.html" class="nav-logo">
-                <span class="nav-logo-mark"><img src="img/icon.png" alt="" style="flex-shrink:0;width:18px;height:18px;" width="18" height="18">TKL</span>
+            <a href="../index.html" class="nav-logo">
+                <span class="nav-logo-mark"><img src="../img/icon.png" alt="" style="flex-shrink:0;width:18px;height:18px;" width="18" height="18">TKL</span>
                 <span class="nav-tagline">Wit Beyond Measure</span>
             </a>
-            <a href="blog.html" class="nav-back">Back to the Study</a>
+            <a href="../blog.html" class="nav-back">Back to the Study</a>
         </header>
 
         <main>
