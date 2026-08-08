@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Archiviette - Theo K Laurent</title>
+        <title>MedBridge - Theo K Laurent</title>
         <link rel="icon" type="image/png" href="img/icon.png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -494,174 +494,242 @@
         <main>
             <header class="post-header">
                 <div class="post-meta">
-                    <span class="post-category">Tools</span>
-                    <span class="post-date">Feb 06, 2026</span>
-                    <span class="post-read-time">· 5 min read</span>
+                    <span class="post-category">Systems</span>
+                    <span class="post-date">Jul 26, 2026</span>
+                    <span class="post-read-time">· 8 min read</span>
                 </div>
 
-                <h1 class="post-title">Archiviette</h1>
+                <h1 class="post-title">MedBridge</h1>
 
                 <p class="post-subtitle">
-                    Project Archiviette, a student tracker built by three
-                    apprentices who knew nothing, and what it means to begin
-                    anyway.
+                    On architecture, on the six of us, and on what a plan is
+                    worth once the deadline arrives.
                 </p>
             </header>
             <article class="post-body">
                 <p>
-                    We decided to build Archiviette, a student attendance and
-                    marks tracking system for our class. A spreadsheet can
-                    hold the same information, but a spreadsheet asks nothing
-                    of the people who touch it, and is maintained by no one
-                    in particular. I wanted something that was actually
-                    accountable to its own structure, and I wanted to be the
-                    one who understood why.
+                    A team assembled across two colleges: Pacman and Dino from
+                    mine, and from the other, Mr. V, an old friend from
+                    school, along with two others I'll call person-1 and
+                    person-2. Six of us, all beginners, in the truest sense
+                    the word allows.
                 </p>
 
                 <p>
-                    The team is me, Pacman, and Dino. Between the three of
-                    us, the entire body of programming experience amounted
-                    to printing "Hello, world!" in Python and feeling
-                    reasonably pleased about it. We knew no Flask, no React,
-                    no SQLite, and understood JSON mostly by its
-                    pronunciation. That felt, somehow, like precisely the
-                    right moment to begin something real.
+                    I had drawn a plan before the hackathon began, the way I
+                    try to draw any plan. Not what to build first, but what
+                    each piece should answer for and nothing more. OCR to Mr.
+                    V. The interaction engine and the data beneath it, the
+                    foundation the rest of the system would stand on, to
+                    person-1 and person-2 together. The backend to Pacman and
+                    Dino. The frontend, and the harder work of making six
+                    efforts resemble one intention, to me.
                 </p>
 
-                <h2>The Current State: Empty Folders and Intent</h2>
+                <p>The plan held for perhaps four hours.</p>
+
+                <h2>The First Fracture</h2>
 
                 <p>
-                    Right now, Archiviette exists as a GitHub repository with
-                    four empty folders (frontend/, backend/, database/,
-                    docs/), a default README, and an MIT license, added
-                    because a serious structure ought to look serious from
-                    the outset.
-                </p>
-                <p>
-                    No code. No logic. No features yet. Just the shape of
-                    what it will become, and a plan we intend to hold
-                    ourselves to.
+                    Once the work began in earnest, a different structure was
+                    proposed. Not division by discipline, but by module: six
+                    modules for six people, each carried start to finish by
+                    one pair of hands. It came from person-1, the one among us
+                    who had told everyone he understood the ML side best, so
+                    we agreed without much argument. I've thought since about
+                    how easily a plan gives way to whoever speaks as though
+                    the answer were already settled.
                 </p>
 
-                <h2>Division of the Work</h2>
                 <p>
-                    We divided the labor in the way that made the most
-                    sense, given how little any of us understood the terrain
-                    we were dividing.
-                </p>
-                <p>
-                    Pacman is handling the database: learning SQL, designing
-                    tables, understanding why foreign keys exist instead of
-                    treating each table as its own island. Dino is on
-                    frontend with React, which means learning JSX,
-                    components, state, and how a single missing bracket can
-                    bring down an entire interface. I'm building the backend
-                    with Flask, which mostly means learning routing, APIs,
-                    and why nothing runs correctly on the first attempt.
-                </p>
-                <p>
-                    None of us are specialists in what we've taken on. We're
-                    learning enough to move forward, breaking things
-                    regularly, and slowly working out how these separate
-                    pieces are meant to speak to one another without the
-                    whole structure collapsing.
+                    We split the modules. We set everyone up on GitHub and
+                    connected to Claude, so that whatever came next would at
+                    least come from a shared workflow.
                 </p>
 
-                <h2>The Instruments</h2>
                 <p>
-                    We're building with React, Flask, and SQLite, largely
-                    because every introductory resource we found called them
-                    approachable. At this stage, approachable mostly means
-                    that someone else has already documented the exact
-                    problem we're about to encounter.
-                </p>
-                <p>
-                    The intention is to keep the system deliberately simple.
-                    No elaborate dashboards, no analytics beyond what's
-                    needed. Login, attendance, and exam marks. If those
-                    three hold up reliably without taking the database down
-                    with them, that will be enough.
+                    Then the questions began. What a <code>.data</code> file
+                    actually held, how it should be traversed, what the API
+                    keys were for. From the same person who had proposed the
+                    structure that made them necessary. At one point we
+                    handed over a Claude conversation containing working
+                    code, <code>place-your-url-here</code> and
+                    <code>place-your-api-key-here</code> sitting in it as
+                    plainly as a door left open. It was run unedited. It
+                    failed, predictably, and we were asked why.
                 </p>
 
-                <h2>How We're Learning</h2>
                 <p>
-                    We're using tools like ChatGPT, Copilot, and Claude as
-                    explanation and as a guardrail, not as something to hand
-                    the work to entirely. The aim is to understand what's
-                    actually happening beneath the code we write, and to sit
-                    with the discomfort of fixing our own mistakes rather
-                    than asking something else to fix them for us.
-                </p>
-                <p>
-                    It isn't the fastest route to competence. It is, I
-                    think, the honest one. We're not trying to arrive
-                    quickly. We're trying not to stop.
+                    Person-2 asked none of it, working through his assigned
+                    piece without a word. Mr. V asked something else
+                    entirely: not <em>how does this begin</em>, but
+                    <em>why does this specific thing behave this way</em>.
+                    That distinction is small on paper and enormous in
+                    practice. It is the difference between building and
+                    waiting to be told what building looks like.
                 </p>
 
-                <h2>Git and GitHub</h2>
+                <h2>What Arrived Instead of a Feature</h2>
+
                 <p>
-                    We know the fundamentals: clone, add, commit, push.
-                    Everything past that remains largely unexplored.
-                    Branching seems unnecessary right up until the moment it
-                    becomes essential. Commit messages, for now, are mostly
-                    instinct.
-                </p>
-                <p>
-                    We expect to get this wrong at least once, and quite
-                    possibly in a way that teaches us something we couldn't
-                    have learned otherwise.
+                    As Phase 1 judging approached, we needed something
+                    committed, something real enough to stand in front of a
+                    judge. When we finally asked person-2 whether the reports
+                    module was ready, what arrived was a PDF. Not a page that
+                    generates one. The document itself, finished in the
+                    narrowest sense: existing, and nothing more.
                 </p>
 
-                <h2>A Timeline, Held Loosely</h2>
                 <p>
-                    Week one: get Flask running, render something in React,
-                    and create a SQLite table without breaking it.
-                </p>
-                <p>
-                    Week two: make the pieces speak to one another. Frontend
-                    to backend, backend to database, with as little panic as
-                    we can manage.
-                </p>
-                <p>
-                    Week three onward: build the actual features, login,
-                    records, attendance, marks.
-                </p>
-                <p>
-                    Whether this timeline survives contact with reality
-                    remains to be seen. Reality tends to have its own
-                    opinion.
+                    I wrote <code>report.html</code> and
+                    <code>js/report.js</code> myself that evening, barely
+                    more than a shell, enough to occupy the space a working
+                    module should have held.
                 </p>
 
-                <h2>Why It Matters</h2>
+                <h2>The Foundation That Wasn't There</h2>
+
                 <p>
-                    Archiviette will not change much beyond our own class,
-                    and it may not look impressive for some time yet. But it
-                    will be ours, built rather than followed, and that
-                    distinction is the one I've been chasing since before
-                    this began.
-                </p>
-                <p>
-                    We're prepared to be poor at this for a while. That is,
-                    as far as I can tell, simply what learning requires.
+                    Over dinner, the shape of the problem became clear. It
+                    wasn't that one module was behind. It was that the
+                    foundation the rest of the application depended on, the
+                    interaction database, the logic connecting a symptom to a
+                    side effect to a medication, had never fully arrived.
+                    Person-1's interaction script and database existed, but
+                    not in a form the rest of the system could safely stand
+                    on.
                 </p>
 
-                <h2>What Comes Next</h2>
                 <p>
-                    We'll continue to write about this as it develops. When
-                    something works, that will be recorded here. When
-                    something breaks, and it certainly will, that will be
-                    recorded too.
+                    So Pacman, having already finished what was asked of him,
+                    turned toward what hadn't been, and began building around
+                    it: a dataset, entered and
+                    re-entered until it held. I kept working on the frontend,
+                    except by then "frontend" no longer meant one page. It
+                    meant everything: login and logout and account handling,
+                    a theme system carried across every page,
+                    <code>symptoms.html</code> cross-checking patient input
+                    against known side effects, and, memorably, a commit that
+                    duplicated the entire page body after its own closing
+                    tag, leaving two elements fighting over the same ID. I
+                    fixed it locally and made a note to actually commit the
+                    fix. Dino built the skeleton for the interactions page; I
+                    gave it its remaining shape. Mr. V, meanwhile, had taught
+                    himself OCR from nothing: an API with image upload
+                    support, a preprocessing and parsing pipeline, model
+                    weights preloaded ahead of time so a cold start wouldn't
+                    cost us. The one piece of my original design that
+                    survived intact, carried by the one person who kept doing
+                    the work in front of him without needing to be asked
+                    twice.
                 </p>
+
+                <h2>When the Foundation Cannot Be Trusted, You Build Around It</h2>
+
                 <p>
-                    The repository link will follow once there's something
-                    in it worth showing. For now, it remains a private
-                    structure, waiting to be filled.
+                    We slept in the sense that exhaustion demanded it. When we
+                    woke, the interaction and data layer still wasn't stable
+                    enough to carry a live demonstration, and there was no
+                    time left to make it so without risking everything else.
+                </p>
+
+                <p>
+                    So I changed the architecture once more, not the real
+                    one, but the one the judges would see. I fixed five
+                    medicines into every page that required data, their
+                    details written directly into the pages rather than
+                    pulled from any live file, anywhere a failure could reach
+                    us. It was not the system we had designed. It was,
+                    however, a system that would not fail in front of an
+                    audience, and by that hour, nothing else mattered as much
+                    as whether it would work when someone was watching.
+                </p>
+
+                <p>
+                    I also designed the order in which the demonstration
+                    would unfold:
+                </p>
+
+                <blockquote>
+                    <p>
+                        Scan, Medications, Reminders, Interactions, Reports,
+                        Symptoms, Dashboard.
+                    </p>
+                </blockquote>
+
+                <p>
+                    It mirrors how a person would actually move through the
+                    product, which meant the sequence explained itself: no
+                    page required a preamble. And it solved a quieter
+                    problem. Every page already held the same five medicines.
+                    Beginning anywhere but the scan would have made that
+                    plain. Beginning there let those five medicines appear to
+                    <em>enter</em> the system, rather than having always been
+                    there.
+                </p>
+
+                <h2>The Instrument That Wasn't Real</h2>
+
+                <p>
+                    The OCR pipeline worked without fault on a local machine.
+                    It did not survive production. And it was meant to open
+                    the demonstration.
+                </p>
+
+                <p>
+                    So we replaced it with something smaller and more
+                    certain. Five photographs, matched to the five medicines
+                    already written into the application. When an image
+                    arrived, we read its filename rather than its contents:
+                    <code>Aspirin.jpeg</code> became the Aspirin already
+                    sitting in the system, its hardcoded details displayed
+                    back as though newly extracted from the image. A short
+                    delay, a second and a half to four, kept the result from
+                    appearing instantly, so the interaction still resembled a
+                    system doing work rather than a lookup returning what it
+                    already knew.
+                </p>
+
+                <p>
+                    To whoever watched, it read as a pipeline: an image
+                    submitted, processed, identified, verified. What actually
+                    happened was smaller than that, and known to us entirely
+                    in advance. Five images, five outcomes, nothing left to
+                    chance, which meant the rest of the application could run
+                    on a foundation we understood completely, rather than one
+                    we could no longer trust.
+                </p>
+
+                <p>
+                    Dino carried the demonstration itself: four medicines
+                    already present on the account, a fifth introduced
+                    through the scan, and the rest of the system following in
+                    the order I had designed, without a single wrong step in
+                    front of the one audience that mattered. Scan a medicine.
+                    Verify it. Manage it. Check what it conflicts with.
+                    Generate a report from it. Examine the symptoms it's
+                    meant to address. Arrive, finally, at the dashboard that
+                    holds it all together.
+                </p>
+
+                <p>
+                    The application never had to reveal how much of its
+                    foundation had been rebuilt in the last twelve hours, or
+                    hardcoded outright. It only had to hold the shape we gave
+                    it.
+                </p>
+
+                <p>
+                    That was the version of MedBridge we carried into the
+                    final demonstration.
                 </p>
 
                 <div class="post-tags">
                     <span>Python</span>
-                    <span>Flask</span>
-                    <span>SQLite</span>
+                    <span>FastAPI</span>
+                    <span>EasyOCR</span>
+                    <span>Vercel</span>
+                    <span>Systems Design</span>
                 </div>
             </article>
         </main>

@@ -893,7 +893,7 @@ main {
   font-style: italic;
   font-size: 0.85rem;
   letter-spacing: 0.01em;
-  color: var(--text-faint);
+  color: var(--text-dim);
 }
 .footer-links a {
   transition: color 0.2s;
