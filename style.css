@@ -21,6 +21,20 @@
 }
 
 /* ─────────────────────────────────────────
+   TEXT SELECTION
+───────────────────────────────────────── */
+::selection {
+  background: var(--accent-bright);
+  color: var(--text);
+  text-shadow: none;
+}
+::-moz-selection {
+  background: var(--accent-bright);
+  color: var(--text);
+  text-shadow: none;
+}
+
+/* ─────────────────────────────────────────
    EAGLE / CREST MOTIFS
 ───────────────────────────────────────── */
 .eagle-mark {
