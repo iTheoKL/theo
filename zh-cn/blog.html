@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>博客 — Theo K Laurent</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/png" href="../img/icon.png" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="../lang-switch.css" />
+    </head>
+    <body>
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-mark"><img src="../img/icon.png" alt="" class="eagle-mark" width="18" height="18">TKL</span>
+                <span class="nav-tagline">智慧无涯</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="projects.html">项目</a></li>
+                <li><a href="blog.html" class="active">博客</a></li>
+                <li><a href="contact.html">寄猫头鹰信</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+
+        <main>
+            <div class="page-header">
+                <div class="section-label"><span>书房</span></div>
+                <h1>眉批</h1>
+                <p class="page-header-quote">因为总有一个问题,值得再问一次。</p>
+            </div>
+
+            <div class="blog-grid">
+                <a href="blogs/tofall.html" class="blog-card featured">
+                    <div class="blog-meta">
+                        <span class="blog-date">2026年8月10日</span>
+                        <span class="blog-category">诗</span>
+                    </div>
+                    <h2>坠落</h2>
+                    <p>
+                        有些想法拒绝散文。这一个,始终围绕着同一个问题打转
+                        ——当你创造的东西,反过来向你索要一切,那意味着什么?
+                        它以伊卡洛斯的神话为骨架,以及那个唯有因这场坠落
+                        才留下姓名的人。
+                    </p>
+                    <span class="read-more">翻页 →</span>
+                </a>
+                <a href="blogs/firsthackathon.html" class="blog-card featured">
+                    <div class="blog-meta">
+                        <span class="blog-date">2026年7月26日</span>
+                        <span class="blog-category">系统</span>
+                    </div>
+                    <h2>MedBridge</h2>
+                    <p>
+                        一支跨越两所学院组建的团队,六名新手,以及一个
+                        大概只撑了四个小时的计划。接下来讲述的是:当截止
+                        日期真正降临,一个项目究竟会向你索求什么——没人
+                        注意时,是谁在继续搭建;又要付出什么,才能让一个
+                        从未真正完工的地基,在那一个下午里,看起来仿佛它
+                        一直都稳稳存在。
+                    </p>
+                    <span class="read-more">翻页 →</span>
+                </a>
+                <a href="blogs/archiviette.html" class="blog-card featured">
+                    <div class="blog-meta">
+                        <span class="blog-date">2026年2月6日</span>
+                        <span class="blog-category">系统</span>
+                    </div>
+                    <h2>Archiviette</h2>
+                    <p>
+                        做一个"第一个项目"这件事,在我的清单上放了一阵子
+                        ——不是为了充实作品集,而是想弄清楚,把一样东西
+                        从"无"做到"能跑起来",究竟需要付出什么。我们三个
+                        人,几乎没有真正的经验可言,还有一个仓库——最初
+                        不过是四个空文件夹,和一份我们打算认真执行到底的
+                        计划。
+                    </p>
+                    <span class="read-more">翻页 →</span>
+                </a>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <span>© 2026 Theo K Laurent</span>
+            <span class="footer-motto">凡有才智与学识者,终将寻得自己的道路。</span>
+            <div class="footer-links">
+                <a href="https://github.com/itheokl" target="_blank">GitHub</a>
+                <a href="mailto:theoklaurent@icloud.com">邮箱</a>
+            </div>
+        </footer>
+
+        <div class="lang-switch" data-current="zh-cn">
+            <button class="lang-switch-toggle" type="button" aria-label="Change language" aria-expanded="false">
+                <span>中文</span>
+            </button>
+            <div class="lang-switch-menu" role="menu">
+                <a href="../blog.html" class="lang-switch-option" data-lang="en" role="menuitem">English</a>
+                <a href="../fr/blog.html" class="lang-switch-option" data-lang="fr" role="menuitem">Français</a>
+                <a href="../zh-cn/blog.html" class="lang-switch-option current" data-lang="zh-cn" role="menuitem">中文</a>
+            </div>
+        </div>
+
+        <script src="../lang-switch.js"></script>
+        <script src="../nav.js"></script>
+    </body>
+</html>

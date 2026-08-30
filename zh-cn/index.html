@@ -1,31 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-cn">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Theo K Laurent - CS Student</title>
+        <title>Theo K Laurent - 计算机科学系学生</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
             rel="stylesheet"
         />
-        <link rel="icon" type="image/png" href="img/icon.png" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="lang-switch.css" />
+        <link rel="icon" type="image/png" href="../img/icon.png" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="../lang-switch.css" />
     </head>
     <body>
         <nav class="nav">
             <a href="index.html" class="nav-logo">
-                <span class="nav-logo-mark"><img src="img/icon.png" alt="" class="eagle-mark" width="18" height="18">TKL</span>
-                <span class="nav-tagline">Wit Beyond Measure</span>
+                <span class="nav-logo-mark"><img src="../img/icon.png" alt="" class="eagle-mark" width="18" height="18">TKL</span>
+                <span class="nav-tagline">智慧无涯</span>
             </a>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Send an Owl</a></li>
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="projects.html">项目</a></li>
+                <li><a href="blog.html">博客</a></li>
+                <li><a href="contact.html">寄猫头鹰信</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -36,18 +36,19 @@
             <section class="hero">
                 <div class="hero-inner">
                     <p class="hero-eyebrow">
-                        Scholar of Modern Magic
+                        现代魔法之学者
                     </p>
                     <h1 class="hero-title">Theo K Laurent</h1>
-                    <p class="hero-motto">Wit Beyond Measure</p>
+                    <p class="hero-motto">智慧无涯</p>
                     <blockquote class="hero-quote">
-                        Where time fades away,<br />dreams become reality.
+                        Là où le temps s'efface,<br />les songes deviennent
+                        réels.
                     </blockquote>
                     <div class="hero-cta">
                         <a href="projects.html" class="btn-primary"
-                            >View the Craft</a
+                            >查看作品</a
                         >
-                        <a href="about.html" class="btn-ghost">Meet the Scholar</a>
+                        <a href="about.html" class="btn-ghost">认识这位学者</a>
                     </div>
                 </div>
                 <div class="hero-deco" aria-hidden="true">
@@ -58,7 +59,7 @@
                                 <path id="mottoArc" d="M25,85 a60,60 0 1,1 120,0" fill="none" />
                             </defs>
                             <text textLength="180" lengthAdjust="spacingAndGlyphs">
-                                <textPath href="#mottoArc" startOffset="50%" text-anchor="middle">WIT BEYOND MEASURE</textPath>
+                                <textPath href="#mottoArc" startOffset="50%" text-anchor="middle">智慧无涯 WIT BEYOND MEASURE</textPath>
                             </text>
                         </svg>
                     </div>
@@ -66,16 +67,16 @@
             </section>
 
             <section class="section-featured">
-                <div class="section-label"><span>Works of Note</span></div>
+                <div class="section-label"><span>代表作品</span></div>
                 <div class="projects-grid">
                     <a href="projects.html" class="project-card">
                         <div class="project-num">03</div>
                         <div class="project-info">
                             <h3>Cipher CLI</h3>
                             <p>
-                                A command-line tool in Go for encrypting and
-                                decrypting local files with AES-256-GCM, the
-                                key derived from a password through Argon2id.
+                                一款用 Go 编写的命令行工具,通过 AES-256-GCM
+                                对本地文件进行加密与解密,密钥由 Argon2id
+                                从密码派生而来。
                             </p>
                             <span class="tag">Go</span>
                         </div>
@@ -85,41 +86,41 @@
             </section>
 
             <section class="section-blog-preview">
-                <div class="section-label"><span>From the Study</span></div>
+                <div class="section-label"><span>书房手记</span></div>
                 <div class="posts-list">
                     <a href="blogs/tofall.html" class="post-row">
-                        <span class="post-date">Aug 11, 2026</span>
+                        <span class="post-date">2026年8月11日</span>
                         <span class="post-title"
-                            >To Fall - A verse</span
+                            >坠落 —— 一首诗</span
                         >
                         <span class="post-arrow">→</span>
                     </a>
                 </div>
-                <a href="blog.html" class="view-all">The Full Archive →</a>
+                <a href="blog.html" class="view-all">完整档案 →</a>
             </section>
         </main>
 
         <footer class="footer">
             <span>© 2026 Theo K Laurent</span>
-            <span class="footer-motto">Where those of wit and learning, will always find their way.</span>
+            <span class="footer-motto">凡有才智与学识者,终将寻得自己的道路。</span>
             <div class="footer-links">
                 <a href="https://github.com/itheokl" target="_blank">GitHub</a>
-                <a href="mailto:theoklaurent@icloud.com">Email</a>
+                <a href="mailto:theoklaurent@icloud.com">邮箱</a>
             </div>
         </footer>
 
-        <div class="lang-switch" data-current="en">
+        <div class="lang-switch" data-current="zh-cn">
             <button class="lang-switch-toggle" type="button" aria-label="Change language" aria-expanded="false">
-                <span>EN</span>
+                <span>中文</span>
             </button>
             <div class="lang-switch-menu" role="menu">
-                <a href="index.html" class="lang-switch-option current" data-lang="en" role="menuitem">English</a>
-                <a href="fr/index.html" class="lang-switch-option" data-lang="fr" role="menuitem">Français</a>
-                <a href="zh-cn/index.html" class="lang-switch-option" data-lang="zh-cn" role="menuitem">中文</a>
+                <a href="../index.html" class="lang-switch-option" data-lang="en" role="menuitem">English</a>
+                <a href="../fr/index.html" class="lang-switch-option" data-lang="fr" role="menuitem">Français</a>
+                <a href="../zh-cn/index.html" class="lang-switch-option current" data-lang="zh-cn" role="menuitem">中文</a>
             </div>
         </div>
 
-        <script src="lang-switch.js"></script>
-        <script src="nav.js"></script>
+        <script src="../lang-switch.js"></script>
+        <script src="../nav.js"></script>
     </body>
 </html>

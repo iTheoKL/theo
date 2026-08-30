@@ -12,6 +12,7 @@
         />
         <link rel="icon" type="image/png" href="img/icon.png" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="lang-switch.css" />
     </head>
     <body>
         <nav class="nav">
@@ -35,7 +36,7 @@
             <div class="page-header">
                 <div class="section-label"><span>The Scholar</span></div>
                 <h1>About The Architect</h1>
-                <p class="page-header-quote">Un regard tourné vers la Terre, l'autre vers l'infini.</p>
+                <p class="page-header-quote">One eye turned to the Earth, the other to the infinity.</p>
             </div>
 
             <div class="about-body">
@@ -107,6 +108,18 @@
             </div>
         </footer>
 
+        <div class="lang-switch" data-current="en">
+            <button class="lang-switch-toggle" type="button" aria-label="Change language" aria-expanded="false">
+                <span>EN</span>
+            </button>
+            <div class="lang-switch-menu" role="menu">
+                <a href="about.html" class="lang-switch-option current" data-lang="en" role="menuitem">English</a>
+                <a href="fr/about.html" class="lang-switch-option" data-lang="fr" role="menuitem">Français</a>
+                <a href="zh-cn/about.html" class="lang-switch-option" data-lang="zh-cn" role="menuitem">中文</a>
+            </div>
+        </div>
+
+        <script src="lang-switch.js"></script>
         <script src="nav.js"></script>
     </body>
 </html>

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>MedBridge - Theo K Laurent</title>
-        <link rel="icon" type="image/png" href="../img/icon.png" />
+        <link rel="icon" type="image/png" href="../../img/icon.png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -492,248 +492,217 @@
                 }
             }
         </style>
-        <link rel="stylesheet" href="../lang-switch.css" />
+        <link rel="stylesheet" href="../../lang-switch.css" />
     </head>
     <body>
         <header class="nav">
             <a href="../index.html" class="nav-logo">
-                <span class="nav-logo-mark"><img src="../img/icon.png" alt="" style="flex-shrink:0;width:18px;height:18px;" width="18" height="18">TKL</span>
-                <span class="nav-tagline">Wit Beyond Measure</span>
+                <span class="nav-logo-mark"><img src="../../img/icon.png" alt="" style="flex-shrink:0;width:18px;height:18px;" width="18" height="18">TKL</span>
+                <span class="nav-tagline">智慧无涯</span>
             </a>
-            <a href="../blog.html" class="nav-back">Back to the Study</a>
+            <a href="../blog.html" class="nav-back">返回书房</a>
         </header>
 
         <main>
             <header class="post-header">
                 <div class="post-meta">
-                    <span class="post-category">Systems</span>
-                    <span class="post-date">Jul 26, 2026</span>
-                    <span class="post-read-time">· 8 min read</span>
+                    <span class="post-category">系统</span>
+                    <span class="post-date">2026年7月26日</span>
+                    <span class="post-read-time">· 阅读约 8 分钟</span>
                 </div>
 
                 <h1 class="post-title">MedBridge</h1>
 
                 <p class="post-subtitle">
-                    On architecture, on the six of us, and on what a plan is
-                    worth once the deadline arrives.
+                    关于架构,关于我们六个人,以及一份计划在截止日期真正降临时,究竟还剩多少价值。
                 </p>
             </header>
             <article class="post-body">
                 <p>
-                    A team assembled across two colleges: Pacman and Dino from
-                    mine, and from the other, Mr. V, an old friend from
-                    school, along with two others I'll call person-1 and
-                    person-2. Six of us, all beginners, in the truest sense
-                    the word allows.
+                    一支跨越两所学院组建的团队:Pacman 和 Dino 来自我所在
+                    的学院;另一边,则是 Mr. V,一位相识多年的老校友,还
+                    有另外两位,我姑且称他们为"人员一"和"人员二"。我们六
+                    个人,全都是新手——是这个词所能承载的最真实意义上的
+                    新手。
                 </p>
 
                 <p>
-                    I had drawn a plan before the hackathon began, the way I
-                    try to draw any plan. Not what to build first, but what
-                    each piece should answer for and nothing more. OCR to Mr.
-                    V. The interaction engine and the data beneath it, the
-                    foundation the rest of the system would stand on, to
-                    person-1 and person-2 together. The backend to Pacman and
-                    Dino. The frontend, and the harder work of making six
-                    efforts resemble one intention, to me.
+                    在黑客松开始之前,我就已经画好了一份计划——就像我对
+                    任何计划所做的那样。不是先造什么,而是每一块该对什么
+                    负责,仅此而已。OCR 交给 Mr. V。交互引擎及其背后的数
+                    据——也就是整个系统赖以立足的地基——交给人员一和人
+                    员二共同负责。后端交给 Pacman 和 Dino。前端,以及那
+                    件更难的事——让六份努力看起来像是出自同一个意图——
+                    交给我自己。
                 </p>
 
-                <p>The plan held for perhaps four hours.</p>
+                <p>这份计划,大概撑了四个小时。</p>
 
-                <h2>The First Fracture</h2>
+                <h2>第一道裂痕</h2>
 
                 <p>
-                    Once the work began in earnest, a different structure was
-                    proposed. Not division by discipline, but by module: six
-                    modules for six people, each carried start to finish by
-                    one pair of hands. It came from person-1, the one among us
-                    who had told everyone he understood the ML side best, so
-                    we agreed without much argument. I've thought since about
-                    how easily a plan gives way to whoever speaks as though
-                    the answer were already settled.
+                    工作真正开始后,有人提出了另一种结构。不是按专业分
+                    工,而是按模块分:六个模块对应六个人,每个模块从头到
+                    尾都由同一双手负责到底。这个提议来自人员一——我们当
+                    中那个曾告诉所有人自己最懂机器学习那部分的人——于是
+                    我们几乎没怎么争论就同意了。事后我常常想起,一份计划
+                    有多容易向那个说话时仿佛答案早已尘埃落定的人让步。
                 </p>
 
                 <p>
-                    We split the modules. We set everyone up on GitHub and
-                    connected to Claude, so that whatever came next would at
-                    least come from a shared workflow.
+                    我们把模块分了下去,给每个人配置好了 GitHub,并接入
+                    了 Claude,这样至少不管接下来发生什么,都出自同一套
+                    共享的工作流程。
                 </p>
 
                 <p>
-                    Then the questions began. What a <code>.data</code> file
-                    actually held, how it should be traversed, what the API
-                    keys were for. From the same person who had proposed the
-                    structure that made them necessary. At one point we
-                    handed over a Claude conversation containing working
-                    code, <code>place-your-url-here</code> and
-                    <code>place-your-api-key-here</code> sitting in it as
-                    plainly as a door left open. It was run unedited. It
-                    failed, predictably, and we were asked why.
+                    然后,问题开始了。一个 <code>.data</code> 文件里到底
+                    存了什么,该如何遍历它,那些 API 密钥又是干什么用
+                    的——而这些问题,来自那个正是他提出了让这些东西变得
+                    必要的那套结构的人。有一次,我们把一段包含可运行代码
+                    的 Claude 对话转交出去,里面
+                    <code>place-your-url-here</code> 和
+                    <code>place-your-api-key-here</code>
+                    摆得像一扇没关上的门那样显眼。结果它被原封不动地直接
+                    运行了。不出所料地失败了,然后我们被问,为什么会这样。
                 </p>
 
                 <p>
-                    Person-2 asked none of it, working through his assigned
-                    piece without a word. Mr. V asked something else
-                    entirely: not <em>how does this begin</em>, but
-                    <em>why does this specific thing behave this way</em>.
-                    That distinction is small on paper and enormous in
-                    practice. It is the difference between building and
-                    waiting to be told what building looks like.
+                    人员二什么都没问,一言不发地埋头做完了分给他的那部
+                    分。Mr. V 问的则完全是另一类问题:不是<em>"这个东西该
+                    怎么开始"</em>,而是<em>"这个具体的东西,为什么会表现
+                    成这样"</em>。这种区别,写在纸面上很小,落到实践里却
+                    巨大无比。那是"动手建造"与"等着别人告诉你建造该是什
+                    么样子"之间的分野。
                 </p>
 
-                <h2>What Arrived Instead of a Feature</h2>
+                <h2>本该是功能,却来了别的东西</h2>
 
                 <p>
-                    As Phase 1 judging approached, we needed something
-                    committed, something real enough to stand in front of a
-                    judge. When we finally asked person-2 whether the reports
-                    module was ready, what arrived was a PDF. Not a page that
-                    generates one. The document itself, finished in the
-                    narrowest sense: existing, and nothing more.
-                </p>
-
-                <p>
-                    I wrote <code>report.html</code> and
-                    <code>js/report.js</code> myself that evening, barely
-                    more than a shell, enough to occupy the space a working
-                    module should have held.
-                </p>
-
-                <h2>The Foundation That Wasn't There</h2>
-
-                <p>
-                    Over dinner, the shape of the problem became clear. It
-                    wasn't that one module was behind. It was that the
-                    foundation the rest of the application depended on, the
-                    interaction database, the logic connecting a symptom to a
-                    side effect to a medication, had never fully arrived.
-                    Person-1's interaction script and database existed, but
-                    not in a form the rest of the system could safely stand
-                    on.
+                    随着第一阶段评审临近,我们需要一些已经提交、足够"真
+                    实"到能拿去面对评审的东西。当我们终于问人员二报表模
+                    块是否准备好了,得到的却是一份 PDF。不是一个能生成
+                    PDF 的页面,而是那份文档本身——以最狭义的方式完成
+                    了:存在着,仅此而已。
                 </p>
 
                 <p>
-                    So Pacman, having already finished what was asked of him,
-                    turned toward what hadn't been, and began building around
-                    it: a dataset, entered and
-                    re-entered until it held. I kept working on the frontend,
-                    except by then "frontend" no longer meant one page. It
-                    meant everything: login and logout and account handling,
-                    a theme system carried across every page,
-                    <code>symptoms.html</code> cross-checking patient input
-                    against known side effects, and, memorably, a commit that
-                    duplicated the entire page body after its own closing
-                    tag, leaving two elements fighting over the same ID. I
-                    fixed it locally and made a note to actually commit the
-                    fix. Dino built the skeleton for the interactions page; I
-                    gave it its remaining shape. Mr. V, meanwhile, had taught
-                    himself OCR from nothing: an API with image upload
-                    support, a preprocessing and parsing pipeline, model
-                    weights preloaded ahead of time so a cold start wouldn't
-                    cost us. The one piece of my original design that
-                    survived intact, carried by the one person who kept doing
-                    the work in front of him without needing to be asked
-                    twice.
+                    那天晚上,我自己写了 <code>report.html</code> 和
+                    <code>js/report.js</code>,几乎只是个空壳,勉强够填满
+                    一个本该正常运作的模块所应占据的位置。
                 </p>
 
-                <h2>When the Foundation Cannot Be Trusted, You Build Around It</h2>
+                <h2>那处不曾存在的地基</h2>
 
                 <p>
-                    We slept in the sense that exhaustion demanded it. When we
-                    woke, the interaction and data layer still wasn't stable
-                    enough to carry a live demonstration, and there was no
-                    time left to make it so without risking everything else.
+                    晚饭时,问题的轮廓终于清晰了。不是某一个模块进度落
+                    后,而是整个应用其余部分所依赖的地基——那个交互数据
+                    库,那套把症状、副作用与药物连在一起的逻辑——从未真
+                    正到位过。人员一的交互脚本和数据库确实存在,但不是那
+                    种能让系统其余部分安全立足其上的形式。
                 </p>
 
                 <p>
-                    So I changed the architecture once more, not the real
-                    one, but the one the judges would see. I fixed five
-                    medicines into every page that required data, their
-                    details written directly into the pages rather than
-                    pulled from any live file, anywhere a failure could reach
-                    us. It was not the system we had designed. It was,
-                    however, a system that would not fail in front of an
-                    audience, and by that hour, nothing else mattered as much
-                    as whether it would work when someone was watching.
+                    于是 Pacman 在完成自己分内的工作后,转身面对那个还没
+                    完成的部分,开始围绕它继续搭建:一份数据集,反复录
+                    入、反复修正,直到它撑得住为止。我继续做前端,只不过
+                    到了这个阶段,"前端"早已不再是一个页面的事。它意味着
+                    一切:登录、登出、账号处理,一套贯穿每个页面的主题系
+                    统,<code>symptoms.html</code> 用来核对患者输入与已知
+                    副作用,还有那个令人难忘的提交——它在自己的闭合标签
+                    之后,把整个页面主体又复制了一遍,留下两个元素在争夺
+                    同一个 ID。我在本地把它修好了,并记了一笔提醒自己真
+                    的要把这个修复提交上去。Dino 搭好了交互页面的骨架,我
+                    则为它填上了剩余的形状。与此同时,Mr. V 从零开始自学
+                    了 OCR:一个支持图片上传的 API,一条预处理与解析的流
+                    水线,还有提前预加载好的模型权重,免得冷启动拖累我
+                    们。这是我最初设计里唯一原封不动存活下来的部分,由那
+                    个始终埋头做眼前的事、从不需要被提醒第二次的人扛了下
+                    来。
+                </p>
+
+                <h2>当地基无法信任时,就绕开它继续建</h2>
+
+                <p>
+                    我们睡了——只是那种因为精疲力竭而不得不睡的意义上的
+                    睡。醒来时,交互与数据层依旧不够稳定,撑不起一次现场
+                    演示,而想在不搭上其他一切风险的前提下修好它,已经没
+                    有时间了。
                 </p>
 
                 <p>
-                    I also designed the order in which the demonstration
-                    would unfold:
+                    于是我又一次改动了架构——不是真正的架构,而是评审会
+                    看到的那一版。我把五种药物固定写进每一个需要数据的页
+                    面,把它们的详细信息直接写死进页面里,而不是从任何实
+                    时文件中读取,以避免任何可能出错的地方波及我们。这不
+                    是我们原本设计的那套系统。但它是一套不会在观众面前崩
+                    掉的系统,而到了那个时刻,再没有什么比"有人看着的时
+                    候它能不能跑起来"更重要了。
+                </p>
+
+                <p>
+                    我还设计了整场演示展开的顺序:
                 </p>
 
                 <blockquote>
                     <p>
-                        Scan, Medications, Reminders, Interactions, Reports,
-                        Symptoms, Dashboard.
+                        扫描、药物、提醒、相互作用、报告、症状、仪表盘。
                     </p>
                 </blockquote>
 
                 <p>
-                    It mirrors how a person would actually move through the
-                    product, which meant the sequence explained itself: no
-                    page required a preamble. And it solved a quieter
-                    problem. Every page already held the same five medicines.
-                    Beginning anywhere but the scan would have made that
-                    plain. Beginning there let those five medicines appear to
-                    <em>enter</em> the system, rather than having always been
-                    there.
+                    它对应的是一个人实际使用产品时会走的路径,这意味着这
+                    个顺序本身就能自我解释:没有哪个页面需要额外铺垫。它
+                    还悄悄解决了另一个问题。每个页面其实早就写死了同样那
+                    五种药。如果不是从"扫描"开始,这一点会一眼被看穿。而
+                    从扫描开始,能让那五种药看起来像是刚刚<em>进入</em>系
+                    统,而不是它们其实一直就在那里。
                 </p>
 
-                <h2>The Instrument That Wasn't Real</h2>
+                <h2>那件并不真实的工具</h2>
 
                 <p>
-                    The OCR pipeline worked without fault on a local machine.
-                    It did not survive production. And it was meant to open
-                    the demonstration.
+                    OCR 流水线在本地机器上运行得完美无缺。到了生产环境却
+                    撑不住。而它本该是打开整场演示的那一环。
                 </p>
 
                 <p>
-                    So we replaced it with something smaller and more
-                    certain. Five photographs, matched to the five medicines
-                    already written into the application. When an image
-                    arrived, we read its filename rather than its contents:
-                    <code>Aspirin.jpeg</code> became the Aspirin already
-                    sitting in the system, its hardcoded details displayed
-                    back as though newly extracted from the image. A short
-                    delay, a second and a half to four, kept the result from
-                    appearing instantly, so the interaction still resembled a
-                    system doing work rather than a lookup returning what it
-                    already knew.
+                    于是我们换成了更小、也更有把握的东西。五张照片,分别
+                    对应应用里已经写死的那五种药。图片一上传,我们读取的
+                    是文件名,而不是内容:<code>Aspirin.jpeg</code>
+                    就会变成系统里早已存在的那款阿司匹林,把它写死的详细
+                    信息原样展示出来,仿佛刚从图片里提取出来一样。一段短
+                    暂的延迟——一秒半到四秒之间——让结果不会瞬间跳出
+                    来,这样整个交互看起来仍像是系统在"做事",而不是一次
+                    单纯的查表,把它本就知道的东西吐回来。
                 </p>
 
                 <p>
-                    To whoever watched, it read as a pipeline: an image
-                    submitted, processed, identified, verified. What actually
-                    happened was smaller than that, and known to us entirely
-                    in advance. Five images, five outcomes, nothing left to
-                    chance, which meant the rest of the application could run
-                    on a foundation we understood completely, rather than one
-                    we could no longer trust.
+                    在旁观者眼中,这看起来就是一条流水线:图片提交、处
+                    理、识别、核实。而实际发生的事,比这小得多,而且我们
+                    早就把一切都摸得一清二楚。五张图片,五种结果,没有一
+                    点留给运气,这也意味着,应用剩下的部分能够运行在一处
+                    我们完全理解的地基上,而不是一处我们已经无法再信任的
+                    地基上。
                 </p>
 
                 <p>
-                    Dino carried the demonstration itself: four medicines
-                    already present on the account, a fifth introduced
-                    through the scan, and the rest of the system following in
-                    the order I had designed, without a single wrong step in
-                    front of the one audience that mattered. Scan a medicine.
-                    Verify it. Manage it. Check what it conflicts with.
-                    Generate a report from it. Examine the symptoms it's
-                    meant to address. Arrive, finally, at the dashboard that
-                    holds it all together.
+                    整场演示由 Dino 撑了下来:账户里已经有四种药,第五种
+                    通过扫描引入,系统的其余部分则严格按照我设计好的顺序
+                    展开,在唯一真正重要的那批观众面前,没有一步走错。扫
+                    描一种药,核实它,管理它,查看它与什么冲突,据此生成
+                    一份报告,查看它本该对应的症状,最后,抵达那个把一切
+                    统合在一起的仪表盘。
                 </p>
 
                 <p>
-                    The application never had to reveal how much of its
-                    foundation had been rebuilt in the last twelve hours, or
-                    hardcoded outright. It only had to hold the shape we gave
-                    it.
+                    这个应用从未需要暴露:它的地基有多少是在最后十二个小
+                    时里重建的,又有多少干脆就是硬编码出来的。它只需要撑
+                    住我们赋予它的那个形状。
                 </p>
 
                 <p>
-                    That was the version of MedBridge we carried into the
-                    final demonstration.
+                    那,就是我们带进最终演示现场的那个版本的 MedBridge。
                 </p>
 
                 <div class="post-tags">
@@ -741,30 +710,30 @@
                     <span>FastAPI</span>
                     <span>EasyOCR</span>
                     <span>Vercel</span>
-                    <span>Systems Design</span>
+                    <span>系统设计</span>
                 </div>
             </article>
         </main>
 
         <footer class="footer">
             <span>© 2026 Theo K Laurent</span>
-            <span class="footer-motto">Where those of wit and learning, will always find their way.</span>
+            <span class="footer-motto">凡有才智与学识者,终将寻得自己的道路。</span>
             <div class="footer-links">
                 <a href="https://github.com/itheokl" target="_blank">GitHub</a>
-                <a href="mailto:theoklaurent@icloud.com">Email</a>
+                <a href="mailto:theoklaurent@icloud.com">邮箱</a>
             </div>
         </footer>
-        <div class="lang-switch" data-current="en">
+        <div class="lang-switch" data-current="zh-cn">
             <button class="lang-switch-toggle" type="button" aria-label="Change language" aria-expanded="false">
-                <span>EN</span>
+                <span>中文</span>
             </button>
             <div class="lang-switch-menu" role="menu">
-                <a href="../blogs/firsthackathon.html" class="lang-switch-option current" data-lang="en" role="menuitem">English</a>
-                <a href="../fr/blogs/firsthackathon.html" class="lang-switch-option" data-lang="fr" role="menuitem">Français</a>
-                <a href="../zh-cn/blogs/firsthackathon.html" class="lang-switch-option" data-lang="zh-cn" role="menuitem">中文</a>
+                <a href="../../blogs/firsthackathon.html" class="lang-switch-option" data-lang="en" role="menuitem">English</a>
+                <a href="../../fr/blogs/firsthackathon.html" class="lang-switch-option" data-lang="fr" role="menuitem">Français</a>
+                <a href="../../zh-cn/blogs/firsthackathon.html" class="lang-switch-option current" data-lang="zh-cn" role="menuitem">中文</a>
             </div>
         </div>
 
-        <script src="../lang-switch.js"></script>
+        <script src="../../lang-switch.js"></script>
     </body>
 </html>

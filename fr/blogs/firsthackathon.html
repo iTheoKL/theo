@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title>MedBridge - Theo K Laurent</title>
-        <link rel="icon" type="image/png" href="../img/icon.png" />
+        <link rel="icon" type="image/png" href="../../img/icon.png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -492,248 +492,273 @@
                 }
             }
         </style>
-        <link rel="stylesheet" href="../lang-switch.css" />
+        <link rel="stylesheet" href="../../lang-switch.css" />
     </head>
     <body>
         <header class="nav">
             <a href="../index.html" class="nav-logo">
-                <span class="nav-logo-mark"><img src="../img/icon.png" alt="" style="flex-shrink:0;width:18px;height:18px;" width="18" height="18">TKL</span>
-                <span class="nav-tagline">Wit Beyond Measure</span>
+                <span class="nav-logo-mark"><img src="../../img/icon.png" alt="" style="flex-shrink:0;width:18px;height:18px;" width="18" height="18">TKL</span>
+                <span class="nav-tagline">L'Esprit Sans Mesure</span>
             </a>
-            <a href="../blog.html" class="nav-back">Back to the Study</a>
+            <a href="../blog.html" class="nav-back">Retour au Cabinet d'Étude</a>
         </header>
 
         <main>
             <header class="post-header">
                 <div class="post-meta">
-                    <span class="post-category">Systems</span>
-                    <span class="post-date">Jul 26, 2026</span>
-                    <span class="post-read-time">· 8 min read</span>
+                    <span class="post-category">Systèmes</span>
+                    <span class="post-date">26 juillet 2026</span>
+                    <span class="post-read-time">· 8 min de lecture</span>
                 </div>
 
                 <h1 class="post-title">MedBridge</h1>
 
                 <p class="post-subtitle">
-                    On architecture, on the six of us, and on what a plan is
-                    worth once the deadline arrives.
+                    Sur l'architecture, sur nous six, et sur ce que vaut un plan une fois l'échéance arrivée.
                 </p>
             </header>
             <article class="post-body">
                 <p>
-                    A team assembled across two colleges: Pacman and Dino from
-                    mine, and from the other, Mr. V, an old friend from
-                    school, along with two others I'll call person-1 and
-                    person-2. Six of us, all beginners, in the truest sense
-                    the word allows.
+                    Une équipe rassemblée entre deux établissements : Pacman
+                    et Dino du mien, et de l'autre, Mr. V, un vieil ami
+                    d'école, ainsi que deux autres personnes que j'appellerai
+                    personne-1 et personne-2. Six d'entre nous, tous
+                    débutants, au sens le plus vrai que le mot puisse
+                    prendre.
                 </p>
 
                 <p>
-                    I had drawn a plan before the hackathon began, the way I
-                    try to draw any plan. Not what to build first, but what
-                    each piece should answer for and nothing more. OCR to Mr.
-                    V. The interaction engine and the data beneath it, the
-                    foundation the rest of the system would stand on, to
-                    person-1 and person-2 together. The backend to Pacman and
-                    Dino. The frontend, and the harder work of making six
-                    efforts resemble one intention, to me.
+                    J'avais dessiné un plan avant le début du hackathon,
+                    comme j'essaie de le faire pour tout plan. Non pas quoi
+                    construire en premier, mais ce dont chaque pièce devait
+                    répondre, et rien de plus. L'OCR à Mr. V. Le moteur
+                    d'interactions et les données qui le sous-tendent, la
+                    fondation sur laquelle le reste du système reposerait, à
+                    personne-1 et personne-2 ensemble. Le backend à Pacman et
+                    Dino. Le frontend, et le travail plus ardu consistant à
+                    faire ressembler six efforts à une seule intention, à
+                    moi.
                 </p>
 
-                <p>The plan held for perhaps four hours.</p>
+                <p>Le plan a tenu peut-être quatre heures.</p>
 
-                <h2>The First Fracture</h2>
-
-                <p>
-                    Once the work began in earnest, a different structure was
-                    proposed. Not division by discipline, but by module: six
-                    modules for six people, each carried start to finish by
-                    one pair of hands. It came from person-1, the one among us
-                    who had told everyone he understood the ML side best, so
-                    we agreed without much argument. I've thought since about
-                    how easily a plan gives way to whoever speaks as though
-                    the answer were already settled.
-                </p>
+                <h2>La Première Fracture</h2>
 
                 <p>
-                    We split the modules. We set everyone up on GitHub and
-                    connected to Claude, so that whatever came next would at
-                    least come from a shared workflow.
-                </p>
-
-                <p>
-                    Then the questions began. What a <code>.data</code> file
-                    actually held, how it should be traversed, what the API
-                    keys were for. From the same person who had proposed the
-                    structure that made them necessary. At one point we
-                    handed over a Claude conversation containing working
-                    code, <code>place-your-url-here</code> and
-                    <code>place-your-api-key-here</code> sitting in it as
-                    plainly as a door left open. It was run unedited. It
-                    failed, predictably, and we were asked why.
+                    Une fois le travail réellement commencé, une structure
+                    différente a été proposée. Non pas une division par
+                    discipline, mais par module : six modules pour six
+                    personnes, chacun porté du début à la fin par une seule
+                    paire de mains. La proposition venait de personne-1,
+                    celui d'entre nous qui avait dit à tout le monde qu'il
+                    comprenait le mieux le côté ML, alors nous avons accepté
+                    sans trop débattre. J'ai souvent repensé depuis à la
+                    facilité avec laquelle un plan cède la place à quiconque
+                    parle comme si la réponse était déjà arrêtée.
                 </p>
 
                 <p>
-                    Person-2 asked none of it, working through his assigned
-                    piece without a word. Mr. V asked something else
-                    entirely: not <em>how does this begin</em>, but
-                    <em>why does this specific thing behave this way</em>.
-                    That distinction is small on paper and enormous in
-                    practice. It is the difference between building and
-                    waiting to be told what building looks like.
-                </p>
-
-                <h2>What Arrived Instead of a Feature</h2>
-
-                <p>
-                    As Phase 1 judging approached, we needed something
-                    committed, something real enough to stand in front of a
-                    judge. When we finally asked person-2 whether the reports
-                    module was ready, what arrived was a PDF. Not a page that
-                    generates one. The document itself, finished in the
-                    narrowest sense: existing, and nothing more.
+                    Nous avons réparti les modules. Nous avons configuré
+                    tout le monde sur GitHub et connecté Claude, de sorte
+                    que, quoi qu'il arrive ensuite, cela proviendrait au
+                    moins d'un flux de travail partagé.
                 </p>
 
                 <p>
-                    I wrote <code>report.html</code> and
-                    <code>js/report.js</code> myself that evening, barely
-                    more than a shell, enough to occupy the space a working
-                    module should have held.
-                </p>
-
-                <h2>The Foundation That Wasn't There</h2>
-
-                <p>
-                    Over dinner, the shape of the problem became clear. It
-                    wasn't that one module was behind. It was that the
-                    foundation the rest of the application depended on, the
-                    interaction database, the logic connecting a symptom to a
-                    side effect to a medication, had never fully arrived.
-                    Person-1's interaction script and database existed, but
-                    not in a form the rest of the system could safely stand
-                    on.
+                    Puis les questions ont commencé. Ce qu'un fichier
+                    <code>.data</code> contenait réellement, comment il
+                    devait être parcouru, à quoi servaient les clés API.
+                    Venant de la même personne qui avait proposé la
+                    structure qui les avait rendues nécessaires. À un
+                    moment, nous avons transmis une conversation Claude
+                    contenant du code fonctionnel, avec
+                    <code>place-your-url-here</code> et
+                    <code>place-your-api-key-here</code> qui y figuraient
+                    aussi ouvertement qu'une porte laissée grande ouverte.
+                    Il a été exécuté sans être modifié. Il a échoué, comme
+                    on pouvait s'y attendre, et on nous a demandé pourquoi.
                 </p>
 
                 <p>
-                    So Pacman, having already finished what was asked of him,
-                    turned toward what hadn't been, and began building around
-                    it: a dataset, entered and
-                    re-entered until it held. I kept working on the frontend,
-                    except by then "frontend" no longer meant one page. It
-                    meant everything: login and logout and account handling,
-                    a theme system carried across every page,
-                    <code>symptoms.html</code> cross-checking patient input
-                    against known side effects, and, memorably, a commit that
-                    duplicated the entire page body after its own closing
-                    tag, leaving two elements fighting over the same ID. I
-                    fixed it locally and made a note to actually commit the
-                    fix. Dino built the skeleton for the interactions page; I
-                    gave it its remaining shape. Mr. V, meanwhile, had taught
-                    himself OCR from nothing: an API with image upload
-                    support, a preprocessing and parsing pipeline, model
-                    weights preloaded ahead of time so a cold start wouldn't
-                    cost us. The one piece of my original design that
-                    survived intact, carried by the one person who kept doing
-                    the work in front of him without needing to be asked
-                    twice.
+                    Personne-2 n'a rien demandé de tout cela, avançant sur
+                    sa part assignée sans un mot. Mr. V, lui, posait une
+                    tout autre question : non pas <em>comment cela
+                    commence-t-il</em>, mais <em>pourquoi cette chose
+                    précise se comporte-t-elle ainsi</em>. Cette distinction
+                    est mince sur le papier et immense en pratique. C'est la
+                    différence entre construire et attendre qu'on vous dise
+                    à quoi ressemble le fait de construire.
                 </p>
 
-                <h2>When the Foundation Cannot Be Trusted, You Build Around It</h2>
+                <h2>Ce Qui Est Arrivé à la Place d'une Fonctionnalité</h2>
 
                 <p>
-                    We slept in the sense that exhaustion demanded it. When we
-                    woke, the interaction and data layer still wasn't stable
-                    enough to carry a live demonstration, and there was no
-                    time left to make it so without risking everything else.
+                    Alors que l'évaluation de la Phase 1 approchait, il nous
+                    fallait quelque chose de commité, quelque chose d'assez
+                    réel pour se tenir devant un juge. Quand nous avons
+                    finalement demandé à personne-2 si le module de rapports
+                    était prêt, ce qui est arrivé fut un PDF. Pas une page
+                    qui en génère un. Le document lui-même, achevé au sens
+                    le plus strict : existant, et rien de plus.
                 </p>
 
                 <p>
-                    So I changed the architecture once more, not the real
-                    one, but the one the judges would see. I fixed five
-                    medicines into every page that required data, their
-                    details written directly into the pages rather than
-                    pulled from any live file, anywhere a failure could reach
-                    us. It was not the system we had designed. It was,
-                    however, a system that would not fail in front of an
-                    audience, and by that hour, nothing else mattered as much
-                    as whether it would work when someone was watching.
+                    J'ai écrit moi-même <code>report.html</code> et
+                    <code>js/report.js</code> ce soir-là, à peine plus qu'une
+                    coquille vide, juste assez pour occuper l'espace qu'un
+                    module fonctionnel aurait dû occuper.
+                </p>
+
+                <h2>La Fondation Qui N'était Pas Là</h2>
+
+                <p>
+                    Au dîner, la forme du problème est devenue claire. Ce
+                    n'était pas qu'un module avait du retard. C'était que la
+                    fondation dont dépendait le reste de l'application — la
+                    base de données d'interactions, la logique reliant un
+                    symptôme à un effet secondaire puis à un médicament —
+                    n'était jamais réellement arrivée. Le script et la base
+                    de données d'interactions de personne-1 existaient, mais
+                    pas sous une forme sur laquelle le reste du système
+                    pouvait s'appuyer en toute sécurité.
                 </p>
 
                 <p>
-                    I also designed the order in which the demonstration
-                    would unfold:
+                    Alors Pacman, ayant déjà terminé ce qu'on lui avait
+                    demandé, s'est tourné vers ce qui ne l'était pas, et a
+                    commencé à construire autour : un jeu de données, saisi
+                    et ressaisi jusqu'à ce qu'il tienne. J'ai continué à
+                    travailler sur le frontend, sauf qu'à ce stade
+                    « frontend » ne désignait plus une seule page. Cela
+                    signifiait tout : connexion, déconnexion et gestion de
+                    compte, un système de thème porté sur chaque page,
+                    <code>symptoms.html</code> vérifiant les saisies du
+                    patient face aux effets secondaires connus, et, chose
+                    mémorable, un commit qui dupliquait tout le corps de la
+                    page après sa propre balise de fermeture, laissant deux
+                    éléments se disputer le même ID. Je l'ai corrigé
+                    localement et j'ai noté qu'il fallait réellement commiter
+                    le correctif. Dino a construit le squelette de la page
+                    des interactions ; je lui ai donné sa forme restante.
+                    Mr. V, pendant ce temps, s'était formé lui-même à l'OCR
+                    à partir de rien : une API prenant en charge le
+                    téléversement d'images, un pipeline de prétraitement et
+                    d'analyse, des poids de modèle préchargés à l'avance
+                    pour qu'un démarrage à froid ne nous coûte rien. Le seul
+                    élément de ma conception originale ayant survécu intact,
+                    porté par la seule personne qui a continué le travail
+                    devant elle sans avoir besoin qu'on le lui demande deux
+                    fois.
+                </p>
+
+                <h2>Quand la Fondation Ne Peut Être Fiable, On Construit Autour</h2>
+
+                <p>
+                    Nous avons dormi, au sens où l'épuisement l'exigeait. À
+                    notre réveil, la couche d'interactions et de données
+                    n'était toujours pas assez stable pour supporter une
+                    démonstration en direct, et il ne restait plus assez de
+                    temps pour y remédier sans risquer tout le reste.
+                </p>
+
+                <p>
+                    J'ai donc modifié l'architecture une fois de plus, non
+                    pas la vraie, mais celle que les juges verraient. J'ai
+                    figé cinq médicaments dans chaque page nécessitant des
+                    données, leurs détails écrits directement dans les
+                    pages plutôt que puisés dans un quelconque fichier en
+                    direct, partout où une défaillance aurait pu nous
+                    atteindre. Ce n'était pas le système que nous avions
+                    conçu. C'était néanmoins un système qui ne s'effondrerait
+                    pas devant un public, et à cette heure-là, rien d'autre
+                    n'importait autant que le fait qu'il fonctionne quand
+                    quelqu'un regardait.
+                </p>
+
+                <p>
+                    J'ai aussi conçu l'ordre dans lequel la démonstration se
+                    déroulerait :
                 </p>
 
                 <blockquote>
                     <p>
-                        Scan, Medications, Reminders, Interactions, Reports,
-                        Symptoms, Dashboard.
+                        Scan, Médicaments, Rappels, Interactions, Rapports,
+                        Symptômes, Tableau de bord.
                     </p>
                 </blockquote>
 
                 <p>
-                    It mirrors how a person would actually move through the
-                    product, which meant the sequence explained itself: no
-                    page required a preamble. And it solved a quieter
-                    problem. Every page already held the same five medicines.
-                    Beginning anywhere but the scan would have made that
-                    plain. Beginning there let those five medicines appear to
-                    <em>enter</em> the system, rather than having always been
-                    there.
+                    Cela reflète la manière dont une personne parcourrait
+                    réellement le produit, ce qui signifiait que la
+                    séquence s'expliquait d'elle-même : aucune page ne
+                    nécessitait de préambule. Et cela résolvait un problème
+                    plus discret. Chaque page contenait déjà les cinq mêmes
+                    médicaments. Commencer ailleurs que par le scan l'aurait
+                    rendu évident. Commencer là permettait à ces cinq
+                    médicaments de sembler <em>entrer</em> dans le système,
+                    plutôt que d'y avoir toujours été.
                 </p>
 
-                <h2>The Instrument That Wasn't Real</h2>
+                <h2>L'Instrument Qui N'était Pas Réel</h2>
 
                 <p>
-                    The OCR pipeline worked without fault on a local machine.
-                    It did not survive production. And it was meant to open
-                    the demonstration.
-                </p>
-
-                <p>
-                    So we replaced it with something smaller and more
-                    certain. Five photographs, matched to the five medicines
-                    already written into the application. When an image
-                    arrived, we read its filename rather than its contents:
-                    <code>Aspirin.jpeg</code> became the Aspirin already
-                    sitting in the system, its hardcoded details displayed
-                    back as though newly extracted from the image. A short
-                    delay, a second and a half to four, kept the result from
-                    appearing instantly, so the interaction still resembled a
-                    system doing work rather than a lookup returning what it
-                    already knew.
+                    Le pipeline OCR fonctionnait sans faille sur une machine
+                    locale. Il n'a pas survécu à la mise en production. Et
+                    c'est pourtant lui qui devait ouvrir la démonstration.
                 </p>
 
                 <p>
-                    To whoever watched, it read as a pipeline: an image
-                    submitted, processed, identified, verified. What actually
-                    happened was smaller than that, and known to us entirely
-                    in advance. Five images, five outcomes, nothing left to
-                    chance, which meant the rest of the application could run
-                    on a foundation we understood completely, rather than one
-                    we could no longer trust.
+                    Nous l'avons donc remplacé par quelque chose de plus
+                    modeste et de plus certain. Cinq photographies,
+                    associées aux cinq médicaments déjà inscrits dans
+                    l'application. Quand une image arrivait, nous lisions
+                    son nom de fichier plutôt que son contenu :
+                    <code>Aspirin.jpeg</code> devenait l'Aspirine déjà
+                    présente dans le système, ses informations codées en
+                    dur affichées en retour comme si elles venaient d'être
+                    extraites de l'image. Un court délai, entre une seconde
+                    et demie et quatre secondes, empêchait le résultat
+                    d'apparaître instantanément, de sorte que l'interaction
+                    ressemblait encore à un système en train de travailler
+                    plutôt qu'à une simple recherche renvoyant ce qu'il
+                    savait déjà.
                 </p>
 
                 <p>
-                    Dino carried the demonstration itself: four medicines
-                    already present on the account, a fifth introduced
-                    through the scan, and the rest of the system following in
-                    the order I had designed, without a single wrong step in
-                    front of the one audience that mattered. Scan a medicine.
-                    Verify it. Manage it. Check what it conflicts with.
-                    Generate a report from it. Examine the symptoms it's
-                    meant to address. Arrive, finally, at the dashboard that
-                    holds it all together.
+                    Pour qui regardait, cela se lisait comme un pipeline :
+                    une image soumise, traitée, identifiée, vérifiée. Ce qui
+                    se passait réellement était plus modeste que cela, et
+                    connu de nous entièrement à l'avance. Cinq images, cinq
+                    résultats, rien laissé au hasard, ce qui signifiait que
+                    le reste de l'application pouvait fonctionner sur une
+                    fondation que nous comprenions complètement, plutôt que
+                    sur une fondation à laquelle nous ne pouvions plus faire
+                    confiance.
                 </p>
 
                 <p>
-                    The application never had to reveal how much of its
-                    foundation had been rebuilt in the last twelve hours, or
-                    hardcoded outright. It only had to hold the shape we gave
-                    it.
+                    Dino a porté la démonstration elle-même : quatre
+                    médicaments déjà présents sur le compte, un cinquième
+                    introduit par le scan, et le reste du système suivant
+                    l'ordre que j'avais conçu, sans un seul faux pas devant
+                    le seul public qui comptait. Scanner un médicament. Le
+                    vérifier. Le gérer. Vérifier avec quoi il entre en
+                    conflit. En générer un rapport. Examiner les symptômes
+                    qu'il est censé traiter. Arriver, enfin, au tableau de
+                    bord qui tient le tout ensemble.
                 </p>
 
                 <p>
-                    That was the version of MedBridge we carried into the
-                    final demonstration.
+                    L'application n'a jamais eu à révéler à quel point sa
+                    fondation avait été reconstruite au cours des douze
+                    dernières heures, ou purement et simplement codée en
+                    dur. Elle n'avait qu'à tenir la forme que nous lui
+                    avions donnée.
+                </p>
+
+                <p>
+                    C'était la version de MedBridge que nous avons portée
+                    jusqu'à la démonstration finale.
                 </p>
 
                 <div class="post-tags">
@@ -741,30 +766,30 @@
                     <span>FastAPI</span>
                     <span>EasyOCR</span>
                     <span>Vercel</span>
-                    <span>Systems Design</span>
+                    <span>Conception de Systèmes</span>
                 </div>
             </article>
         </main>
 
         <footer class="footer">
             <span>© 2026 Theo K Laurent</span>
-            <span class="footer-motto">Where those of wit and learning, will always find their way.</span>
+            <span class="footer-motto">Là où l'esprit et le savoir trouvent toujours leur chemin.</span>
             <div class="footer-links">
                 <a href="https://github.com/itheokl" target="_blank">GitHub</a>
-                <a href="mailto:theoklaurent@icloud.com">Email</a>
+                <a href="mailto:theoklaurent@icloud.com">E-mail</a>
             </div>
         </footer>
-        <div class="lang-switch" data-current="en">
+        <div class="lang-switch" data-current="fr">
             <button class="lang-switch-toggle" type="button" aria-label="Change language" aria-expanded="false">
-                <span>EN</span>
+                <span>FR</span>
             </button>
             <div class="lang-switch-menu" role="menu">
-                <a href="../blogs/firsthackathon.html" class="lang-switch-option current" data-lang="en" role="menuitem">English</a>
-                <a href="../fr/blogs/firsthackathon.html" class="lang-switch-option" data-lang="fr" role="menuitem">Français</a>
-                <a href="../zh-cn/blogs/firsthackathon.html" class="lang-switch-option" data-lang="zh-cn" role="menuitem">中文</a>
+                <a href="../../blogs/firsthackathon.html" class="lang-switch-option" data-lang="en" role="menuitem">English</a>
+                <a href="../../fr/blogs/firsthackathon.html" class="lang-switch-option current" data-lang="fr" role="menuitem">Français</a>
+                <a href="../../zh-cn/blogs/firsthackathon.html" class="lang-switch-option" data-lang="zh-cn" role="menuitem">中文</a>
             </div>
         </div>
 
-        <script src="../lang-switch.js"></script>
+        <script src="../../lang-switch.js"></script>
     </body>
 </html>

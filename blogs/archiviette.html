@@ -492,6 +492,7 @@
                 }
             }
         </style>
+        <link rel="stylesheet" href="../lang-switch.css" />
     </head>
     <body>
         <header class="nav">
@@ -685,5 +686,17 @@
                 <a href="mailto:theoklaurent@icloud.com">Email</a>
             </div>
         </footer>
+        <div class="lang-switch" data-current="en">
+            <button class="lang-switch-toggle" type="button" aria-label="Change language" aria-expanded="false">
+                <span>EN</span>
+            </button>
+            <div class="lang-switch-menu" role="menu">
+                <a href="../blogs/archiviette.html" class="lang-switch-option current" data-lang="en" role="menuitem">English</a>
+                <a href="../fr/blogs/archiviette.html" class="lang-switch-option" data-lang="fr" role="menuitem">Français</a>
+                <a href="../zh-cn/blogs/archiviette.html" class="lang-switch-option" data-lang="zh-cn" role="menuitem">中文</a>
+            </div>
+        </div>
+
+        <script src="../lang-switch.js"></script>
     </body>
 </html>
