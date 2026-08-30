@@ -642,6 +642,8 @@ main {
 }
 .project-full-card:first-child { border-top: 1px solid var(--border); }
 .project-full-card:hover { background: rgba(255,255,255,0.015); }
+div.project-full-card { cursor: default; }
+div.project-full-card:hover { background: transparent; }
 
 .pfc-num {
   font-family: var(--font-head);
