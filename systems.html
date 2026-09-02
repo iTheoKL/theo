@@ -168,19 +168,6 @@
                     </tr>
                 </tbody>
             </table>
-
-            <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 1.25rem 1.5rem; margin-top: 1.5rem; border-radius: 2px;">
-                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--silver-faint); margin-bottom: 0.75rem;">AetherRingBuffer.cpp (Vectorized Price Scan)</div>
-                <pre style="color: #e2e8f0; font-size: 0.86rem; overflow-x: auto;"><code>inline uint32_t match_vectorized(const uint64_t* prices, uint64_t limit_price, uint32_t len) noexcept {
-    const __m512i target = _mm512_set1_epi64(limit_price);
-    for (uint32_t i = 0; i &lt; len; i += 8) {
-        const __m512i chunk = _mm512_load_si512(reinterpret_cast&lt;const __m512i*&gt;(&amp;prices[i]));
-        const __mmask8 mask = _mm512_cmpge_epu64_mask(chunk, target);
-        if (mask != 0) return i + std::countr_zero(mask);
-    }
-    return len;
-}</code></pre>
-            </div>
         </section>
 
         <!-- Footer with GitHub on Right -->
