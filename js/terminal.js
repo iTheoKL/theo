@@ -21,10 +21,19 @@
                             <button class="cmd-close-btn" id="cmd-close-btn" aria-label="Close Terminal">✕</button>
                         </div>
                     </div>
+                    <div class="cmd-quick-pills">
+                        <button class="cmd-pill" data-cmd="bench">⚡ bench</button>
+                        <button class="cmd-pill" data-cmd="whoami">whoami</button>
+                        <button class="cmd-pill" data-cmd="systems">systems</button>
+                        <button class="cmd-pill" data-cmd="papers">papers</button>
+                        <button class="cmd-pill" data-cmd="quote">quote</button>
+                        <button class="cmd-pill" data-cmd="help">help</button>
+                        <button class="cmd-pill" data-cmd="clear">clear</button>
+                    </div>
                     <div class="cmd-output" id="cmd-output">
                         <div class="cmd-line res-info">
                             <strong>Theo K Laurent — Quantitative Systems Environment</strong><br>
-                            Type <code>help</code> to list commands, or <code>bench</code> to run a local CPU latency benchmark.
+                            Tap a command pill above, type <code>help</code>, or run <code>bench</code>.
                         </div>
                     </div>
                     <div class="cmd-input-wrap">
@@ -85,6 +94,15 @@
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 open();
+            });
+        });
+
+        // Attach to quick command pills
+        backdrop.querySelectorAll('.cmd-pill').forEach(pill => {
+            pill.addEventListener('click', (e) => {
+                e.preventDefault();
+                const cmd = pill.getAttribute('data-cmd');
+                if (cmd) execute(cmd);
             });
         });
 
