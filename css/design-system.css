@@ -546,6 +546,16 @@ code {
     cursor: crosshair;
 }
 
+.canvas-caption {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--silver-faint);
+    text-align: right;
+    margin-top: -1.75rem;
+    margin-bottom: 3.5rem;
+    letter-spacing: 0.02em;
+}
+
 /* ==========================================================================
    Editorial Footer (GitHub on Right)
    ========================================================================== */
