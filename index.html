@@ -66,147 +66,74 @@
             <canvas id="phase-canvas"></canvas>
         </div>
 
-        <!-- Ledger of Selected Works -->
-        <section>
-            <h2>Selected Works & Primitives</h2>
+        <!-- Gateway Portals -->
+        <section style="margin-top: 4.5rem;">
+            <h2>Architectural Coordinates</h2>
             
             <table class="ledger-table">
                 <tbody>
                     <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.01</td>
+                        <td class="ledger-cell ledger-id">SECT.01</td>
                         <td class="ledger-cell">
                             <div class="ledger-name">
-                                <a href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer">Cipher-CLI Vault</a>
-                                <span class="status-tag open-source">Open Source</span>
+                                <a href="systems.html">Systems & Engineering Primitives</a>
                             </div>
                             <div class="ledger-desc">
-                                Command-line file encryption utility in Go. Employs Argon2id memory-hard key derivation ($64\,\text{MB}$) with authenticated AES-256-GCM, engineered to eliminate timing side-channel leakage.
-                            </div>
-                            <div class="ledger-tech">
-                                <span>Go</span>
-                                <span>AES-256-GCM</span>
-                                <span>Argon2id</span>
-                                <span>Constant-Time</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">256-bit</span> AES<br>
-                            <span style="color:var(--silver-faint);">Post-Quantum Key</span>
-                        </td>
-                    </tr>
-
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.02</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="https://github.com/iTheoKL/ThreatLens.git" target="_blank" rel="noopener noreferrer">ThreatLens</a>
-                                <span class="status-tag open-source">Open Source</span>
-                            </div>
-                            <div class="ledger-desc">
-                                Client-side security browser extension in pure JavaScript. Intercepts phishing vectors across browsing and webmail clients, categorizes risk into three discrete verdicts (Safe, Suspicious, or Malicious), and transparently surfaces the causal reasoning behind every flag.
-                            </div>
-                            <div class="ledger-tech">
-                                <span>JavaScript</span>
-                                <span>Browser Extension</span>
-                                <span>Phishing Defense</span>
-                                <span>Causal Analysis</span>
-                                <span>Webmail Security</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">Verdict + Cause</span><br>
-                            <span style="color:var(--silver-faint);">Tri-State Classifier</span>
-                        </td>
-                    </tr>
-
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.03</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="papers.html#medbridge-post-mortem">MedBridge Engine</a>
-                                <span class="status-tag closed-source">Closed Source</span>
-                            </div>
-                            <div class="ledger-desc">
-                                Polypharmacy conflict detection and unified clinical graph platform engineered under hackathon deadlines. Deploys dynamic graph traversal, model preloading, and synchronized session security.
-                            </div>
-                            <div class="ledger-tech">
-                                <span>Python</span>
-                                <span>FastAPI</span>
-                                <span>Graph Algorithms</span>
-                                <span>EasyOCR</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">&lt; 120 ms</span><br>
-                            <span style="color:var(--silver-faint);">Deterministic Core</span>
-                        </td>
-                    </tr>
-
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.04</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="systems.html#aether-l3">Aether-L3 Matching Core</a>
-                                <span class="status-tag closed-source">Closed Source</span>
-                            </div>
-                            <div class="ledger-desc">
-                                A zero-allocation limit order matching engine in C++23. Leverages AVX-512 vector broadcasts to scan contiguous price levels with zero heap allocations on the critical hot path.
+                                High-assurance cryptographic vaults in Go, client-side threat intelligence extensions in pure JavaScript, and zero-allocation AVX-512 limit order matching engines in C++23.
                             </div>
                             <div class="ledger-tech">
                                 <span>C++23</span>
                                 <span>AVX-512</span>
-                                <span>Lock-Free SPSC</span>
-                                <span>Cache Aligned</span>
+                                <span>Go</span>
+                                <span>Argon2id</span>
+                                <span>JavaScript</span>
                             </div>
                         </td>
                         <td class="ledger-cell ledger-spec">
-                            <span class="stat">&lt; 14.2 ns</span> / match<br>
-                            <span style="color:var(--silver-faint);">0 Bytes / Alloc</span>
+                            <span class="stat">4 Systems</span><br>
+                            <span style="color:var(--silver-faint);"><a href="systems.html">Enter Systems</a></span>
                         </td>
                     </tr>
-                </tbody>
-            </table>
-        </section>
 
-        <!-- Monograph & Verse Ledger -->
-        <section>
-            <h2>Monographs & Verse</h2>
-            <table class="ledger-table">
-                <tbody>
                     <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">2026.07</td>
+                        <td class="ledger-cell ledger-id">SECT.02</td>
                         <td class="ledger-cell">
-                            <div class="ledger-name"><a href="papers.html#medbridge-post-mortem">MedBridge: An Architecture of Inevitable Convergence</a></div>
+                            <div class="ledger-name">
+                                <a href="papers.html">Monographs & Verse</a>
+                            </div>
                             <div class="ledger-desc">
-                                On combating multi-contributor entropy, enforcing global interface invariants, and pulling a complex clinical graph platform into seamless execution under deadline.
+                                Formal treatises on architectural convergence under deadlines, structural failure modes across distributed teams, and philosophical verse on human ambition.
+                            </div>
+                            <div class="ledger-tech">
+                                <span>Architecture Post-Mortem</span>
+                                <span>Epistemology</span>
+                                <span>Verse</span>
                             </div>
                         </td>
                         <td class="ledger-cell ledger-spec">
-                            <span>8 min read</span>
+                            <span class="stat">3 Works</span><br>
+                            <span style="color:var(--silver-faint);"><a href="papers.html">Read Monographs</a></span>
                         </td>
                     </tr>
+
                     <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">2026.08</td>
+                        <td class="ledger-cell ledger-id">SECT.03</td>
                         <td class="ledger-cell">
-                            <div class="ledger-name"><a href="papers.html#to-fall">To Fall (Verse on Icarus & Daedalus)</a></div>
+                            <div class="ledger-name">
+                                <a href="about.html">The Architect</a>
+                            </div>
                             <div class="ledger-desc">
-                                On what is risked, on what is lost, and on what it costs to make something worthy of the name.
+                                Intellectual ethos, mechanical sympathy with silicon, the Jane Street quantitative baseline standard, and artistic coordinates beyond the terminal.
+                            </div>
+                            <div class="ledger-tech">
+                                <span>Ethos</span>
+                                <span>Silicon Sympathy</span>
+                                <span>Narrative Coordinates</span>
                             </div>
                         </td>
                         <td class="ledger-cell ledger-spec">
-                            <span style="color:var(--accent-plum-bright);">Verse</span>
-                        </td>
-                    </tr>
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">2025.11</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name"><a href="papers.html#ravenclaw-creed-intellectual-moat">The Ravenclaw Creed: Intellectual Rigor as the Only Durable Moat</a></div>
-                            <div class="ledger-desc">
-                                Why intellectual rigor is the sole enduring competitive advantage, and why achieving correctness is merely the table stakes to enter the room.
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span>5 min read</span>
+                            <span class="stat">Profile</span><br>
+                            <span style="color:var(--silver-faint);"><a href="about.html">View Ethos</a></span>
                         </td>
                     </tr>
                 </tbody>

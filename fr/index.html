@@ -40,7 +40,7 @@
                     <li><a href="index.html" class="active">Index</a></li>
                     <li><a href="systems.html">Systèmes</a></li>
                     <li><a href="papers.html">Monographies & Vers</a></li>
-                    <li><a href="about.html">L\'Architecte</a></li>
+                    <li><a href="about.html">L'Architecte</a></li>
                     <li><button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button></li>
                 </ul>
             </nav>
@@ -66,147 +66,74 @@
             <canvas id="phase-canvas"></canvas>
         </div>
 
-        <!-- Grand Livre des Travaux Sélectionnés -->
-        <section>
-            <h2>Travaux Choisis & Primitives</h2>
+        <!-- Portails d'accès -->
+        <section style="margin-top: 4.5rem;">
+            <h2>Coordonnées Architecturales</h2>
             
             <table class="ledger-table">
                 <tbody>
                     <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.01</td>
+                        <td class="ledger-cell ledger-id">SECT.01</td>
                         <td class="ledger-cell">
                             <div class="ledger-name">
-                                <a href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer">Coffre Cipher-CLI</a>
-                                <span class="status-tag open-source">Open Source</span>
+                                <a href="systems.html">Systèmes & Primitives d'Ingénierie</a>
                             </div>
                             <div class="ledger-desc">
-                                Utilitaire de chiffrement en ligne de commande en Go. Utilise la dérivation de clé en mémoire stricte Argon2id ($64\,\text{Mo}$) avec AES-256-GCM authentifié, conçu pour éliminer les fuites par canaux auxiliaires.
-                            </div>
-                            <div class="ledger-tech">
-                                <span>Go</span>
-                                <span>AES-256-GCM</span>
-                                <span>Argon2id</span>
-                                <span>Temps-Constant</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">256-bit</span> AES<br>
-                            <span style="color:var(--silver-faint);">Post-Quantique</span>
-                        </td>
-                    </tr>
-
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.02</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="https://github.com/iTheoKL/ThreatLens.git" target="_blank" rel="noopener noreferrer">ThreatLens</a>
-                                <span class="status-tag open-source">Open Source</span>
-                            </div>
-                            <div class="ledger-desc">
-                                Extension de sécurité pour navigateur en pur JavaScript. Intercepte les vecteurs de phishing sur le web et dans les webmails, classe les risques selon trois verdicts (Sûr, Suspect, Malveillant) et détaille la raison causale de chaque alerte.
-                            </div>
-                            <div class="ledger-tech">
-                                <span>JavaScript</span>
-                                <span>Extension Navigateur</span>
-                                <span>Anti-Phishing</span>
-                                <span>Analyse Causale</span>
-                                <span>Sécurité Webmail</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">Verdict + Cause</span><br>
-                            <span style="color:var(--silver-faint);">Classificateur Tri-État</span>
-                        </td>
-                    </tr>
-
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.03</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="papers.html#medbridge-post-mortem">Moteur MedBridge</a>
-                                <span class="status-tag closed-source">Closed Source</span>
-                            </div>
-                            <div class="ledger-desc">
-                                Plateforme unifiée de détection de conflits médicamenteux et de graphes cliniques. Traverses de graphes dynamiques, préchargement de modèles et synchronisation de session sécurisée.
-                            </div>
-                            <div class="ledger-tech">
-                                <span>Python</span>
-                                <span>FastAPI</span>
-                                <span>Théorie des Graphes</span>
-                                <span>EasyOCR</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">&lt; 120 ms</span><br>
-                            <span style="color:var(--silver-faint);">Cœur Déterministe</span>
-                        </td>
-                    </tr>
-
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.04</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="systems.html#aether-l3">Noyau d'Appariement Aether-L3</a>
-                                <span class="status-tag closed-source">Closed Source</span>
-                            </div>
-                            <div class="ledger-desc">
-                                Moteur de carnet d'ordres sans allocation dynamique en C++23. Utilise les instructions vectorielles AVX-512 pour balayer les niveaux de prix en moins de 14.2 nanosecondes.
+                                Coffres cryptographiques en Go à temps constant, extensions de sécurité en pur JavaScript et moteurs d'appariement d'ordres sans allocation en C++23 AVX-512.
                             </div>
                             <div class="ledger-tech">
                                 <span>C++23</span>
                                 <span>AVX-512</span>
-                                <span>Lock-Free SPSC</span>
-                                <span>Aligné Cache</span>
+                                <span>Go</span>
+                                <span>Argon2id</span>
+                                <span>JavaScript</span>
                             </div>
                         </td>
                         <td class="ledger-cell ledger-spec">
-                            <span class="stat">&lt; 14.2 ns</span> / match<br>
-                            <span style="color:var(--silver-faint);">0 Octet / Alloc</span>
+                            <span class="stat">4 Systèmes</span><br>
+                            <span style="color:var(--silver-faint);"><a href="systems.html">Entrer dans les Systèmes</a></span>
                         </td>
                     </tr>
-                </tbody>
-            </table>
-        </section>
 
-        <!-- Grand Livre des Monographies -->
-        <section>
-            <h2>Monographies & Vers</h2>
-            <table class="ledger-table">
-                <tbody>
                     <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">2026.07</td>
+                        <td class="ledger-cell ledger-id">SECT.02</td>
                         <td class="ledger-cell">
-                            <div class="ledger-name"><a href="papers.html#medbridge-post-mortem">MedBridge : Une Architecture de Convergence Inévitable</a></div>
+                            <div class="ledger-name">
+                                <a href="papers.html">Monographies & Vers</a>
+                            </div>
                             <div class="ledger-desc">
-                                Sur la maîtrise de l'entropie des équipes distribuées, l'application d'invariants d'interfaces stricts et la convergence d'une plateforme médicale complexe sous des délais serrés.
+                                Traités formels sur la convergence architecturale sous contrainte de temps, les modes de rupture d'équipes distribuées et réflexions en vers sur l'ambition.
+                            </div>
+                            <div class="ledger-tech">
+                                <span>Post-Mortem</span>
+                                <span>Épistémologie</span>
+                                <span>Vers</span>
                             </div>
                         </td>
                         <td class="ledger-cell ledger-spec">
-                            <span>8 min lecture</span>
+                            <span class="stat">3 Œuvres</span><br>
+                            <span style="color:var(--silver-faint);"><a href="papers.html">Lire les Monographies</a></span>
                         </td>
                     </tr>
+
                     <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">2026.08</td>
+                        <td class="ledger-cell ledger-id">SECT.03</td>
                         <td class="ledger-cell">
-                            <div class="ledger-name"><a href="papers.html#to-fall">To Fall / Tomber (Vers sur Icare & Dédale)</a></div>
+                            <div class="ledger-name">
+                                <a href="about.html">L'Architecte</a>
+                            </div>
                             <div class="ledger-desc">
-                                Sur ce qui est risqué, sur ce qui est perdu, et sur ce qu'il en coûte de façonner une œuvre digne de ce nom.
+                                Éthos intellectuel, sympathie mécanique avec le silicium, le seuil de base quantitatif et coordonnées esthétiques hors du terminal.
+                            </div>
+                            <div class="ledger-tech">
+                                <span>Éthos</span>
+                                <span>Sympathie Silicium</span>
+                                <span>Coordonnées</span>
                             </div>
                         </td>
                         <td class="ledger-cell ledger-spec">
-                            <span style="color:var(--accent-plum-bright);">Vers</span>
-                        </td>
-                    </tr>
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">2025.11</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name"><a href="papers.html#ravenclaw-creed-intellectual-moat">Le Credo de Serdaigle : La Rigueur Intellectuelle comme Seul Rempart Durable</a></div>
-                            <div class="ledger-desc">
-                                Pourquoi la rigueur intellectuelle est le seul avantage concurrentiel impérissable, et pourquoi atteindre l'exactitude n'est que le droit d'entrer dans la pièce.
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span>5 min lecture</span>
+                            <span class="stat">Profil</span><br>
+                            <span style="color:var(--silver-faint);"><a href="about.html">Découvrir l'Éthos</a></span>
                         </td>
                     </tr>
                 </tbody>

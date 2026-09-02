@@ -66,154 +66,81 @@
             <canvas id="phase-canvas"></canvas>
         </div>
 
-        <!-- 核心系统总览 -->
-        <section>
-            <h2>核心系统与工程原语</h2>
+        <!-- 导航分流矩阵 -->
+        <section style="margin-top: 4.5rem;">
+            <h2>核心架构坐标</h2>
             
             <table class="ledger-table">
                 <tbody>
                     <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.01</td>
+                        <td class="ledger-cell ledger-id">SECT.01</td>
                         <td class="ledger-cell">
                             <div class="ledger-name">
-                                <a href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer">Cipher-CLI 加密库</a>
-                                <span class="status-tag open-source">开源</span>
+                                <a href="systems.html">系统架构与工程原语</a>
                             </div>
                             <div class="ledger-desc">
-                                基于 Go 语言的常数时间命令行加密工具。采用内存密集型 Argon2id 密钥派生算法（$64\,\text{MB}$）结合认证式 AES-256-GCM，专为消除时序侧信道泄漏而设计。
-                            </div>
-                            <div class="ledger-tech">
-                                <span>Go</span>
-                                <span>AES-256-GCM</span>
-                                <span>Argon2id</span>
-                                <span>常数时间</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">256-bit</span> AES<br>
-                            <span style="color:var(--silver-faint);">抗量子密钥派生</span>
-                        </td>
-                    </tr>
-
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.02</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="https://github.com/iTheoKL/ThreatLens.git" target="_blank" rel="noopener noreferrer">ThreatLens</a>
-                                <span class="status-tag open-source">开源</span>
-                            </div>
-                            <div class="ledger-desc">
-                                纯 JavaScript 构建的客户端安全浏览器扩展。实时拦截网页与邮箱中的网络钓鱼向量，将风险精准判定为三级结论（安全、可疑、恶意），并逐项透明呈现判定背后的因果分析与启发式依据。
-                            </div>
-                            <div class="ledger-tech">
-                                <span>JavaScript</span>
-                                <span>浏览器扩展</span>
-                                <span>反钓鱼</span>
-                                <span>因果归因</span>
-                                <span>邮箱安全</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">结论 + 原因</span><br>
-                            <span style="color:var(--silver-faint);">三态分类器</span>
-                        </td>
-                    </tr>
-
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.03</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="papers.html#medbridge-post-mortem">MedBridge 引擎</a>
-                                <span class="status-tag closed-source">闭源专有</span>
-                            </div>
-                            <div class="ledger-desc">
-                                多药联合冲突排查引擎与临床图分析统一平台。具备动态图遍历机制、模型预加载与全局同步的安全会话管理。
-                            </div>
-                            <div class="ledger-tech">
-                                <span>Python</span>
-                                <span>FastAPI</span>
-                                <span>图论算法</span>
-                                <span>EasyOCR</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">&lt; 120 ms</span><br>
-                            <span style="color:var(--silver-faint);">确定性核心</span>
-                        </td>
-                    </tr>
-
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SYS.04</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="systems.html#aether-l3">Aether-L3 撮合核心</a>
-                                <span class="status-tag closed-source">闭源专有</span>
-                            </div>
-                            <div class="ledger-desc">
-                                基于 C++23 的零内存分配限价订单簿撮合引擎。利用 AVX-512 向量广播指令在 14.2 纳秒内完成价格档位并行扫描。
+                                Go 语言常数时间加密库、纯 JavaScript 客户端反钓鱼浏览器扩展，以及 C++23 AVX-512 零内存分配限价订单簿撮合核心。
                             </div>
                             <div class="ledger-tech">
                                 <span>C++23</span>
                                 <span>AVX-512</span>
-                                <span>无锁 SPSC</span>
-                                <span>缓存对齐</span>
+                                <span>Go</span>
+                                <span>Argon2id</span>
+                                <span>JavaScript</span>
                             </div>
                         </td>
                         <td class="ledger-cell ledger-spec">
-                            <span class="stat">&lt; 14.2 ns</span> / 撮合<br>
-                            <span style="color:var(--silver-faint);">0 堆分配</span>
+                            <span class="stat">4 大系统</span><br>
+                            <span style="color:var(--silver-faint);"><a href="systems.html">进入系统架构</a></span>
+                        </td>
+                    </tr>
+
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SECT.02</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name">
+                                <a href="papers.html">专题与诗篇</a>
+                            </div>
+                            <div class="ledger-desc">
+                                论高压时限下架构必然收敛的复盘论文、分布式协作中的接口失效模式剖析，以及探讨人类抱负的哲理诗篇。
+                            </div>
+                            <div class="ledger-tech">
+                                <span>架构复盘</span>
+                                <span>工程认识论</span>
+                                <span>诗篇</span>
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span class="stat">3 篇长卷</span><br>
+                            <span style="color:var(--silver-faint);"><a href="papers.html">研读专题与诗</a></span>
+                        </td>
+                    </tr>
+
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SECT.03</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name">
+                                <a href="about.html">架构师</a>
+                            </div>
+                            <div class="ledger-desc">
+                                智力信条、对底层硬件机制的深刻共情、量化开发的基准线标准，以及终端之外的叙事与竞技坐标。
+                            </div>
+                            <div class="ledger-tech">
+                                <span>智力信条</span>
+                                <span>硬件共情</span>
+                                <span>叙事坐标</span>
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span class="stat">人物志</span><br>
+                            <span style="color:var(--silver-faint);"><a href="about.html">查看个人信条</a></span>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <!-- 专题与诗歌索引 -->
-        <section>
-            <h2>专题与诗篇</h2>
-            <table class="ledger-table">
-                <tbody>
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">2026.07</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name"><a href="papers.html#medbridge-post-mortem">MedBridge：必然收敛的系统架构</a></div>
-                            <div class="ledger-desc">
-                                论高压时限下如何战胜多人协作的系统熵增、严密确立全局接口不变量，并将复杂的临床图分析平台拉入无缝执行。
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span>8 分钟阅读</span>
-                        </td>
-                    </tr>
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">2026.08</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name"><a href="papers.html#to-fall">坠落（伊卡洛斯与代达罗斯的诗篇）</a></div>
-                            <div class="ledger-desc">
-                                论所冒之险，论所失之重，以及铸造名副其实之作所必须承受的代价。
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span style="color:var(--accent-plum-bright);">诗篇</span>
-                        </td>
-                    </tr>
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">2025.11</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name"><a href="papers.html#ravenclaw-creed-intellectual-moat">拉文克劳信条：思维深度是唯一的持久护城河</a></div>
-                            <div class="ledger-desc">
-                                为何严谨的智力标准是唯一的不可替代优势，以及为何做到“准确无误”仅仅是进入这个领域的准入门槛。
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span>5 分钟阅读</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Footer with GitHub on Right -->
+        <!-- Footer -->
         <footer class="editorial-footer">
             <div class="footer-left">
                 <span>Theo K Laurent • 新加坡、香港及全球</span>
