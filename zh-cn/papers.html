@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专题与诗篇 – Theo K Laurent</title>
+    <meta name="description" content="Theo K Laurent 的形式化研究专题、系统架构论文与哲学诗篇。">
+    
+    <link rel="icon" type="image/jpeg" href="../pfp.jpeg">
+    <link rel="stylesheet" href="../css/design-system.css">
+    <!-- OpenGraph & Social Metadata -->
+    <meta property="og:site_name" content="Theo K Laurent">
+    <meta property="og:title" content="专题与诗篇 – Theo K Laurent">
+    <meta property="og:description" content="Theo K Laurent 的形式化研究专题、系统架构论文与哲学诗篇。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../pfp.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="专题与诗篇 – Theo K Laurent">
+    <meta name="twitter:description" content="Theo K Laurent 的形式化研究专题、系统架构论文与哲学诗篇。">
+    <meta name="twitter:image" content="../pfp.jpeg">
+    <!-- KaTeX Math Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+
+    <div class="page-wrap">
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="masthead-identity">
+                <div class="masthead-brand">
+                    <img src="../pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
+                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
+                </div>
+                <span class="masthead-meta">量化系统 • 形式化验证 • 延迟确定性</span>
+            </div>
+            <nav>
+                <ul class="masthead-nav">
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="systems.html">系统架构</a></li>
+                    <li><a href="papers.html" class="active">专题与诗</a></li>
+                    <li><a href="about.html">架构师</a></li>
+                    <li><button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h1>专题与诗篇</h1>
+            <p class="lead" style="margin-top: 1rem;">
+                系统架构论文、工程认识论与关于人类抱负的哲理诗。
+            </p>
+        </section>
+
+        <!-- 专题 01: MedBridge 架构论文 -->
+        <article id="medbridge-post-mortem" style="margin-top: 4rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border-subtle);">
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-plum-bright); margin-bottom: 0.5rem;">2026.07 // 系统架构与专题</div>
+            <h2 style="margin-top: 0; font-size: 1.85rem; font-family: var(--font-editorial); text-transform: none; letter-spacing: 0; font-style: italic; border-bottom: none;">
+                MedBridge：必然收敛的系统架构
+            </h2>
+            <p class="lead" style="margin-top: 1rem;">
+                论高压时限下如何战胜多人协作的系统熵增、严密确立全局接口不变量，并将复杂的临床图分析平台拉入无缝执行。
+            </p>
+
+            <p>
+                绝大多数工程复盘都在歌颂“集体和谐”的礼貌神话。然而在现实中，任何在紧迫时限下构建的复杂软件，本质上都是一场对抗熵增的残酷战役。
+            </p>
+
+            <p>
+                六个人可以同时提交代码，但一个系统只能拥有<strong>一个清醒的大脑</strong>。若你深入审视任何一个真正在极端压力下交付的工程冲刺，你几乎绝不会看到均质分散的负载；你只会看到一根强有力的结构脊梁，所有其他外围模块都被迫沿着它收敛对齐。
+            </p>
+
+            <div class="annotation-block">
+                <div class="annotation-caption">§ 架构一致性不变量</div>
+                <p>“除非由单一核心架构师以数学般的严谨去强制执行接口边界，否则分布式代码库必然会退化为合并冲突与断裂的状态。”</p>
+            </div>
+
+            <p>
+                在 MedBridge 中，问题边界极其清晰：多药联合冲突检测、临床相互作用图谱、实时处方 OCR 识别以及症状与药物副作用的三角关联推导。这个领域关乎生命安全，容不得半点含糊。
+            </p>
+
+            <p>
+                核心策略是从第一个小时起就锚定不变量边界。在次要模块动工之前，主设计语言、全局安全屏障与核心状态架构便已牢固确立。一旦这个闭包确立，所有外部依赖就都有了一个必须严格契合的模具。
+            </p>
+
+            <p>
+                当外部组件不可避免地以参差不齐的工程纪律提交时——割裂的 OCR 解析脚本、未经校准的数据库 Schema，以及在冷启动时卡顿超时的机器学习模型——它们绝不允许破坏整体架构。解决方案冷静而果断：
+            </p>
+
+            <p>
+                首先，在执行前直接将神经网络权重预加载并固化到内存中，在评委实时评审前彻底消除了冷启动延迟；其次，基于详尽的临床药物数据集直接构建症状与副作用交互引擎，将患者主观的症状输入转化为确定性的图遍历查询；最后，系统性地重构每一个外围界面，注入会话安全守卫，并调和数据层，直至所有分散的组件如同一台精密浑然的单一机器般顺畅运转。
+            </p>
+
+            <p>
+                对外部观察者而言，MedBridge 呈现为一次完美的团队协作硕果。而对任何懂得剖析系统架构的人来说，真相要简单得多：<strong>当一位工程师以绝对的清晰度把控住状态、接口与执行的全局不变量时，成功便不再是一场偶然，而是一种必然。</strong>
+            </p>
+        </article>
+
+        <!-- 诗篇 02: 坠落 -->
+        <article id="to-fall" style="margin-top: 4rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border-subtle);">
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-plum-bright); margin-bottom: 0.5rem;">2026.08 // 诗篇与哲学沉思</div>
+            <h2 style="margin-top: 0; font-size: 1.85rem; font-family: var(--font-editorial); text-transform: none; letter-spacing: 0; font-style: italic; border-bottom: none;">
+                坠落（To Fall）
+            </h2>
+            <p class="lead" style="margin-top: 1rem; color: var(--silver-dim);">
+                论伊卡洛斯，论代达罗斯，以及铸造名副其实之作所必须承受的代价。
+            </p>
+
+            <div class="verse-block">
+                <div class="verse-stanza">
+                    <p>何为坠落？</p>
+                    <p>不过是对高空的记忆，</p>
+                    <p>穿透日益稀薄的空气，</p>
+                    <p>落入大海无声的静谧。</p>
+                </div>
+                <div class="verse-stanza">
+                    <p>他们高谈蜡翼与狂妄，</p>
+                    <p>仿佛烈日是一场伏击，</p>
+                    <p>仿佛少年遗忘了凡人之手</p>
+                    <p>束缚羽翼的自然规律。</p>
+                </div>
+                <div class="verse-stanza">
+                    <p>他并未遗忘。</p>
+                    <p>他只是主动选择了那道弧线——</p>
+                    <p>在那灼热超越耐受之处，</p>
+                    <p>在设计被推至安全边际之外，</p>
+                    <p>去经受彻底的检验。</p>
+                </div>
+                <div class="verse-stanza">
+                    <p>创造，即是接受大海的深邃。</p>
+                    <p>工程，即是在知晓代价后依然振翅攀登。</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- 专题 03: 拉文克劳信条 -->
+        <article id="ravenclaw-creed-intellectual-moat" style="margin-top: 4rem; padding-bottom: 3.5rem;">
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-plum-bright); margin-bottom: 0.5rem;">2025.11 // 哲学与工程准则</div>
+            <h2 style="margin-top: 0; font-size: 1.85rem; font-family: var(--font-editorial); text-transform: none; letter-spacing: 0; font-style: italic; border-bottom: none;">
+                拉文克劳信条：思维深度是唯一的持久护城河
+            </h2>
+            <p class="lead" style="margin-top: 1rem;">
+                在一个痴迷于短期权宜之计和蛮力算力的行业中，真正的竞争壁垒不在于浮于表面的速度，而在于绝不妥协的思想清晰度，以及从不可化约的第一性原理出发进行推导的定力。
+            </p>
+            <p>
+                在平庸的工程文化中，做到“准确无误”被当作值得庆祝的成就。而在精英量化环境中，正确性甚至算不上成就——它仅仅是进入这个领域的准入门槛。
+            </p>
+            <p>
+                我们构建系统，不是为了取悦那些用依赖包数量来衡量代码的人。我们只为数学的无声审视、硅晶芯片的冷酷约束，以及对极致精度的沉静追求而建造。
+            </p>
+        </article>
+
+        <!-- Footer with GitHub on Right -->
+        <footer class="editorial-footer">
+            <div class="footer-left">
+                <span>Theo K Laurent • 新加坡、香港及全球</span>
+                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-locales">
+                    <span style="color:var(--silver-faint);">语言 :</span>
+                    <a href="../papers.html">EN</a> • 
+                    <a href="../fr/papers.html">FR</a> • 
+                    <a href="papers.html" class="active">中文</a>
+                </div>
+                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
+            </div>
+        </footer>
+    </div>
+    <script defer src="../js/terminal.js"></script>
+</body>
+</html>

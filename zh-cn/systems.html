@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统与架构 – Theo K Laurent</title>
+    <meta name="description" content="Theo K Laurent 的系统架构蓝图、复杂度分析与确定性系统。">
+    
+    <link rel="icon" type="image/jpeg" href="../pfp.jpeg">
+    <link rel="stylesheet" href="../css/design-system.css">
+    <!-- OpenGraph & Social Metadata -->
+    <meta property="og:site_name" content="Theo K Laurent">
+    <meta property="og:title" content="系统与架构 – Theo K Laurent">
+    <meta property="og:description" content="Theo K Laurent 的系统架构蓝图、复杂度分析与确定性系统。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../pfp.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="系统与架构 – Theo K Laurent">
+    <meta name="twitter:description" content="Theo K Laurent 的系统架构蓝图、复杂度分析与确定性系统。">
+    <meta name="twitter:image" content="../pfp.jpeg">
+    <!-- KaTeX Math Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+
+    <div class="page-wrap">
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="masthead-identity">
+                <div class="masthead-brand">
+                    <img src="../pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
+                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
+                </div>
+                <span class="masthead-meta">量化系统 • 形式化验证 • 延迟确定性</span>
+            </div>
+            <nav>
+                <ul class="masthead-nav">
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="systems.html" class="active">系统架构</a></li>
+                    <li><a href="papers.html">专题与诗</a></li>
+                    <li><a href="about.html">架构师</a></li>
+                    <li><button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h1>工程原语</h1>
+            <p class="lead" style="margin-top: 1rem;">
+                常数时间加密原语、威胁感知浏览器扩展、零内存分配引擎与强韧图论系统的架构索引。
+            </p>
+        </section>
+
+        <!-- 系统 01: Cipher-CLI -->
+        <section id="cipher-cli" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.01 // Cipher-CLI 加密库</span>
+                <span class="status-tag open-source">开源</span>
+            </h2>
+            <p>
+                基于 Go 语言构建的高安全保证命令行加密工具。采用内存密集型 Argon2id 算法动态派生密钥（$t=3, m=64\,\text{MB}, p=4$），并使用 AES-256-GCM 进行认证加密，旨在确保严格的常数时间执行并消除时序侧信道泄漏。
+            </p>
+            <table class="ledger-table" style="margin: 1.5rem 0;">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">密码算法</td>
+                        <td class="ledger-cell">认证式对称加密</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">AES-256-GCM</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">KDF</td>
+                        <td class="ledger-cell">内存硬派生参数</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">64 MB Argon2id</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">源码仓库</td>
+                        <td class="ledger-cell">仓库访问</td>
+                        <td class="ledger-cell ledger-spec"><a href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer">github.com/iTheoKL/cipher-cli</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 系统 02: ThreatLens -->
+        <section id="threatlens" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.02 // ThreatLens 浏览器扩展</span>
+                <span class="status-tag open-source">开源</span>
+            </h2>
+            <p>
+                基于纯 JavaScript 编写的客户端安全浏览器扩展，专为实时拦截网页浏览及网页邮箱（Webmail）中的网络钓鱼攻击而设计。ThreatLens 不仅输出模糊的风险分值，更将风险划分为明确的三态判定（安全、可疑、恶意），并逐项透明展示触发判级背后的具体结构特征与启发式因果分析。
+            </p>
+            <table class="ledger-table" style="margin: 1.5rem 0;">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">判级机制</td>
+                        <td class="ledger-cell">三态明确判级与因果溯源（安全 / 可疑 / 恶意）</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">结论 + 原因</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">防护场景</td>
+                        <td class="ledger-cell">网页实时冲浪与邮箱内钓鱼链接拦截</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">浏览器与邮箱</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">技术原语</td>
+                        <td class="ledger-cell">纯客户端实现栈</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">纯 JavaScript</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">源码仓库</td>
+                        <td class="ledger-cell">仓库访问</td>
+                        <td class="ledger-cell ledger-spec"><a href="https://github.com/iTheoKL/ThreatLens.git" target="_blank" rel="noopener noreferrer">github.com/iTheoKL/ThreatLens</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 系统 03: MedBridge -->
+        <section id="medbridge" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.03 // MedBridge 引擎</span>
+                <span class="status-tag closed-source">闭源专有</span>
+            </h2>
+            <p>
+                多药联合冲突排查引擎与临床图分析统一平台。具备动态图遍历机制、EasyOCR 模型预加载与全局同步的安全会话管理。
+            </p>
+            <p>
+                架构论文：<a href="papers.html#medbridge-post-mortem">阅读 MedBridge：必然收敛的系统架构</a>
+            </p>
+        </section>
+
+        <!-- 系统 04: Aether-L3 -->
+        <section id="aether-l3" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.04 // Aether-L3 撮合核心</span>
+                <span class="status-tag closed-source">闭源专有</span>
+            </h2>
+            <p>
+                基于 C++23 的零内存分配限价订单簿撮合引擎。将深度数据组织在 64 字节对齐的连续 SIMD 数组中，利用 AVX-512 向量广播指令在 14.2 纳秒内完成价格扫描。
+            </p>
+
+            <table class="ledger-table" style="margin: 1.5rem 0;">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">延迟边界</td>
+                        <td class="ledger-cell">确定性最坏情况执行时间</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">&le; 14.2 ns</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">内存模型</td>
+                        <td class="ledger-cell">撮合热路径上的堆分配</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">0 字节</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">向量指令</td>
+                        <td class="ledger-cell">SIMD 硬件加速</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">AVX-512 / VBROADCAST</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Footer with GitHub on Right -->
+        <footer class="editorial-footer">
+            <div class="footer-left">
+                <span>Theo K Laurent • 新加坡、香港及全球</span>
+                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-locales">
+                    <span style="color:var(--silver-faint);">语言 :</span>
+                    <a href="../systems.html">EN</a> • 
+                    <a href="../fr/systems.html">FR</a> • 
+                    <a href="systems.html" class="active">中文</a>
+                </div>
+                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
+            </div>
+        </footer>
+    </div>
+    <script defer src="../js/terminal.js"></script>
+</body>
+</html>

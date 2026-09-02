@@ -1,127 +1,237 @@
-<!doctype html>
-<html lang="zh-cn">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Theo K Laurent - 系统与量化工程</title>
-        <meta name="description" content="Theo K Laurent 的个人作品集与博客 - 专注于软件架构、低延迟系统与量化开发。" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="icon" type="image/png" href="../img/icon.png" />
-        <link rel="stylesheet" href="../style.css" />
-        <link rel="stylesheet" href="../lang-switch.css" />
-    </head>
-    <body>
-        <nav class="nav">
-            <a href="index.html" class="nav-logo">
-                <span class="nav-logo-mark"><img src="../img/icon.png" alt="" class="eagle-mark" width="18" height="18">TKL</span>
-                <span class="nav-tagline">智慧无涯</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">首页</a></li>
-                <li><a href="about.html">关于</a></li>
-                <li><a href="projects.html">项目</a></li>
-                <li><a href="blog.html">博客</a></li>
-                <li><a href="contact.html">寄猫头鹰信</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theo K Laurent – 量化系统与形式化架构</title>
+    <meta name="description" content="Theo K Laurent 的个人研究主页。低延迟系统架构、底层硬件契合、确定性执行与严谨数学推导。">
+    
+    <link rel="icon" type="image/jpeg" href="../pfp.jpeg">
+    <link rel="stylesheet" href="../css/design-system.css">
+    <!-- OpenGraph & Social Metadata -->
+    <meta property="og:site_name" content="Theo K Laurent">
+    <meta property="og:title" content="Theo K Laurent – 量化系统与形式化架构">
+    <meta property="og:description" content="Theo K Laurent 的个人研究主页。低延迟系统架构、底层硬件契合、确定性执行与严谨数学推导。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../pfp.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Theo K Laurent – 量化系统与形式化架构">
+    <meta name="twitter:description" content="Theo K Laurent 的个人研究主页。低延迟系统架构、底层硬件契合、确定性执行与严谨数学推导。">
+    <meta name="twitter:image" content="../pfp.jpeg">
+    <!-- KaTeX Math Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
 
-        <main>
-            <section class="hero">
-                <div class="hero-inner">
-                    <p class="hero-eyebrow">
-                        现代魔法之学者
-                    </p>
-                    <h1 class="hero-title">Theo K Laurent</h1>
-                    <p class="hero-motto">智慧无涯</p>
-                    <blockquote class="hero-quote">
-                        Là où le temps s'efface,<br />les songes deviennent
-                        réels.
-                    </blockquote>
-                    <div class="hero-cta">
-                        <a href="projects.html" class="btn-primary"
-                            >查看作品</a
-                        >
-                        <a href="about.html" class="btn-ghost">认识这位学者</a>
-                    </div>
+    <div class="page-wrap">
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="masthead-identity">
+                <div class="masthead-brand">
+                    <img src="../pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
+                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
                 </div>
-                <div class="hero-deco" aria-hidden="true">
-                    <div class="deco-line"></div>
-                    <div class="deco-circle">
-                        <svg class="deco-circle-text" viewBox="0 0 170 170" width="170" height="170" aria-hidden="true">
-                            <defs>
-                                <path id="mottoArc" d="M25,85 a60,60 0 1,1 120,0" fill="none" />
-                            </defs>
-                            <text textLength="180" lengthAdjust="spacingAndGlyphs">
-                                <textPath href="#mottoArc" startOffset="50%" text-anchor="middle">智慧无涯 WIT BEYOND MEASURE</textPath>
-                            </text>
-                        </svg>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-featured">
-                <div class="section-label"><span>代表作品</span></div>
-                <div class="projects-grid">
-                    <a href="projects.html" class="project-card">
-                        <div class="project-num">03</div>
-                        <div class="project-info">
-                            <h3>Cipher CLI</h3>
-                            <p>
-                                一款用 Go 编写的命令行工具,通过 AES-256-GCM
-                                对本地文件进行加密与解密,密钥由 Argon2id
-                                从密码派生而来。
-                            </p>
-                            <span class="tag">Go</span>
-                        </div>
-                        <div class="project-arrow">→</div>
-                    </a>
-                </div>
-            </section>
-
-            <section class="section-blog-preview">
-                <div class="section-label"><span>书房手记</span></div>
-                <div class="posts-list">
-                    <a href="blogs/tofall.html" class="post-row">
-                        <span class="post-date">2026年8月11日</span>
-                        <span class="post-title"
-                            >坠落 - 一首诗</span
-                        >
-                        <span class="post-arrow">→</span>
-                    </a>
-                </div>
-                <a href="blog.html" class="view-all">完整档案 →</a>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <span>© 2026 Theo K Laurent</span>
-            <span class="footer-motto">凡有才智与学识者,终将寻得自己的道路。</span>
-            <div class="footer-links">
-                <a href="https://github.com/itheokl" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="mailto:theoklaurent@icloud.com">邮箱</a>
+                <span class="masthead-meta">量化系统 • 形式化验证 • 延迟确定性</span>
             </div>
-        </footer>
+            <nav>
+                <ul class="masthead-nav">
+                    <li><a href="index.html" class="active">主页</a></li>
+                    <li><a href="systems.html">系统架构</a></li>
+                    <li><a href="papers.html">专题与诗</a></li>
+                    <li><a href="about.html">架构师</a></li>
+                    <li><button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="lang-switch" data-current="zh-cn">
-            <button class="lang-switch-toggle" type="button" aria-label="Change language" aria-expanded="false">
-                <span>中文</span>
-            </button>
-            <div class="lang-switch-menu" role="menu">
-                <a href="../index.html" class="lang-switch-option" data-lang="en" role="menuitem">English</a>
-                <a href="../fr/index.html" class="lang-switch-option" data-lang="fr" role="menuitem">Français</a>
-                <a href="../zh-cn/index.html" class="lang-switch-option current" data-lang="zh-cn" role="menuitem">中文</a>
+        <!-- 核心论述与建筑引言 -->
+        <section>
+            <p class="lead">
+                我专注于探究硅晶芯片的机械极限与计算执行的数学结构。多数软件为中位数场景妥协；而我只针对确定性的最坏边界进行架构。
+            </p>
+            <div class="annotation-block">
+                <div class="annotation-caption">§ 架构准则</div>
+                <p>“软件，正如我所领悟的，是一种建筑艺术，而建筑绝不该是粗陋的。”</p>
             </div>
+        </section>
+
+        <!-- 相空间几何画布 -->
+        <div class="canvas-frame">
+            <div class="canvas-header">
+                <span>随机微观结构 // 合成布朗漂移与订单密度</span>
+                <span>采样步长: Δt = 50ms • 点击注入流动性冲击</span>
+            </div>
+            <canvas id="phase-canvas"></canvas>
         </div>
 
-        <script src="../lang-switch.js"></script>
-        <script src="../nav.js"></script>
-    </body>
+        <!-- 核心系统总览 -->
+        <section>
+            <h2>核心系统与工程原语</h2>
+            
+            <table class="ledger-table">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SYS.01</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name">
+                                <a href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer">Cipher-CLI 加密库</a>
+                                <span class="status-tag open-source">开源</span>
+                            </div>
+                            <div class="ledger-desc">
+                                基于 Go 语言的常数时间命令行加密工具。采用内存密集型 Argon2id 密钥派生算法（$64\,\text{MB}$）结合认证式 AES-256-GCM，专为消除时序侧信道泄漏而设计。
+                            </div>
+                            <div class="ledger-tech">
+                                <span>Go</span>
+                                <span>AES-256-GCM</span>
+                                <span>Argon2id</span>
+                                <span>常数时间</span>
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span class="stat">256-bit</span> AES<br>
+                            <span style="color:var(--silver-faint);">抗量子密钥派生</span>
+                        </td>
+                    </tr>
+
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SYS.02</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name">
+                                <a href="https://github.com/iTheoKL/ThreatLens.git" target="_blank" rel="noopener noreferrer">ThreatLens</a>
+                                <span class="status-tag open-source">开源</span>
+                            </div>
+                            <div class="ledger-desc">
+                                纯 JavaScript 构建的客户端安全浏览器扩展。实时拦截网页与邮箱中的网络钓鱼向量，将风险精准判定为三级结论（安全、可疑、恶意），并逐项透明呈现判定背后的因果分析与启发式依据。
+                            </div>
+                            <div class="ledger-tech">
+                                <span>JavaScript</span>
+                                <span>浏览器扩展</span>
+                                <span>反钓鱼</span>
+                                <span>因果归因</span>
+                                <span>邮箱安全</span>
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span class="stat">结论 + 原因</span><br>
+                            <span style="color:var(--silver-faint);">三态分类器</span>
+                        </td>
+                    </tr>
+
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SYS.03</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name">
+                                <a href="papers.html#medbridge-post-mortem">MedBridge 引擎</a>
+                                <span class="status-tag closed-source">闭源专有</span>
+                            </div>
+                            <div class="ledger-desc">
+                                多药联合冲突排查引擎与临床图分析统一平台。具备动态图遍历机制、模型预加载与全局同步的安全会话管理。
+                            </div>
+                            <div class="ledger-tech">
+                                <span>Python</span>
+                                <span>FastAPI</span>
+                                <span>图论算法</span>
+                                <span>EasyOCR</span>
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span class="stat">&lt; 120 ms</span><br>
+                            <span style="color:var(--silver-faint);">确定性核心</span>
+                        </td>
+                    </tr>
+
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SYS.04</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name">
+                                <a href="systems.html#aether-l3">Aether-L3 撮合核心</a>
+                                <span class="status-tag closed-source">闭源专有</span>
+                            </div>
+                            <div class="ledger-desc">
+                                基于 C++23 的零内存分配限价订单簿撮合引擎。利用 AVX-512 向量广播指令在 14.2 纳秒内完成价格档位并行扫描。
+                            </div>
+                            <div class="ledger-tech">
+                                <span>C++23</span>
+                                <span>AVX-512</span>
+                                <span>无锁 SPSC</span>
+                                <span>缓存对齐</span>
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span class="stat">&lt; 14.2 ns</span> / 撮合<br>
+                            <span style="color:var(--silver-faint);">0 堆分配</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 专题与诗歌索引 -->
+        <section>
+            <h2>专题与诗篇</h2>
+            <table class="ledger-table">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">2026.07</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name"><a href="papers.html#medbridge-post-mortem">MedBridge：必然收敛的系统架构</a></div>
+                            <div class="ledger-desc">
+                                论高压时限下如何战胜多人协作的系统熵增、严密确立全局接口不变量，并将复杂的临床图分析平台拉入无缝执行。
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span>8 分钟阅读</span>
+                        </td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">2026.08</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name"><a href="papers.html#to-fall">坠落（伊卡洛斯与代达罗斯的诗篇）</a></div>
+                            <div class="ledger-desc">
+                                论所冒之险，论所失之重，以及铸造名副其实之作所必须承受的代价。
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span style="color:var(--accent-plum-bright);">诗篇</span>
+                        </td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">2025.11</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name"><a href="papers.html#ravenclaw-creed-intellectual-moat">拉文克劳信条：思维深度是唯一的持久护城河</a></div>
+                            <div class="ledger-desc">
+                                为何严谨的智力标准是唯一的不可替代优势，以及为何做到“准确无误”仅仅是进入这个领域的准入门槛。
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span>5 分钟阅读</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Footer with GitHub on Right -->
+        <footer class="editorial-footer">
+            <div class="footer-left">
+                <span>Theo K Laurent • 新加坡、香港及全球</span>
+                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-locales">
+                    <span style="color:var(--silver-faint);">语言 :</span>
+                    <a href="../index.html">EN</a> • 
+                    <a href="../fr/index.html">FR</a> • 
+                    <a href="index.html" class="active">中文</a>
+                </div>
+                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/canvas-instrument.js"></script>
+    <script defer src="../js/terminal.js"></script>
+</body>
 </html>

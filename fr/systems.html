@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systèmes & Architecture – Theo K Laurent</title>
+    <meta name="description" content="Spécifications techniques, profils de complexité et systèmes déterministes conçus par Theo K Laurent.">
+    
+    <link rel="icon" type="image/jpeg" href="../pfp.jpeg">
+    <link rel="stylesheet" href="../css/design-system.css">
+    <!-- OpenGraph & Social Metadata -->
+    <meta property="og:site_name" content="Theo K Laurent">
+    <meta property="og:title" content="Systèmes & Architecture – Theo K Laurent">
+    <meta property="og:description" content="Spécifications techniques, profils de complexité et systèmes déterministes conçus par Theo K Laurent.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../pfp.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Systèmes & Architecture – Theo K Laurent">
+    <meta name="twitter:description" content="Spécifications techniques, profils de complexité et systèmes déterministes conçus par Theo K Laurent.">
+    <meta name="twitter:image" content="../pfp.jpeg">
+    <!-- KaTeX Math Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+
+    <div class="page-wrap">
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="masthead-identity">
+                <div class="masthead-brand">
+                    <img src="../pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
+                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
+                </div>
+                <span class="masthead-meta">Systèmes Quantitatifs • Vérification Formelle • Déterminisme</span>
+            </div>
+            <nav>
+                <ul class="masthead-nav">
+                    <li><a href="index.html">Index</a></li>
+                    <li><a href="systems.html" class="active">Systèmes</a></li>
+                    <li><a href="papers.html">Monographies & Vers</a></li>
+                    <li><a href="about.html">L\'Architecte</a></li>
+                    <li><button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h1>Primitives d'Ingénierie</h1>
+            <p class="lead" style="margin-top: 1rem;">
+                Un registre de primitives cryptographiques à temps constant, d'extensions d'intelligence contre les menaces, de moteurs sans allocation et de systèmes de graphes résilients.
+            </p>
+        </section>
+
+        <!-- Système 01: Cipher-CLI -->
+        <section id="cipher-cli" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.01 // Coffre Cipher-CLI</span>
+                <span class="status-tag open-source">Open Source</span>
+            </h2>
+            <p>
+                Outil de stockage cryptographique de haute assurance en Go. Dérivation de clé en mémoire stricte Argon2id ($t=3, m=64\,\text{Mo}, p=4$), authentifié avec AES-256-GCM. Conçu pour garantir une exécution en temps constant et éliminer les fuites par canaux auxiliaires.
+            </p>
+            <table class="ledger-table" style="margin: 1.5rem 0;">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">CHIFFREMENT</td>
+                        <td class="ledger-cell">Chiffrement symétrique authentifié</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">AES-256-GCM</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">KDF</td>
+                        <td class="ledger-cell">Paramètre de mémoire stricte</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">64 Mo Argon2id</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SOURCE</td>
+                        <td class="ledger-cell">Accès au dépôt</td>
+                        <td class="ledger-cell ledger-spec"><a href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer">github.com/iTheoKL/cipher-cli</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Système 02: ThreatLens -->
+        <section id="threatlens" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.02 // Extension ThreatLens</span>
+                <span class="status-tag open-source">Open Source</span>
+            </h2>
+            <p>
+                Extension de navigateur de sécurité côté client écrite en pur JavaScript, conçue pour intercepter en temps réel les attaques de phishing sur le web et dans les clients webmail. Au lieu d'un score opaque, ThreatLens classe les cibles selon trois verdicts nets (Sûr, Suspect, Malveillant) et expose les raisons structurelles et heuristiques précises derrière chaque alerte.
+            </p>
+            <table class="ledger-table" style="margin: 1.5rem 0;">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">VERDICT</td>
+                        <td class="ledger-cell">Classification tri-état & explication causale (Sûr / Suspect / Malveillant)</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">Verdict + Cause</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">PÉRIMÈTRE</td>
+                        <td class="ledger-cell">Navigation Web & Interception dans les Webmails</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">Web & Messagerie</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">STACK</td>
+                        <td class="ledger-cell">Primitives d'implémentation</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">Pur JavaScript</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SOURCE</td>
+                        <td class="ledger-cell">Accès au dépôt</td>
+                        <td class="ledger-cell ledger-spec"><a href="https://github.com/iTheoKL/ThreatLens.git" target="_blank" rel="noopener noreferrer">github.com/iTheoKL/ThreatLens</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Système 03: MedBridge -->
+        <section id="medbridge" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.03 // Moteur MedBridge</span>
+                <span class="status-tag closed-source">Closed Source</span>
+            </h2>
+            <p>
+                Moteur de détection de conflits polymédicamenteux et plateforme de graphes cliniques unifiée. Intègre une analyse de graphes dynamique, le préchargement EasyOCR et une sécurité de session synchronisée.
+            </p>
+            <p>
+                Essai d'Architecture : <a href="papers.html#medbridge-post-mortem">Lire MedBridge : Une Architecture de Convergence Inévitable</a>
+            </p>
+        </section>
+
+        <!-- Système 04: Aether-L3 -->
+        <section id="aether-l3" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.04 // Noyau d'Appariement Aether-L3</span>
+                <span class="status-tag closed-source">Closed Source</span>
+            </h2>
+            <p>
+                Moteur de carnet d'ordres sans allocation dynamique en C++23. Structure la profondeur en tableaux contigus alignés sur 64 octets, balayés par vectorisation AVX-512 en moins de 14.2 nanosecondes.
+            </p>
+
+            <table class="ledger-table" style="margin: 1.5rem 0;">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">BORNE</td>
+                        <td class="ledger-cell">Exécution déterministe pire cas</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">&le; 14.2 ns</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">MÉMOIRE</td>
+                        <td class="ledger-cell">Allocation sur le chemin critique</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">0 Octet</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">VECTEURS</td>
+                        <td class="ledger-cell">Jeu d'instructions vectorisées</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">AVX-512 / VBROADCAST</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Footer with GitHub on Right -->
+        <footer class="editorial-footer">
+            <div class="footer-left">
+                <span>Theo K Laurent • Singapour, Hong Kong et International</span>
+                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-locales">
+                    <span style="color:var(--silver-faint);">LANGUE :</span>
+                    <a href="../systems.html">EN</a> • 
+                    <a href="systems.html" class="active">FR</a> • 
+                    <a href="../zh-cn/systems.html">中文</a>
+                </div>
+                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
+            </div>
+        </footer>
+    </div>
+    <script defer src="../js/terminal.js"></script>
+</body>
+</html>

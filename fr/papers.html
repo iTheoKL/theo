@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monographies & Vers – Theo K Laurent</title>
+    <meta name="description" content="Monographies formelles de recherche, essais d'architecture et vers par Theo K Laurent.">
+    
+    <link rel="icon" type="image/jpeg" href="../pfp.jpeg">
+    <link rel="stylesheet" href="../css/design-system.css">
+    <!-- OpenGraph & Social Metadata -->
+    <meta property="og:site_name" content="Theo K Laurent">
+    <meta property="og:title" content="Monographies & Vers – Theo K Laurent">
+    <meta property="og:description" content="Monographies formelles de recherche, essais d'architecture et vers par Theo K Laurent.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../pfp.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Monographies & Vers – Theo K Laurent">
+    <meta name="twitter:description" content="Monographies formelles de recherche, essais d'architecture et vers par Theo K Laurent.">
+    <meta name="twitter:image" content="../pfp.jpeg">
+    <!-- KaTeX Math Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+
+    <div class="page-wrap">
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="masthead-identity">
+                <div class="masthead-brand">
+                    <img src="../pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
+                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
+                </div>
+                <span class="masthead-meta">Systèmes Quantitatifs • Vérification Formelle • Déterminisme</span>
+            </div>
+            <nav>
+                <ul class="masthead-nav">
+                    <li><a href="index.html">Index</a></li>
+                    <li><a href="systems.html">Systèmes</a></li>
+                    <li><a href="papers.html" class="active">Monographies & Vers</a></li>
+                    <li><a href="about.html">L\'Architecte</a></li>
+                    <li><button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h1>Monographies & Vers</h1>
+            <p class="lead" style="margin-top: 1rem;">
+                Essais architecturaux, épistémologie de l'artisanat et réflexions en vers sur l'ambition humaine.
+            </p>
+        </section>
+
+        <!-- Monographie 01: MedBridge -->
+        <article id="medbridge-post-mortem" style="margin-top: 4rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border-subtle);">
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-plum-bright); margin-bottom: 0.5rem;">2026.07 // ARCHITECTURE DE SYSTÈMES & ESSAI</div>
+            <h2 style="margin-top: 0; font-size: 1.85rem; font-family: var(--font-editorial); text-transform: none; letter-spacing: 0; font-style: italic; border-bottom: none;">
+                MedBridge : Une Architecture de Convergence Inévitable
+            </h2>
+            <p class="lead" style="margin-top: 1rem;">
+                Sur la maîtrise de l'entropie des équipes distribuées, l'application d'invariants d'interfaces stricts et la convergence d'une plateforme médicale complexe sous des délais serrés.
+            </p>
+
+            <p>
+                La plupart des rétrospectives célèbrent le mythe poli de l'harmonie collective. En réalité, tout logiciel complexe construit contre la montre est un exercice de combat contre l'entropie.
+            </p>
+
+            <p>
+                Six personnes peuvent écrire du code simultanément, mais un système ne peut avoir qu'<strong>un seul esprit cohérent</strong>. Si l'on regarde sous la surface d'un projet qui réussit véritablement sous pression, on trouve rarement une dispersion égale des efforts ; on trouve une colonne vertébrale structurelle unique autour de laquelle chaque composant est forcé de s'aligner.
+            </p>
+
+            <div class="annotation-block">
+                <div class="annotation-caption">§ L'Invariant de Cohérence Architecturale</div>
+                <p>« Une base de code distribuée se dissout inévitablement dans les conflits et la rupture d'état, à moins qu'un architecte central unique n'impose les frontières d'interfaces avec une rigueur mathématique absolue. »</p>
+            </div>
+
+            <p>
+                Avec MedBridge, le périmètre était clair : détection de conflits polymédicamenteux, graphes d'interactions cliniques, saisie d'ordonnances par OCR et triangulation symptômes-effets secondaires. Le domaine portait des enjeux réels, et les logiciels de santé n'ont aucune tolérance pour l'ambiguïté.
+            </p>
+
+            <p>
+                La stratégie a consisté à ancrer le périmètre invariant dès la première heure. Avant que les modules secondaires ne soient ébauchés, le système de conception maître, les barrières de sécurité et l'architecture d'état centrale étaient solidement fixés. Une fois ce périmètre établi, chaque dépendance externe avait une forme précise à laquelle elle devait impérativement se conformer.
+            </p>
+
+            <p>
+                Lorsque les composants arrivaient inévitablement dans des états de rigueur variables – analyseurs OCR isolés, schémas de base de données non calibrés et modèles de machine learning ralentis lors des démarrages à froid –, ils ne pouvaient fracturer l'architecture globale. Les solutions ont été nettes et décisives :
+            </p>
+
+            <p>
+                D'abord, précharger les poids des réseaux neuronaux directement en mémoire avant l'exécution pour éliminer toute latence lors des évaluations en direct. Ensuite, concevoir le moteur d'interactions directement sur une pharmacopée clinique exhaustive, transformant des déclarations subjectives de patients en requêtes déterministes sur un graphe. Enfin, refactoriser systématiquement chaque interface périphérique, injecter des gardes d'authentification de session et harmoniser les couches de données jusqu'à ce que l'ensemble du système se meuve avec la fluidité d'une seule machine unifiée.
+            </p>
+
+            <p>
+                Pour l'observateur extérieur, MedBridge est apparu comme un accomplissement d'équipe sans accroc. Pour quiconque sait lire une architecture, la réalité est bien plus simple : <strong>lorsqu'un ingénieur maintient les invariants globaux d'état, d'interface et d'exécution avec une clarté absolue, le succès cesse d'être un hasard et devient une certitude inévitable.</strong>
+            </p>
+        </article>
+
+        <!-- Vers 02: To Fall -->
+        <article id="to-fall" style="margin-top: 4rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--border-subtle);">
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-plum-bright); margin-bottom: 0.5rem;">2026.08 // VERS & RÉFLEXION CRITIQUE</div>
+            <h2 style="margin-top: 0; font-size: 1.85rem; font-family: var(--font-editorial); text-transform: none; letter-spacing: 0; font-style: italic; border-bottom: none;">
+                To Fall (Tomber)
+            </h2>
+            <p class="lead" style="margin-top: 1rem; color: var(--silver-dim);">
+                Sur Icare, sur Dédale, et sur ce qu'il en coûte de façonner une œuvre digne de ce nom.
+            </p>
+
+            <div class="verse-block">
+                <div class="verse-stanza">
+                    <p>Qu'est-ce qu'une chute,</p>
+                    <p>Sinon la mémoire d'une hauteur</p>
+                    <p>Emportée à travers l'air qui s'amenuise</p>
+                    <p>Jusqu'au silence de la mer ?</p>
+                </div>
+                <div class="verse-stanza">
+                    <p>Ils parlent de cire et d'orgueil</p>
+                    <p>Comme si le soleil était un piège,</p>
+                    <p>Comme si l'enfant avait oublié la loi</p>
+                    <p>Des plumes liées par des mains mortelles.</p>
+                </div>
+                <div class="verse-stanza">
+                    <p>Il n'a pas oublié.</p>
+                    <p>Il a simplement choisi l'arc</p>
+                    <p>Où la chaleur dépasse l'endurance,</p>
+                    <p>Là où l'ouvrage est éprouvé</p>
+                    <p>Au-delà de la marge de sécurité.</p>
+                </div>
+                <div class="verse-stanza">
+                    <p>Bâtir, c'est accepter la mer.</p>
+                    <p>Être ingénieur, c'est entreprendre l'ascension malgré tout.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Monographie 03: Le Credo de Serdaigle -->
+        <article id="ravenclaw-creed-intellectual-moat" style="margin-top: 4rem; padding-bottom: 3.5rem;">
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-plum-bright); margin-bottom: 0.5rem;">2025.11 // PHILOSOPHIE & INGÉNIERIE</div>
+            <h2 style="margin-top: 0; font-size: 1.85rem; font-family: var(--font-editorial); text-transform: none; letter-spacing: 0; font-style: italic; border-bottom: none;">
+                Le Credo de Serdaigle : La Rigueur Intellectuelle comme Seul Rempart Durable
+            </h2>
+            <p class="lead" style="margin-top: 1rem;">
+                Dans une industrie obsédée par les raccourcis à court terme et la puissance de calcul brute, le véritable avantage concurrentiel ne réside pas dans une vitesse superficielle, mais dans la clarté intransigeante de la pensée et le courage de raisonner à partir des premiers principes irréductibles.
+            </p>
+            <p>
+                Dans les cultures d'ingénierie ordinaires, atteindre l'exactitude est fêté comme un exploit. Dans les environnements quantitatifs d'élite, l'exactitude n'est pas un exploit ; c'est simplement le droit d'entrer dans la pièce.
+            </p>
+            <p>
+                Nous ne construisons pas pour impressionner ceux qui évaluent le logiciel par le nombre de dépendances dans leur fichier lock. Nous construisons pour le jugement silencieux des mathématiques, la discipline implacable du silicium et la satisfaction sereine d'une précision absolue.
+            </p>
+        </article>
+
+        <!-- Footer with GitHub on Right -->
+        <footer class="editorial-footer">
+            <div class="footer-left">
+                <span>Theo K Laurent • Singapour, Hong Kong et International</span>
+                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-locales">
+                    <span style="color:var(--silver-faint);">LANGUE :</span>
+                    <a href="../papers.html">EN</a> • 
+                    <a href="papers.html" class="active">FR</a> • 
+                    <a href="../zh-cn/papers.html">中文</a>
+                </div>
+                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
+            </div>
+        </footer>
+    </div>
+    <script defer src="../js/terminal.js"></script>
+</body>
+</html>

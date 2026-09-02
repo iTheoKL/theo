@@ -1,140 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>À Propos - Theo K Laurent</title>
-    <meta name="description" content="À propos de Theo K Laurent - parcours en développement quantitatif, systèmes basse latence et architecture logicielle." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
-        rel="stylesheet" />
-    <link rel="icon" type="image/png" href="../img/icon.png" />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../lang-switch.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Architecte – Theo K Laurent</title>
+    <meta name="description" content="Parcours, philosophie intellectuelle et principes d'architecture de Theo K Laurent. Érudit, développeur quantitatif et artisan.">
+    
+    <link rel="icon" type="image/jpeg" href="../pfp.jpeg">
+    <link rel="stylesheet" href="../css/design-system.css">
+    <!-- OpenGraph & Social Metadata -->
+    <meta property="og:site_name" content="Theo K Laurent">
+    <meta property="og:title" content="L'Architecte – Theo K Laurent">
+    <meta property="og:description" content="Parcours, philosophie intellectuelle et principes d'architecture de Theo K Laurent. Érudit, développeur quantitatif et artisan.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../pfp.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="L'Architecte – Theo K Laurent">
+    <meta name="twitter:description" content="Parcours, philosophie intellectuelle et principes d'architecture de Theo K Laurent. Érudit, développeur quantitatif et artisan.">
+    <meta name="twitter:image" content="../pfp.jpeg">
+    <!-- KaTeX Math Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
 </head>
-
 <body>
-    <nav class="nav">
-        <a href="index.html" class="nav-logo">
-            <span class="nav-logo-mark"><img src="../img/icon.png" alt="" class="eagle-mark" width="18"
-                    height="18">TKL</span>
-            <span class="nav-tagline">L'Esprit Sans Mesure</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="about.html" class="active">À Propos</a></li>
-            <li><a href="projects.html">Projets</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Envoyer un Hibou</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
-    </nav>
 
-    <main>
-        <div class="page-header">
-            <div class="section-label"><span>L'Érudit</span></div>
-            <h1>À Propos de l'Architecte</h1>
-            <p class="page-header-quote">Un regard tourné vers la Terre, l'autre vers l'infini.</p>
-        </div>
+    <div class="page-wrap">
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="masthead-identity">
+                <div class="masthead-brand">
+                    <img src="../pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
+                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
+                </div>
+                <span class="masthead-meta">Systèmes Quantitatifs • Vérification Formelle • Déterminisme</span>
+            </div>
+            <nav>
+                <ul class="masthead-nav">
+                    <li><a href="index.html">Index</a></li>
+                    <li><a href="systems.html">Systèmes</a></li>
+                    <li><a href="papers.html">Monographies & Vers</a></li>
+                    <li><a href="about.html" class="active">L\'Architecte</a></li>
+                    <li><button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="about-body">
-            <div class="about-text">
-                <p>
-                    Le logiciel, j'en suis venu à le croire, est une forme d'architecture, et un édifice ne devrait pas
-                    être laid. Je ne me contente pas d'écrire du code : je me demande d'abord ce qu'une chose devrait
-                    être avant de me demander comment la construire. Comment ses pièces devraient s'assembler. Si elle
-                    tient sous la contrainte. Si elle est honnête quant à ce qu'elle fait. Cette question m'intéresse
-                    plus qu'aucun langage ne pourrait jamais le faire.
-                </p>
-                <p>
-                    Cette question m'a conduit vers le développement quantitatif - un environnement où la rigueur
-                    intellectuelle n'est pas accessoire, mais porteuse. Là où l'écart entre une idée brillante et une
-                    implémentation fonctionnelle se chiffre en argent réel, et où la précision n'est pas une
-                    préférence, mais une condition de survie. Ce qui m'y attire, et chez Jane Street en particulier,
-                    c'est ceci : dans la plupart des domaines, faire partie de l'élite est un plafond. Ici, c'est le
-                    plancher. L'exigence fondamentale, non l'accomplissement.
-                </p>
-                <p>
-                    Hors du terminal, je reste fidèle à quelques anciennes passions. Clair Obscur : Expedition 33 et
-                    Cyberpunk 2077, pour la même raison qui m'attire vers l'architecture - des mondes construits avec
-                    assez de soin pour que leurs choix pèsent réellement. J'ai choisi la fin de Verso. J'ai laissé
-                    partir So Mi, au-delà du monde qu'elle avait connu, parce qu'elle le méritait plus que V. L'esport
-                    Valorant, pour prouver que la compétition n'a besoin ni de ballon ni de chronomètre pour susciter
-                    une émotion authentique. Une manche peut basculer sur une seule erreur de lecture, et cela coûte
-                    exactement autant que sur n'importe quel terrain. J'arbore la bannière d'EDG, pour une région qu'on
-                    avait laissée pour compte pendant des années, et pour un parcours qui a donné tort à tout le monde.
-                    Et j'aime la musique, sans doute plus que de raison. Qu'on m'appelle érudit, architecte ou artisan,
-                    je suis encore en train de devenir les trois, et j'entends bien profiter du chemin.
-                </p>
+        <section>
+            <h1>L'Architecte</h1>
+            <p class="lead" style="margin-top: 1rem;">
+                Le logiciel, lorsqu'il est poursuivi avec rigueur, n'est pas un simple texte soumis à un compilateur. C'est une architecture mathématique, et une architecture ne devrait jamais être laide.
+            </p>
+        </section>
+
+        <!-- Prominent Jane Street Quote Block -->
+        <section style="margin-top: 2.5rem;">
+            <div class="annotation-block">
+                <div class="annotation-caption">§ Le Seuil Quantitatif</div>
+                <p>« Dans la plupart des domaines, faire partie de l'élite est considéré comme un sommet. Dans le développement quantitatif, c'est simplement le seuil de base – la mise requise pour entrer dans la pièce. »</p>
             </div>
 
-            <div>
-                <div class="skills-block">
-                    <h3>Les Outils du Métier</h3>
-                    <ul class="skill-list">
-                        <li>OCaml</li>
-                        <li>C++</li>
-                        <li>Rust</li>
-                        <li>Go</li>
-                        <li>Python</li>
-                        <li>Linux</li>
-                        <li>Concurrence</li>
-                        <li>Systèmes Distribués</li>
-                        <li>Réseaux & Sockets</li>
-                        <li>Modèles de Mémoire & Cache</li>
-                        <li>gRPC</li>
-                        <li>Kafka</li>
-                        <li>PostgreSQL</li>
-                        <li>Redis</li>
-                        <li>Docker</li>
-                    </ul>
-                </div>
+            <p>
+                Je ne me contente pas d'écrire du code ; je détermine ce qu'un système doit être avant de chercher comment l'assembler. Comment ses pièces interagissent sous une contrainte extrême, s'il préserve ses invariants lorsqu'un adversaire tente délibérément de le briser, et comment il se comporte aux limites de sa formulation. Cette question m'intéresse bien plus que la syntaxe éphémère d'un langage donné.
+            </p>
+            <p>
+                Cet instinct m'a naturellement conduit au développement quantitatif. Dans l'ingénierie ordinaire, faire partie de l'« élite » est célébré comme un sommet. Dans les systèmes à faible latence et l'infrastructure de marché – dans des maisons comme Jane Street –, être d'élite n'est pas le plafond. C'est le seuil minimal requis pour justifier sa place à la table.
+            </p>
 
-                <div class="timeline" style="
-                            margin-top: 2.5rem;
-                            border: 1px solid var(--border);
-                            padding: 2rem;
-                        ">
-                    <h3>Le Chemin Parcouru</h3>
-                    <div class="timeline-item">
-                        <span class="tl-year">2025</span>
-                        <div class="tl-content">
-                            <strong>Licence d'ingénieur, Cybersécurité</strong>
-                            <span>SRM VEC, KTR</span>
-                        </div>
-                    </div>
-                </div>
+            <h2>I. Sympathie pour le Silicium</h2>
+            <p>
+                Lorsque le capital, le risque et les microsecondes sont liés, vous ne pouvez pas vous offrir le luxe d'abstractions floues. Vous devez posséder une sympathie mécanique pour le matériel : la façon dont les lignes de cache L1/L2 s'invalident, dont les unités vectorielles diffusent les registres SIMD, et pourquoi les bornes de complexité amortie sont une illusion lors des chocs de liquidité.
+            </p>
+
+            <h2>II. Coordonnées Hors du Terminal</h2>
+            <p>
+                En dehors du prouveur formel, du terminal et du compilateur, je reste fidèle aux arts qui exigent la même dévotion envers la facture.
+            </p>
+            <p>
+                Dans l'art narratif – de <em>Clair Obscur : Expedition 33</em> à <em>Cyberpunk 2077</em> –, je suis attiré par les mondes construits avec une telle conviction que les choix portent un poids moral authentique. J'ai choisi la fin de Verso sans hésiter. J'ai envoyé Song So Mi au-delà du Mur Noir et hors du monde qu'elle connaissait, parce qu'une liberté gagnée à ce prix l'emporte sur les compromis pragmatiques.
+            </p>
+            <p>
+                Dans la compétition, je suis l'esport <em>Valorant</em> pour cette même appréciation des décisions à la microseconde. Une manche décisive bascule sur une seule erreur d'évaluation sous une pression écrasante. Je porte les couleurs d'EDG, qui a prouvé qu'une rigueur constante finit toujours par renverser les hiérarchies établies.
+            </p>
+            <p>
+                Et au centre de tout cela, il y a la musique – un art de pures proportions mathématiques, de rythme et d'émotions humaines. Qu'on m'appelle érudit, ingénieur quantitatif ou artisan, je m'impose une norme intransigeante, et j'ai l'intention de savourer chaque pas de l'ascension.
+            </p>
+        </section>
+
+        <!-- Footer with GitHub on Right -->
+        <footer class="editorial-footer">
+            <div class="footer-left">
+                <span>Theo K Laurent • Singapour, Hong Kong et International</span>
+                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
             </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <span>© 2026 Theo K Laurent</span>
-        <span class="footer-motto">Là où l'esprit et le savoir trouvent toujours leur chemin.</span>
-        <div class="footer-links">
-            <a href="https://github.com/itheokl" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:theoklaurent@icloud.com">E-mail</a>
-        </div>
-    </footer>
-
-    <div class="lang-switch" data-current="fr">
-        <button class="lang-switch-toggle" type="button" aria-label="Change language" aria-expanded="false">
-            <span>FR</span>
-        </button>
-        <div class="lang-switch-menu" role="menu">
-            <a href="../about.html" class="lang-switch-option" data-lang="en" role="menuitem">English</a>
-            <a href="../fr/about.html" class="lang-switch-option current" data-lang="fr" role="menuitem">Français</a>
-            <a href="../zh-cn/about.html" class="lang-switch-option" data-lang="zh-cn" role="menuitem">中文</a>
-        </div>
+            <div class="footer-right">
+                <div class="footer-locales">
+                    <span style="color:var(--silver-faint);">LANGUE :</span>
+                    <a href="../about.html">EN</a> • 
+                    <a href="about.html" class="active">FR</a> • 
+                    <a href="../zh-cn/about.html">中文</a>
+                </div>
+                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
+            </div>
+        </footer>
     </div>
-
-    <script src="../lang-switch.js"></script>
-    <script src="../nav.js"></script>
+    <script defer src="../js/terminal.js"></script>
 </body>
-
 </html>

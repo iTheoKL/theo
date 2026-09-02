@@ -1,125 +1,109 @@
-<!doctype html>
-<html lang="zh-cn">
-
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>关于 - Theo K Laurent</title>
-    <meta name="description" content="关于 Theo K Laurent - 量化开发、低延迟系统与软件架构的探索与实践。" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
-        rel="stylesheet" />
-    <link rel="icon" type="image/png" href="../img/icon.png" />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../lang-switch.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>架构师 – Theo K Laurent</title>
+    <meta name="description" content="Theo K Laurent 的个人背景、学术哲学与架构准则。学者、量化工程师与匠人。">
+    
+    <link rel="icon" type="image/jpeg" href="../pfp.jpeg">
+    <link rel="stylesheet" href="../css/design-system.css">
+    <!-- OpenGraph & Social Metadata -->
+    <meta property="og:site_name" content="Theo K Laurent">
+    <meta property="og:title" content="架构师 – Theo K Laurent">
+    <meta property="og:description" content="Theo K Laurent 的个人背景、学术哲学与架构准则。学者、量化工程师与匠人。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../pfp.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="架构师 – Theo K Laurent">
+    <meta name="twitter:description" content="Theo K Laurent 的个人背景、学术哲学与架构准则。学者、量化工程师与匠人。">
+    <meta name="twitter:image" content="../pfp.jpeg">
+    <!-- KaTeX Math Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
 </head>
-
 <body>
-    <nav class="nav">
-        <a href="index.html" class="nav-logo">
-            <span class="nav-logo-mark"><img src="../img/icon.png" alt="" class="eagle-mark" width="18"
-                    height="18">TKL</span>
-            <span class="nav-tagline">智慧无涯</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">首页</a></li>
-            <li><a href="about.html" class="active">关于</a></li>
-            <li><a href="projects.html">项目</a></li>
-            <li><a href="blog.html">博客</a></li>
-            <li><a href="contact.html">寄猫头鹰信</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
-    </nav>
 
-    <main>
-        <div class="page-header">
-            <div class="section-label"><span>学者</span></div>
-            <h1>关于这位建筑师</h1>
-            <p class="page-header-quote">一只眼望向大地，另一只眼望向无垠。</p>
-        </div>
+    <div class="page-wrap">
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="masthead-identity">
+                <div class="masthead-brand">
+                    <img src="../pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
+                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
+                </div>
+                <span class="masthead-meta">量化系统 • 形式化验证 • 延迟确定性</span>
+            </div>
+            <nav>
+                <ul class="masthead-nav">
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="systems.html">系统架构</a></li>
+                    <li><a href="papers.html">专题与诗</a></li>
+                    <li><a href="about.html" class="active">架构师</a></li>
+                    <li><button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="about-body">
-            <div class="about-text">
-                <p>
-                    我渐渐相信,软件是一种建筑的形式,而建筑不该丑陋。我不只是写代码 - 在思考如何建造之前,我先问一件事物该是什么样子。它的各个部分该如何契合。它能否承受压力。它对自身的作为是否诚实。这个问题,比任何一门语言本身都更让我着迷。
-                </p>
-                <p>
-                    正是这个问题，将我引向了量化开发 - 一个严谨求实并非附带要求、而是承重支柱的领域。在那里，敏锐的想法与实际可运行的实现之间的差距关乎真金白银，而精准从来不是一种偏好，而是生存的先决条件。吸引我投身其中，尤其是走向 Jane Street 的原因在于：在大多数领域，卓越是天花板；而在这里，卓越只是地基 - 是基准底线，而非终点成就。
-                </p>
-                <p>
-                    在终端之外,我仍忠于几样旧日的钟爱。《Clair Obscur: Expedition
-                    33》与《赛博朋克2077》,吸引我的理由与建筑相同 - 那些用心构建、其中每个选择都承载着真实分量的世界。我选择了 Verso 的结局。我放手让 So Mi 离开,前往她所熟知世界之外的地方,因为比起
-                    V,她更应得到那样的结局。Valorant 电竞,证明了竞技的真实情感无需一颗球或一只秒表来成就。一局比赛可能因一次误判而彻底逆转,而它的代价,与任何一片球场上的代价并无二致。我为 EDG
-                    摇旗 - 为一个被写了多年"凉了"标签的赛区,以及那一次让所有人都改口的征程。而我爱音乐,爱得或许有些不合情理。称我为学者、建筑师,或匠人皆可 - 我仍在成为这三者的路上,并打算好好享受这个过程。
-                </p>
+        <section>
+            <h1>架构师</h1>
+            <p class="lead" style="margin-top: 1rem;">
+                软件，在被严谨对待时，绝不仅是输入给编译器的文本。它是一种数学建筑艺术，而建筑绝不该是粗陋的。
+            </p>
+        </section>
+
+        <!-- Prominent Jane Street Quote Block -->
+        <section style="margin-top: 2.5rem;">
+            <div class="annotation-block">
+                <div class="annotation-caption">§ 量化基准线</div>
+                <p>“在绝大多数领域，成为精英被视为天花板。而在量化开发中，它仅仅是底线 – 坐上牌桌的最低门槛。”</p>
             </div>
 
-            <div>
-                <div class="skills-block">
-                    <h3>技艺利器</h3>
-                    <ul class="skill-list">
-                        <li>OCaml</li>
-                        <li>C++</li>
-                        <li>Rust</li>
-                        <li>Go</li>
-                        <li>Python</li>
-                        <li>Linux</li>
-                        <li>并发编程</li>
-                        <li>分布式系统</li>
-                        <li>网络与套接字</li>
-                        <li>内存与缓存模型</li>
-                        <li>gRPC</li>
-                        <li>Kafka</li>
-                        <li>PostgreSQL</li>
-                        <li>Redis</li>
-                        <li>Docker</li>
-                    </ul>
-                </div>
+            <p>
+                我不仅编写代码；在思考如何组装之前，我首先探究一个系统应当具备何种根本形态。它的各个部件在极端压力下如何交互，当对手蓄意破坏时能否维系其不变量，以及它在数学边界上的表现。这一追问远比任何编程语言的暂态语法更令我着迷。
+            </p>
+            <p>
+                这种本能自然将我引向量化开发领域。在普通的软件工程中，“卓越”被奉为天花板。而在低延迟量化系统与市场基础设施中 – 在像 Jane Street 这样的殿堂里 – 追求卓越并非上限，它仅仅是证明自己有资格坐上牌桌的底线要求。
+            </p>
 
-                <div class="timeline" style="
-                            margin-top: 2.5rem;
-                            border: 1px solid var(--border);
-                            padding: 2rem;
-                        ">
-                    <h3>迄今之路</h3>
-                    <div class="timeline-item">
-                        <span class="tl-year">2025</span>
-                        <div class="tl-content">
-                            <strong>工学学士,网络安全</strong>
-                            <span>SRM VEC, KTR</span>
-                        </div>
-                    </div>
-                </div>
+            <h2>I. 硬件共情</h2>
+            <p>
+                当资本、风险与微秒紧密交织，你无法承受模糊抽象的代价。你必须对底层硬件怀有深刻的共情：理解 L1/L2 缓存行如何失效，理解向量单元如何在 SIMD 寄存器中广播，以及为何均摊复杂度上界在非平稳市场冲击下只是一场幻觉。
+            </p>
+
+            <h2>II. 终端之外的坐标</h2>
+            <p>
+                在形式化证明器、终端与编译器之外，我始终对那些要求同样极致专注的事物心怀敬畏。
+            </p>
+            <p>
+                在叙事艺术中 – 从《光与影：33号远征队》到《赛博朋克 2077》 – 我被那些构建得极其笃定、使每个抉择都具有真实道德重量的世界所吸引。我毫不犹豫地选择了 Verso 的结局；我目送宋昭美穿越黑墙、前往她所熟知世界之外的远方，因为以这般代价赢得的自由远胜于权宜的妥协。
+            </p>
+            <p>
+                在竞技领域，我关注《无畏契约》（Valorant）电竞赛事，同样源于对微秒级决策的欣赏。在巨大压力下，一个微小的误判就足以倾覆决胜局；其失误代价与光纤交叉连接上的丢包一样残酷。我为 EDG 战队喝彩，他们证明了持续的严谨、纪律与沉着终将重塑既有的秩序。
+            </p>
+            <p>
+                而在这一切之中，始终有音乐流淌 – 这是一门蕴含纯粹数学比例、节奏与人类情感的艺术。无论是学者、量化工程师还是匠人，我始终坚守不妥协的标准，并乐于享受攀登过程中的每一步。
+            </p>
+        </section>
+
+        <!-- Footer with GitHub on Right -->
+        <footer class="editorial-footer">
+            <div class="footer-left">
+                <span>Theo K Laurent • 新加坡、香港及全球</span>
+                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
             </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <span>© 2026 Theo K Laurent</span>
-        <span class="footer-motto">凡有才智与学识者,终将寻得自己的道路。</span>
-        <div class="footer-links">
-            <a href="https://github.com/itheokl" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:theoklaurent@icloud.com">邮箱</a>
-        </div>
-    </footer>
-
-    <div class="lang-switch" data-current="zh-cn">
-        <button class="lang-switch-toggle" type="button" aria-label="Change language" aria-expanded="false">
-            <span>中文</span>
-        </button>
-        <div class="lang-switch-menu" role="menu">
-            <a href="../about.html" class="lang-switch-option" data-lang="en" role="menuitem">English</a>
-            <a href="../fr/about.html" class="lang-switch-option" data-lang="fr" role="menuitem">Français</a>
-            <a href="../zh-cn/about.html" class="lang-switch-option current" data-lang="zh-cn" role="menuitem">中文</a>
-        </div>
+            <div class="footer-right">
+                <div class="footer-locales">
+                    <span style="color:var(--silver-faint);">语言 :</span>
+                    <a href="../about.html">EN</a> • 
+                    <a href="../fr/about.html">FR</a> • 
+                    <a href="about.html" class="active">中文</a>
+                </div>
+                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
+            </div>
+        </footer>
     </div>
-
-    <script src="../lang-switch.js"></script>
-    <script src="../nav.js"></script>
+    <script defer src="../js/terminal.js"></script>
 </body>
-
 </html>

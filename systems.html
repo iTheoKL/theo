@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systems & Architecture – Theo K Laurent</title>
+    <meta name="description" content="Technical blueprints, complexity profiles, and deterministic systems built by Theo K Laurent.">
+    
+    <link rel="icon" type="image/jpeg" href="pfp.jpeg">
+    <link rel="stylesheet" href="css/design-system.css">
+    <!-- OpenGraph & Social Metadata -->
+    <meta property="og:site_name" content="Theo K Laurent">
+    <meta property="og:title" content="Systems & Architecture – Theo K Laurent">
+    <meta property="og:description" content="Technical blueprints, complexity profiles, and deterministic systems built by Theo K Laurent.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="pfp.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Systems & Architecture – Theo K Laurent">
+    <meta name="twitter:description" content="Technical blueprints, complexity profiles, and deterministic systems built by Theo K Laurent.">
+    <meta name="twitter:image" content="pfp.jpeg">
+    <!-- KaTeX Math Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+
+    <div class="page-wrap">
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="masthead-identity">
+                <div class="masthead-brand">
+                    <img src="pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
+                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
+                </div>
+                <span class="masthead-meta">Quantitative Systems • Formal Verification • Latency Determinism</span>
+            </div>
+            <nav>
+                <ul class="masthead-nav">
+                    <li><a href="index.html">Index</a></li>
+                    <li><a href="systems.html" class="active">Systems</a></li>
+                    <li><a href="papers.html">Monographs & Verse</a></li>
+                    <li><a href="about.html">The Architect</a></li>
+                    <li><button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h1>Engineering Primitives</h1>
+            <p class="lead" style="margin-top: 1rem;">
+                A registry of constant-time cryptographic primitives, client-side threat intelligence extensions, zero-allocation engines, and resilient graph systems.
+            </p>
+        </section>
+
+        <!-- System 01: Cipher-CLI -->
+        <section id="cipher-cli" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.01 // Cipher-CLI Vault</span>
+                <span class="status-tag open-source">Open Source</span>
+            </h2>
+            <p>
+                A high-assurance cryptographic storage tool in Go. Keys are derived dynamically using memory-hard Argon2id parameters ($t=3, m=64\,\text{MB}, p=4$), authenticated with AES-256-GCM. Designed to guarantee constant-time execution and eliminate timing side-channel leakage.
+            </p>
+            <table class="ledger-table" style="margin: 1.5rem 0;">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">CIPHER</td>
+                        <td class="ledger-cell">Authenticated Symmetric Encryption</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">AES-256-GCM</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">KDF</td>
+                        <td class="ledger-cell">Memory-Hard Derivation Parameter</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">64 MB Argon2id</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SOURCE</td>
+                        <td class="ledger-cell">Repository Access</td>
+                        <td class="ledger-cell ledger-spec"><a href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer">github.com/iTheoKL/cipher-cli</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- System 02: ThreatLens -->
+        <section id="threatlens" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.02 // ThreatLens Extension</span>
+                <span class="status-tag open-source">Open Source</span>
+            </h2>
+            <p>
+                A client-side security browser extension written in pure JavaScript, engineered to defend against phishing vectors across active web browsing and webmail clients in real time. Rather than providing an arbitrary opaque score, ThreatLens classifies destinations into clear tri-state verdicts (Safe, Suspicious, or Malicious) and displays the exact structural and heuristic reasons why a verdict was triggered.
+            </p>
+            <table class="ledger-table" style="margin: 1.5rem 0;">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">CLASSIFIER</td>
+                        <td class="ledger-cell">Tri-State Verdict & Causal Reasoning (Safe / Suspicious / Malicious)</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">Verdict + Cause</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SURFACE</td>
+                        <td class="ledger-cell">Web Surfing & In-Email Phishing Interception</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">Browser & Webmail</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">STACK</td>
+                        <td class="ledger-cell">Implementation Primitives</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">Pure JavaScript</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SOURCE</td>
+                        <td class="ledger-cell">Repository Access</td>
+                        <td class="ledger-cell ledger-spec"><a href="https://github.com/iTheoKL/ThreatLens.git" target="_blank" rel="noopener noreferrer">github.com/iTheoKL/ThreatLens</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- System 03: MedBridge Engine -->
+        <section id="medbridge" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.03 // MedBridge Engine</span>
+                <span class="status-tag closed-source">Closed Source</span>
+            </h2>
+            <p>
+                A polypharmacy medication conflict detection engine and unified clinical platform designed to process compound interaction graphs under strict real-time deadlines. Features dynamic symptom-interaction cross-referencing, EasyOCR model preloading, and synchronized session security.
+            </p>
+            <p>
+                Architecture Essay: <a href="papers.html#medbridge-post-mortem">Read MedBridge: An Architecture of Inevitable Convergence</a>
+            </p>
+        </section>
+
+        <!-- System 04: Aether-L3 -->
+        <section id="aether-l3" style="margin-top: 3.5rem;">
+            <h2>
+                <span>SYS.04 // Aether-L3 Matching Core</span>
+                <span class="status-tag closed-source">Closed Source</span>
+            </h2>
+            <p>
+                A zero-allocation limit order matching engine written in C++23. Standard matching implementations allocate nodes on the heap during order insertion, causing memory fragmentation, jitter, and cache-line invalidation. Aether-L3 organizes resting depth into contiguous 64-byte aligned SIMD arrays scanned via AVX-512 vector broadcasts in under 14.2 nanoseconds.
+            </p>
+
+            <table class="ledger-table" style="margin: 1.5rem 0;">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">BOUND</td>
+                        <td class="ledger-cell">Deterministic Worst-Case Execution</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">&le; 14.2 ns</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">MEMORY</td>
+                        <td class="ledger-cell">Heap Allocation on Match Hot-Path</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">0 Bytes</span></td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">VECTOR</td>
+                        <td class="ledger-cell">Vectorized Instruction Set</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">AVX-512 / VBROADCAST</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 1.25rem 1.5rem; margin-top: 1.5rem; border-radius: 2px;">
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--silver-faint); margin-bottom: 0.75rem;">AetherRingBuffer.cpp (Vectorized Price Scan)</div>
+                <pre style="color: #e2e8f0; font-size: 0.86rem; overflow-x: auto;"><code>inline uint32_t match_vectorized(const uint64_t* prices, uint64_t limit_price, uint32_t len) noexcept {
+    const __m512i target = _mm512_set1_epi64(limit_price);
+    for (uint32_t i = 0; i &lt; len; i += 8) {
+        const __m512i chunk = _mm512_load_si512(reinterpret_cast&lt;const __m512i*&gt;(&amp;prices[i]));
+        const __mmask8 mask = _mm512_cmpge_epu64_mask(chunk, target);
+        if (mask != 0) return i + std::countr_zero(mask);
+    }
+    return len;
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- Footer with GitHub on Right -->
+        <footer class="editorial-footer">
+            <div class="footer-left">
+                <span>Theo K Laurent • Singapore, Hong Kong, and Global</span>
+                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-locales">
+                    <span style="color:var(--silver-faint);">LOCALE:</span>
+                    <a href="systems.html" class="active">EN</a> • 
+                    <a href="fr/systems.html">FR</a> • 
+                    <a href="zh-cn/systems.html">中文</a>
+                </div>
+                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
+            </div>
+        </footer>
+    </div>
+    <script defer src="js/terminal.js"></script>
+</body>
+</html>

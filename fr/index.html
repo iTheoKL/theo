@@ -1,128 +1,237 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Theo K Laurent - Ingénierie Système & Quantitative</title>
-        <meta name="description" content="Portfolio et écrits de Theo K Laurent - exploration de l'architecture logicielle, des systèmes basse latence et du développement quantitatif." />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="icon" type="image/png" href="../img/icon.png" />
-        <link rel="stylesheet" href="../style.css" />
-        <link rel="stylesheet" href="../lang-switch.css" />
-    </head>
-    <body>
-        <nav class="nav">
-            <a href="index.html" class="nav-logo">
-                <span class="nav-logo-mark"><img src="../img/icon.png" alt="" class="eagle-mark" width="18" height="18">TKL</span>
-                <span class="nav-tagline">L'Esprit Sans Mesure</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Accueil</a></li>
-                <li><a href="about.html">À Propos</a></li>
-                <li><a href="projects.html">Projets</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Envoyer un Hibou</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theo K Laurent – Systèmes Quantitatifs & Architecture Formelle</title>
+    <meta name="description" content="Domaine personnel et index de recherche de Theo K Laurent. Systèmes à faible latence, sympathie mécanique, exécution déterministe et rigueur mathématique.">
+    
+    <link rel="icon" type="image/jpeg" href="../pfp.jpeg">
+    <link rel="stylesheet" href="../css/design-system.css">
+    <!-- OpenGraph & Social Metadata -->
+    <meta property="og:site_name" content="Theo K Laurent">
+    <meta property="og:title" content="Theo K Laurent – Systèmes Quantitatifs & Architecture Formelle">
+    <meta property="og:description" content="Domaine personnel et index de recherche de Theo K Laurent. Systèmes à faible latence, sympathie mécanique, exécution déterministe et rigueur mathématique.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../pfp.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Theo K Laurent – Systèmes Quantitatifs & Architecture Formelle">
+    <meta name="twitter:description" content="Domaine personnel et index de recherche de Theo K Laurent. Systèmes à faible latence, sympathie mécanique, exécution déterministe et rigueur mathématique.">
+    <meta name="twitter:image" content="../pfp.jpeg">
+    <!-- KaTeX Math Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
 
-        <main>
-            <section class="hero">
-                <div class="hero-inner">
-                    <p class="hero-eyebrow">
-                        Érudit de la Magie Moderne
-                    </p>
-                    <h1 class="hero-title">Theo K Laurent</h1>
-                    <p class="hero-motto">L'Esprit Sans Mesure</p>
-                    <blockquote class="hero-quote">
-                        Là où le temps s'efface,<br />les songes deviennent
-                        réels.
-                    </blockquote>
-                    <div class="hero-cta">
-                        <a href="projects.html" class="btn-primary"
-                            >Découvrir l'Œuvre</a
-                        >
-                        <a href="about.html" class="btn-ghost">Rencontrer l'Érudit</a>
-                    </div>
+    <div class="page-wrap">
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="masthead-identity">
+                <div class="masthead-brand">
+                    <img src="../pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
+                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
                 </div>
-                <div class="hero-deco" aria-hidden="true">
-                    <div class="deco-line"></div>
-                    <div class="deco-circle">
-                        <svg class="deco-circle-text" viewBox="0 0 170 170" width="170" height="170" aria-hidden="true">
-                            <defs>
-                                <path id="mottoArc" d="M25,85 a60,60 0 1,1 120,0" fill="none" />
-                            </defs>
-                            <text textLength="180" lengthAdjust="spacingAndGlyphs">
-                                <textPath href="#mottoArc" startOffset="50%" text-anchor="middle">L'ESPRIT SANS MESURE</textPath>
-                            </text>
-                        </svg>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-featured">
-                <div class="section-label"><span>Œuvres Notables</span></div>
-                <div class="projects-grid">
-                    <a href="projects.html" class="project-card">
-                        <div class="project-num">03</div>
-                        <div class="project-info">
-                            <h3>Cipher CLI</h3>
-                            <p>
-                                Un outil en ligne de commande écrit en Go pour
-                                chiffrer et déchiffrer des fichiers locaux avec
-                                AES-256-GCM, la clé étant dérivée d'un mot de
-                                passe via Argon2id.
-                            </p>
-                            <span class="tag">Go</span>
-                        </div>
-                        <div class="project-arrow">→</div>
-                    </a>
-                </div>
-            </section>
-
-            <section class="section-blog-preview">
-                <div class="section-label"><span>Depuis l'Étude</span></div>
-                <div class="posts-list">
-                    <a href="blogs/tofall.html" class="post-row">
-                        <span class="post-date">11 août 2026</span>
-                        <span class="post-title"
-                            >La Chute - Un vers</span
-                        >
-                        <span class="post-arrow">→</span>
-                    </a>
-                </div>
-                <a href="blog.html" class="view-all">Toutes les Archives →</a>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <span>© 2026 Theo K Laurent</span>
-            <span class="footer-motto">Là où l'esprit et le savoir trouvent toujours leur chemin.</span>
-            <div class="footer-links">
-                <a href="https://github.com/itheokl" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="mailto:theoklaurent@icloud.com">E-mail</a>
+                <span class="masthead-meta">Systèmes Quantitatifs • Vérification Formelle • Déterminisme</span>
             </div>
-        </footer>
+            <nav>
+                <ul class="masthead-nav">
+                    <li><a href="index.html" class="active">Index</a></li>
+                    <li><a href="systems.html">Systèmes</a></li>
+                    <li><a href="papers.html">Monographies & Vers</a></li>
+                    <li><a href="about.html">L\'Architecte</a></li>
+                    <li><button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="lang-switch" data-current="fr">
-            <button class="lang-switch-toggle" type="button" aria-label="Change language" aria-expanded="false">
-                <span>FR</span>
-            </button>
-            <div class="lang-switch-menu" role="menu">
-                <a href="../index.html" class="lang-switch-option" data-lang="en" role="menuitem">English</a>
-                <a href="../fr/index.html" class="lang-switch-option current" data-lang="fr" role="menuitem">Français</a>
-                <a href="../zh-cn/index.html" class="lang-switch-option" data-lang="zh-cn" role="menuitem">中文</a>
+        <!-- Thèse d'ouverture -->
+        <section>
+            <p class="lead">
+                J'étudie les limites mécaniques du silicium et les structures mathématiques de l'exécution. La plupart des logiciels sont conçus pour la commodité médiane ; je conçois exclusivement pour les bornes déterministes du pire cas.
+            </p>
+            <div class="annotation-block">
+                <div class="annotation-caption">§ Principe Architectural</div>
+                <p>« Le logiciel, j'en suis venu à le croire, est une sorte d'architecture, et un bâtiment ne devrait pas être laid. »</p>
             </div>
+        </section>
+
+        <!-- Instrument Graphique de Phase -->
+        <div class="canvas-frame">
+            <div class="canvas-header">
+                <span>MICROSTRUCTURE STOCHASTIQUE // DÉRIVE BROWNIENNE &amp; DENSITÉ DES ORDRES</span>
+                <span>ÉCHANTILLONNAGE : Δt = 50ms • CLIQUER POUR INJECTER UN CHOC</span>
+            </div>
+            <canvas id="phase-canvas"></canvas>
         </div>
 
-        <script src="../lang-switch.js"></script>
-        <script src="../nav.js"></script>
-    </body>
+        <!-- Grand Livre des Travaux Sélectionnés -->
+        <section>
+            <h2>Travaux Choisis & Primitives</h2>
+            
+            <table class="ledger-table">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SYS.01</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name">
+                                <a href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer">Coffre Cipher-CLI</a>
+                                <span class="status-tag open-source">Open Source</span>
+                            </div>
+                            <div class="ledger-desc">
+                                Utilitaire de chiffrement en ligne de commande en Go. Utilise la dérivation de clé en mémoire stricte Argon2id ($64\,\text{Mo}$) avec AES-256-GCM authentifié, conçu pour éliminer les fuites par canaux auxiliaires.
+                            </div>
+                            <div class="ledger-tech">
+                                <span>Go</span>
+                                <span>AES-256-GCM</span>
+                                <span>Argon2id</span>
+                                <span>Temps-Constant</span>
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span class="stat">256-bit</span> AES<br>
+                            <span style="color:var(--silver-faint);">Post-Quantique</span>
+                        </td>
+                    </tr>
+
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SYS.02</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name">
+                                <a href="https://github.com/iTheoKL/ThreatLens.git" target="_blank" rel="noopener noreferrer">ThreatLens</a>
+                                <span class="status-tag open-source">Open Source</span>
+                            </div>
+                            <div class="ledger-desc">
+                                Extension de sécurité pour navigateur en pur JavaScript. Intercepte les vecteurs de phishing sur le web et dans les webmails, classe les risques selon trois verdicts (Sûr, Suspect, Malveillant) et détaille la raison causale de chaque alerte.
+                            </div>
+                            <div class="ledger-tech">
+                                <span>JavaScript</span>
+                                <span>Extension Navigateur</span>
+                                <span>Anti-Phishing</span>
+                                <span>Analyse Causale</span>
+                                <span>Sécurité Webmail</span>
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span class="stat">Verdict + Cause</span><br>
+                            <span style="color:var(--silver-faint);">Classificateur Tri-État</span>
+                        </td>
+                    </tr>
+
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SYS.03</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name">
+                                <a href="papers.html#medbridge-post-mortem">Moteur MedBridge</a>
+                                <span class="status-tag closed-source">Closed Source</span>
+                            </div>
+                            <div class="ledger-desc">
+                                Plateforme unifiée de détection de conflits médicamenteux et de graphes cliniques. Traverses de graphes dynamiques, préchargement de modèles et synchronisation de session sécurisée.
+                            </div>
+                            <div class="ledger-tech">
+                                <span>Python</span>
+                                <span>FastAPI</span>
+                                <span>Théorie des Graphes</span>
+                                <span>EasyOCR</span>
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span class="stat">&lt; 120 ms</span><br>
+                            <span style="color:var(--silver-faint);">Cœur Déterministe</span>
+                        </td>
+                    </tr>
+
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">SYS.04</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name">
+                                <a href="systems.html#aether-l3">Noyau d'Appariement Aether-L3</a>
+                                <span class="status-tag closed-source">Closed Source</span>
+                            </div>
+                            <div class="ledger-desc">
+                                Moteur de carnet d'ordres sans allocation dynamique en C++23. Utilise les instructions vectorielles AVX-512 pour balayer les niveaux de prix en moins de 14.2 nanosecondes.
+                            </div>
+                            <div class="ledger-tech">
+                                <span>C++23</span>
+                                <span>AVX-512</span>
+                                <span>Lock-Free SPSC</span>
+                                <span>Aligné Cache</span>
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span class="stat">&lt; 14.2 ns</span> / match<br>
+                            <span style="color:var(--silver-faint);">0 Octet / Alloc</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Grand Livre des Monographies -->
+        <section>
+            <h2>Monographies & Vers</h2>
+            <table class="ledger-table">
+                <tbody>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">2026.07</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name"><a href="papers.html#medbridge-post-mortem">MedBridge : Une Architecture de Convergence Inévitable</a></div>
+                            <div class="ledger-desc">
+                                Sur la maîtrise de l'entropie des équipes distribuées, l'application d'invariants d'interfaces stricts et la convergence d'une plateforme médicale complexe sous des délais serrés.
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span>8 min lecture</span>
+                        </td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">2026.08</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name"><a href="papers.html#to-fall">To Fall / Tomber (Vers sur Icare & Dédale)</a></div>
+                            <div class="ledger-desc">
+                                Sur ce qui est risqué, sur ce qui est perdu, et sur ce qu'il en coûte de façonner une œuvre digne de ce nom.
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span style="color:var(--accent-plum-bright);">Vers</span>
+                        </td>
+                    </tr>
+                    <tr class="ledger-row">
+                        <td class="ledger-cell ledger-id">2025.11</td>
+                        <td class="ledger-cell">
+                            <div class="ledger-name"><a href="papers.html#ravenclaw-creed-intellectual-moat">Le Credo de Serdaigle : La Rigueur Intellectuelle comme Seul Rempart Durable</a></div>
+                            <div class="ledger-desc">
+                                Pourquoi la rigueur intellectuelle est le seul avantage concurrentiel impérissable, et pourquoi atteindre l'exactitude n'est que le droit d'entrer dans la pièce.
+                            </div>
+                        </td>
+                        <td class="ledger-cell ledger-spec">
+                            <span>5 min lecture</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Footer -->
+        <footer class="editorial-footer">
+            <div class="footer-left">
+                <span>Theo K Laurent • Singapour, Hong Kong et International</span>
+                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
+            </div>
+            <div class="footer-right">
+                <div class="footer-locales">
+                    <span style="color:var(--silver-faint);">LANGUE :</span>
+                    <a href="../index.html">EN</a> • 
+                    <a href="index.html" class="active">FR</a> • 
+                    <a href="../zh-cn/index.html">中文</a>
+                </div>
+                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/canvas-instrument.js"></script>
+    <script defer src="../js/terminal.js"></script>
+</body>
 </html>
