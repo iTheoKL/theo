@@ -456,9 +456,15 @@ code {
     padding: 0.55rem 0.9rem;
     border-bottom: 1px solid var(--border-subtle);
     font-family: var(--font-mono);
-    font-size: 0.74rem;
+    font-size: 0.72rem;
     color: var(--silver-dim);
     background: rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.04em;
+    gap: 1rem;
+}
+
+.canvas-header span {
+    white-space: nowrap;
 }
 
 #phase-canvas {

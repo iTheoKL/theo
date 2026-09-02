@@ -162,15 +162,12 @@
             const lastX = width;
             const lastY = midY;
             ctx.fillStyle = '#f8fafc';
+            ctx.shadowColor = '#9b7fde';
+            ctx.shadowBlur = 8;
             ctx.beginPath();
-            ctx.arc(lastX - 2, lastY, 3.5, 0, Math.PI * 2);
+            ctx.arc(lastX - 2, lastY, 3, 0, Math.PI * 2);
             ctx.fill();
-
-            // Real-Time Coordinate Callouts
-            ctx.fillStyle = '#94a3b8';
-            ctx.font = '10px "JetBrains Mono", monospace';
-            ctx.fillText(`S_t = ${currentPrice.toFixed(2)}`, lastX - 95, Math.max(16, lastY - 8));
-            ctx.fillText(`σ = ${sigma.toFixed(2)}  Δt = 50ms [CLICK TO SHOCK]`, 12, 18);
+            ctx.shadowBlur = 0;
         }
 
         window.addEventListener('resize', resize);
