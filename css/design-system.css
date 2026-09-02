@@ -705,18 +705,42 @@ code {
     }
 
     .canvas-frame {
-        margin: 1.75rem 0;
+        margin: 1.75rem 0 0.5rem 0;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
     }
     .canvas-header {
-        font-size: 0.64rem;
-        padding: 0.45rem 0.65rem;
-        gap: 0.5rem;
+        font-size: 0.65rem;
+        padding: 0.45rem 0.75rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .canvas-header span:last-child {
+        color: var(--bronze-light);
+        background: rgba(223, 178, 96, 0.08);
+        border: 1px solid rgba(223, 178, 96, 0.25);
+        padding: 2px 6px;
+        border-radius: 2px;
+        font-size: 0.62rem;
+        letter-spacing: 0.03em;
     }
     #phase-canvas {
         height: 130px;
+        width: 100%;
+    }
+    .canvas-caption {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--silver-faint);
+        opacity: 0.85;
+        text-align: right;
+        margin-top: 0.35rem;
+        margin-bottom: 3.25rem;
+        letter-spacing: 0.02em;
+        display: block;
         width: 100%;
     }
 
