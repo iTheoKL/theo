@@ -106,6 +106,31 @@
             });
         });
 
+        // Mobile Hamburger Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navWrap = document.getElementById('masthead-nav-wrap');
+        if (menuToggle && navWrap) {
+            menuToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = navWrap.classList.contains('open');
+                if (isOpen) {
+                    navWrap.classList.remove('open');
+                    menuToggle.classList.remove('open');
+                } else {
+                    navWrap.classList.add('open');
+                    menuToggle.classList.add('open');
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navWrap.contains(e.target) && !menuToggle.contains(e.target)) {
+                    navWrap.classList.remove('open');
+                    menuToggle.classList.remove('open');
+                }
+            });
+        }
+
         function appendLine(html, type = '') {
             if (!output) return;
             const line = document.createElement('div');
