@@ -3,191 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Systems & Architecture – Theo K Laurent</title>
-    <meta name="description" content="Technical blueprints, complexity profiles, and deterministic systems built by Theo K Laurent.">
-    
+    <title>Work — Theo K Laurent</title>
+    <meta name="description" content="Systems, decisions, and writing by Theo K Laurent.">
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="css/design-system.css">
     <!-- OpenGraph & Social Metadata -->
     <meta property="og:site_name" content="Theo K Laurent">
-    <meta property="og:title" content="Systems & Architecture – Theo K Laurent">
-    <meta property="og:description" content="Technical blueprints, complexity profiles, and deterministic systems built by Theo K Laurent.">
+    <meta property="og:title" content="Work — Theo K Laurent">
+    <meta property="og:description" content="Systems, decisions, and writing by Theo K Laurent.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="pfp.jpeg">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Systems & Architecture – Theo K Laurent">
-    <meta name="twitter:description" content="Technical blueprints, complexity profiles, and deterministic systems built by Theo K Laurent.">
+    <meta name="twitter:title" content="Work — Theo K Laurent">
+    <meta name="twitter:description" content="Systems, decisions, and writing by Theo K Laurent.">
     <meta name="twitter:image" content="pfp.jpeg">
     <!-- KaTeX Math Typesetting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
-</head>
-<body>
+<link rel="stylesheet" href="css/serpent.css?v=1">
+<link rel="stylesheet" href="css/venom.css?v=3"></head><body class="archive-page systems-page"><div class="atmosphere" aria-hidden="true"><canvas id="toxin-field"></canvas><div class="atmosphere-fallback"></div></div><div class="grain" aria-hidden="true"></div><header><a class="identity" href="index.html">Theo K Laurent</a><nav aria-label="Main navigation"><a href="index.html">Index</a><a href="systems.html" aria-current="page">Work</a><a href="papers.html">Notes</a><a href="about.html">About</a><a href="index.html#contact">Contact</a></nav></header><main id="top"><h1>Work</h1><p class="page-preface">Selected implementations. The decisions beneath them.</p><section id="work"><article id="cipher-cli"><h3>Cipher CLI</h3>
 
-    <div class="page-wrap">
-        <!-- Masthead -->
-        <header class="masthead">
-            <div class="masthead-identity">
-                <div class="masthead-brand">
-                    <img src="pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
-                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
-                </div>
-                <span class="masthead-meta">Quantitative Systems • Formal Verification • Latency Determinism</span>
-            </div>
-            <div class="masthead-controls">
-                <button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button>
-                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                </button>
-            </div>
-            <nav class="masthead-nav-wrap" id="masthead-nav-wrap">
-                <ul class="masthead-nav">
-                    <li><a href="index.html">Index</a></li>
-                    <li><a href="systems.html" class="active">Systems</a></li>
-                    <li><a href="papers.html">Monographs & Verse</a></li>
-                    <li><a href="about.html">The Architect</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section>
-            <h1>Engineering Primitives</h1>
-            <p class="lead" style="margin-top: 1rem;">
-                A registry of constant-time cryptographic primitives, client-side threat intelligence extensions, zero-allocation engines, and resilient graph systems.
-            </p>
-        </section>
-
-        <!-- System 01: Cipher-CLI -->
-        <section id="cipher-cli" style="margin-top: 3.5rem;">
-            <h2>
-                <span>SYS.01 // Cipher-CLI Vault</span>
-                <span class="status-tag open-source">Open Source</span>
-            </h2>
-            <p>
-                A high-assurance cryptographic storage tool in Go. Keys are derived dynamically using memory-hard Argon2id parameters ($t=3, m=64\,\text{MB}, p=4$), authenticated with AES-256-GCM. Designed to guarantee constant-time execution and eliminate timing side-channel leakage.
-            </p>
-            <table class="ledger-table" style="margin: 1.5rem 0;">
+            <p>A command-line tool in Go for encrypting local files. AES-256-GCM authenticates the ciphertext; Argon2id derives the key from a password. The key is never stored.</p>
+            <table class="ledger-table">
                 <tbody>
                     <tr class="ledger-row">
                         <td class="ledger-cell ledger-id">CIPHER</td>
-                        <td class="ledger-cell">Authenticated Symmetric Encryption</td>
+                        <td class="ledger-cell">Authenticated encryption</td>
                         <td class="ledger-cell ledger-spec"><span class="stat">AES-256-GCM</span></td>
                     </tr>
                     <tr class="ledger-row">
                         <td class="ledger-cell ledger-id">KDF</td>
-                        <td class="ledger-cell">Memory-Hard Derivation Parameter</td>
+                        <td class="ledger-cell">Key derivation</td>
                         <td class="ledger-cell ledger-spec"><span class="stat">64 MB Argon2id</span></td>
                     </tr>
                     <tr class="ledger-row">
                         <td class="ledger-cell ledger-id">SOURCE</td>
-                        <td class="ledger-cell">Repository Access</td>
+                        <td class="ledger-cell">Source code</td>
                         <td class="ledger-cell ledger-spec"><a href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer">github.com/iTheoKL/cipher-cli</a></td>
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </article><article id="threatlens"><h3>ThreatLens</h3>
 
-        <!-- System 02: ThreatLens -->
-        <section id="threatlens" style="margin-top: 3.5rem;">
-            <h2>
-                <span>SYS.02 // ThreatLens Extension</span>
-                <span class="status-tag open-source">Open Source</span>
-            </h2>
-            <p>
-                A client-side security browser extension written in pure JavaScript, engineered to defend against phishing vectors across active web browsing and webmail clients in real time. Rather than providing an arbitrary opaque score, ThreatLens classifies destinations into clear tri-state verdicts (Safe, Suspicious, or Malicious) and displays the exact structural and heuristic reasons why a verdict was triggered.
-            </p>
-            <table class="ledger-table" style="margin: 1.5rem 0;">
+            <p>A browser extension that examines suspicious links and explains its verdict. Client-side heuristics distinguish safe, suspicious, and malicious URLs without disguising uncertainty.</p>
+            <table class="ledger-table">
                 <tbody>
                     <tr class="ledger-row">
                         <td class="ledger-cell ledger-id">CLASSIFIER</td>
-                        <td class="ledger-cell">Tri-State Verdict & Causal Reasoning (Safe / Suspicious / Malicious)</td>
+                        <td class="ledger-cell">Safe / Suspicious / Malicious</td>
                         <td class="ledger-cell ledger-spec"><span class="stat">Verdict + Cause</span></td>
                     </tr>
                     <tr class="ledger-row">
                         <td class="ledger-cell ledger-id">SURFACE</td>
-                        <td class="ledger-cell">Web Surfing & In-Email Phishing Interception</td>
+                        <td class="ledger-cell">Links in browsers and webmail</td>
                         <td class="ledger-cell ledger-spec"><span class="stat">Browser & Webmail</span></td>
                     </tr>
                     <tr class="ledger-row">
                         <td class="ledger-cell ledger-id">STACK</td>
-                        <td class="ledger-cell">Implementation Primitives</td>
-                        <td class="ledger-cell ledger-spec"><span class="stat">Pure JavaScript</span></td>
+                        <td class="ledger-cell">Language</td>
+                        <td class="ledger-cell ledger-spec"><span class="stat">JavaScript</span></td>
                     </tr>
                     <tr class="ledger-row">
                         <td class="ledger-cell ledger-id">SOURCE</td>
-                        <td class="ledger-cell">Repository Access</td>
+                        <td class="ledger-cell">Source code</td>
                         <td class="ledger-cell ledger-spec"><a href="https://github.com/iTheoKL/ThreatLens.git" target="_blank" rel="noopener noreferrer">github.com/iTheoKL/ThreatLens</a></td>
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </article><article id="medbridge"><h3>MedBridge</h3>
 
-        <!-- System 03: MedBridge Engine -->
-        <section id="medbridge" style="margin-top: 3.5rem;">
-            <h2>
-                <span>SYS.03 // MedBridge Engine</span>
-                <span class="status-tag closed-source">Closed Source</span>
-            </h2>
+            <p>A medication-management platform built under a hackathon deadline. Prescription intake, interaction checks, and symptom cross-referencing brought into one working system.</p>
             <p>
-                A polypharmacy medication conflict detection engine and unified clinical platform designed to process compound interaction graphs under strict real-time deadlines. Features dynamic symptom-interaction cross-referencing, EasyOCR model preloading, and synchronized session security.
+                Build notes: <a href="papers.html#medbridge-post-mortem">Read MedBridge: holding the system together</a>
             </p>
-            <p>
-                Architecture Essay: <a href="papers.html#medbridge-post-mortem">Read MedBridge: An Architecture of Inevitable Convergence</a>
-            </p>
-        </section>
-
-        <!-- System 04: Aether-L3 -->
-        <section id="aether-l3" style="margin-top: 3.5rem;">
-            <h2>
-                <span>SYS.04 // Aether-L3 Matching Core</span>
-                <span class="status-tag closed-source">Closed Source</span>
-            </h2>
-            <p>
-                A zero-allocation limit order matching engine written in C++23. Standard matching implementations allocate nodes on the heap during order insertion, causing memory fragmentation, jitter, and cache-line invalidation. Aether-L3 organizes resting depth into contiguous 64-byte aligned SIMD arrays scanned via AVX-512 vector broadcasts in under 14.2 nanoseconds.
-            </p>
-
-            <table class="ledger-table" style="margin: 1.5rem 0;">
-                <tbody>
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">BOUND</td>
-                        <td class="ledger-cell">Deterministic Worst-Case Execution</td>
-                        <td class="ledger-cell ledger-spec"><span class="stat">&le; 14.2 ns</span></td>
-                    </tr>
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">MEMORY</td>
-                        <td class="ledger-cell">Heap Allocation on Match Hot-Path</td>
-                        <td class="ledger-cell ledger-spec"><span class="stat">0 Bytes</span></td>
-                    </tr>
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">VECTOR</td>
-                        <td class="ledger-cell">Vectorized Instruction Set</td>
-                        <td class="ledger-cell ledger-spec"><span class="stat">AVX-512 / VBROADCAST</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Footer with GitHub on Right -->
-        <footer class="editorial-footer">
-            <div class="footer-left">
-                <span>Theo K Laurent • Singapore, Hong Kong, and Global</span>
-                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
-            </div>
-            <div class="footer-right">
-                <div class="footer-locales">
-                    <span style="color:var(--silver-faint);">LOCALE:</span>
-                    <a href="systems.html" class="active">EN</a> • 
-                    <a href="fr/systems.html">FR</a> • 
-                    <a href="zh-cn/systems.html">中文</a>
-                </div>
-                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
-            </div>
-        </footer>
-    </div>
-    <script defer src="js/terminal.js"></script>
-</body>
-</html>
+        </article></section></main><footer><span>© Theo K Laurent / 2026</span><div><a href="systems.html">EN</a><a href="fr/systems.html">FR</a><a href="zh-cn/systems.html">中文</a></div><a href="#top" aria-label="Back to top">Top</a></footer><script src="js/serpent.js?v=3" defer></script></body></html>

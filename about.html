@@ -3,115 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Architect – Theo K Laurent</title>
-    <meta name="description" content="The background, intellectual philosophy, and architecture tenets of Theo K Laurent. Scholar, quantitative developer, and craftsman.">
-    
+    <title>About — Theo K Laurent</title>
+    <meta name="description" content="Systems, decisions, and writing by Theo K Laurent.">
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="css/design-system.css">
     <!-- OpenGraph & Social Metadata -->
     <meta property="og:site_name" content="Theo K Laurent">
-    <meta property="og:title" content="The Architect – Theo K Laurent">
-    <meta property="og:description" content="The background, intellectual philosophy, and architecture tenets of Theo K Laurent. Scholar, quantitative developer, and craftsman.">
+    <meta property="og:title" content="About — Theo K Laurent">
+    <meta property="og:description" content="Systems, decisions, and writing by Theo K Laurent.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="pfp.jpeg">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="The Architect – Theo K Laurent">
-    <meta name="twitter:description" content="The background, intellectual philosophy, and architecture tenets of Theo K Laurent. Scholar, quantitative developer, and craftsman.">
+    <meta name="twitter:title" content="About — Theo K Laurent">
+    <meta name="twitter:description" content="Systems, decisions, and writing by Theo K Laurent.">
     <meta name="twitter:image" content="pfp.jpeg">
     <!-- KaTeX Math Typesetting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
-</head>
-<body>
-
-    <div class="page-wrap">
-        <!-- Masthead -->
-        <header class="masthead">
-            <div class="masthead-identity">
-                <div class="masthead-brand">
-                    <img src="pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
-                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
-                </div>
-                <span class="masthead-meta">Quantitative Systems • Formal Verification • Latency Determinism</span>
-            </div>
-            <div class="masthead-controls">
-                <button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button>
-                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                </button>
-            </div>
-            <nav class="masthead-nav-wrap" id="masthead-nav-wrap">
-                <ul class="masthead-nav">
-                    <li><a href="index.html">Index</a></li>
-                    <li><a href="systems.html">Systems</a></li>
-                    <li><a href="papers.html">Monographs & Verse</a></li>
-                    <li><a href="about.html" class="active">The Architect</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section>
-            <h1>The Architect</h1>
-            <p class="lead" style="margin-top: 1rem;">
-                Software, when pursued seriously, is not merely text fed to a compiler. It is mathematical architecture, and an architecture must never be crude.
-            </p>
-        </section>
-
-        <!-- Prominent Jane Street / Baseline Invariant Quote Block -->
-        <section style="margin-top: 2.5rem;">
-            <div class="annotation-block">
-                <div class="annotation-caption">§ The Quantitative Baseline</div>
-                <p>"In most fields, being elite is regarded as a ceiling. In quantitative development, it is merely the baseline – the table stakes required to enter the room."</p>
-            </div>
-
-            <p>
-                I do not merely write code; I determine what a system must fundamentally be before asking how to assemble it. How its parts interact under extreme strain, whether it preserves its invariants when an adversary deliberately attempts to break it, and how it behaves at the boundaries of its mathematical formulation. That question interests me far more than the ephemeral syntax of any single programming language.
-            </p>
-            <p>
-                That instinct naturally led me to quantitative development. In ordinary software engineering, being "elite" is celebrated as a high-water mark. In quantitative systems and low-latency market infrastructure – at institutions like Jane Street – being elite is not the ceiling. It is the baseline expectation, the bare minimum required to justify one’s seat at the table.
-            </p>
-
-            <h2>I. Silicon Sympathy</h2>
-            <p>
-                When capital, risk, and microseconds are bound together, you cannot afford the luxury of hand-waving abstractions. You must possess mechanical sympathy for the hardware: how L1/L2 cache lines invalidate, how vector units broadcast across SIMD registers, and why amortized complexity bounds are an operational illusion during non-stationary market regimes.
-            </p>
-
-            <h2>II. Coordinates Outside the Terminal</h2>
-            <p>
-                Outside the proof assistant, the terminal, and the compiler, I hold faith with pursuits that demand the same obsessive devotion to craft.
-            </p>
-            <p>
-                In narrative art – from <em>Clair Obscur: Expedition 33</em> to <em>Cyberpunk 2077</em> – I am drawn to worlds constructed with enough structural conviction that choices carry real moral weight. I chose Verso's ending without hesitation. I sent Song So Mi beyond the Blackwall and past the reach of the world she knew, because freedom earned at that price outweighs pragmatic compromise.
-            </p>
-            <p>
-                In competitive gaming, I follow <em>Valorant</em> esports with the same appreciation for microsecond execution. A championship round turns on a single misread under crushing pressure; the cost of error is as unforgiving as a dropped packet on an optical cross-connect. I fly the banner for EDG, who proved that sustained rigor, discipline, and patience will eventually dismantle any established hierarchy.
-            </p>
-            <p>
-                And throughout all of it, there is music – an art of pure mathematical proportion, cadence, and human emotion. Whether labeled scholar, quantitative engineer, or craftsman, I hold myself to an uncompromising standard, and I intend to savor every step of the ascent.
-            </p>
-        </section>
-
-        <!-- Footer with GitHub on Right -->
-        <footer class="editorial-footer">
-            <div class="footer-left">
-                <span>Theo K Laurent • Singapore, Hong Kong, and Global</span>
-                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
-            </div>
-            <div class="footer-right">
-                <div class="footer-locales">
-                    <span style="color:var(--silver-faint);">LOCALE:</span>
-                    <a href="about.html" class="active">EN</a> • 
-                    <a href="fr/about.html">FR</a> • 
-                    <a href="zh-cn/about.html">中文</a>
-                </div>
-                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
-            </div>
-        </footer>
-    </div>
-    <script defer src="js/terminal.js"></script>
-</body>
-</html>
+<link rel="stylesheet" href="css/serpent.css?v=1">
+<link rel="stylesheet" href="css/venom.css?v=3"></head><body class="archive-page about-page"><div class="atmosphere" aria-hidden="true"><canvas id="toxin-field"></canvas><div class="atmosphere-fallback"></div></div><div class="grain" aria-hidden="true"></div><header><a class="identity" href="index.html">Theo K Laurent</a><nav aria-label="Main navigation"><a href="index.html">Index</a><a href="systems.html">Work</a><a href="papers.html">Notes</a><a href="about.html" aria-current="page">About</a><a href="index.html#contact">Contact</a></nav></header><main id="top"><h1>About</h1><section id="about"><section class="personal-section"><p class="lead">I ask what a system must be before deciding how to build it.</p><p>The interesting work happens at the boundaries: between components, between an abstraction and the machine beneath it, between what passes a test and what remains correct under pressure. I prefer decisions I can account for.</p><p>That is what draws me to quantitative development, and to firms such as Jane Street. Precision has consequences there. I want to work where the details cannot be delegated to luck.</p><h2>Below the abstraction</h2><p>Memory layout, cache behaviour, concurrency, and the cost of moving data interest me more than the number of tools in a stack. A clean interface is useful. Understanding what it hides is necessary.</p><h2>Outside the terminal</h2><p>VALORANT and VCT hold more of my attention than any other game. I follow EDG. A round is often decided before the shot: information withheld, space conceded, a rotation made too early.</p><p>I play Fade, Clove, and Sova most often. Chamber has had more time this act; Vyse remains a preference when the composition allows it. More often than not, I fill what four other players have left.</p><p>Viper occupies a different place. She is my favourite agent, perhaps my favourite fictional character. Her utility asks for patience and coordination. Ranked seldom supplies both. I still know how I want to play her.</p></section></section></main><footer><span>© Theo K Laurent / 2026</span><div><a href="about.html">EN</a><a href="fr/about.html">FR</a><a href="zh-cn/about.html">中文</a></div><a href="#top" aria-label="Back to top">Top</a></footer><script src="js/serpent.js?v=3" defer></script></body></html>

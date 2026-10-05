@@ -3,115 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>架构师 – Theo K Laurent</title>
-    <meta name="description" content="Theo K Laurent 的个人背景、学术哲学与架构准则。学者、量化工程师与匠人。">
-    
+    <title>关于 — Theo K Laurent</title>
+    <meta name="description" content="Theo K Laurent 的系统、思考与文字。">
+
     <link rel="icon" type="image/svg+xml" href="../favicon.svg?v=2">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="stylesheet" href="../css/design-system.css">
     <!-- OpenGraph & Social Metadata -->
     <meta property="og:site_name" content="Theo K Laurent">
-    <meta property="og:title" content="架构师 – Theo K Laurent">
-    <meta property="og:description" content="Theo K Laurent 的个人背景、学术哲学与架构准则。学者、量化工程师与匠人。">
+    <meta property="og:title" content="关于 — Theo K Laurent">
+    <meta property="og:description" content="Theo K Laurent 的系统、思考与文字。">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../pfp.jpeg">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="架构师 – Theo K Laurent">
-    <meta name="twitter:description" content="Theo K Laurent 的个人背景、学术哲学与架构准则。学者、量化工程师与匠人。">
+    <meta name="twitter:title" content="关于 — Theo K Laurent">
+    <meta name="twitter:description" content="Theo K Laurent 的系统、思考与文字。">
     <meta name="twitter:image" content="../pfp.jpeg">
     <!-- KaTeX Math Typesetting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
-</head>
-<body>
-
-    <div class="page-wrap">
-        <!-- Masthead -->
-        <header class="masthead">
-            <div class="masthead-identity">
-                <div class="masthead-brand">
-                    <img src="../pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
-                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
-                </div>
-                <span class="masthead-meta">量化系统 • 形式化验证 • 延迟确定性</span>
-            </div>
-            <div class="masthead-controls">
-                <button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button>
-                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                </button>
-            </div>
-            <nav class="masthead-nav-wrap" id="masthead-nav-wrap">
-                <ul class="masthead-nav">
-                    <li><a href="index.html">主页</a></li>
-                    <li><a href="systems.html">系统架构</a></li>
-                    <li><a href="papers.html">专题与诗</a></li>
-                    <li><a href="about.html" class="active">架构师</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section>
-            <h1>架构师</h1>
-            <p class="lead" style="margin-top: 1rem;">
-                软件，在被严谨对待时，绝不仅是输入给编译器的文本。它是一种数学建筑艺术，而建筑绝不该是粗陋的。
-            </p>
-        </section>
-
-        <!-- Prominent Jane Street Quote Block -->
-        <section style="margin-top: 2.5rem;">
-            <div class="annotation-block">
-                <div class="annotation-caption">§ 量化基准线</div>
-                <p>“在绝大多数领域，成为精英被视为天花板。而在量化开发中，它仅仅是底线 – 坐上牌桌的最低门槛。”</p>
-            </div>
-
-            <p>
-                我不仅编写代码；在思考如何组装之前，我首先探究一个系统应当具备何种根本形态。它的各个部件在极端压力下如何交互，当对手蓄意破坏时能否维系其不变量，以及它在数学边界上的表现。这一追问远比任何编程语言的暂态语法更令我着迷。
-            </p>
-            <p>
-                这种本能自然将我引向量化开发领域。在普通的软件工程中，“卓越”被奉为天花板。而在低延迟量化系统与市场基础设施中 – 在像 Jane Street 这样的殿堂里 – 追求卓越并非上限，它仅仅是证明自己有资格坐上牌桌的底线要求。
-            </p>
-
-            <h2>I. 硬件共情</h2>
-            <p>
-                当资本、风险与微秒紧密交织，你无法承受模糊抽象的代价。你必须对底层硬件怀有深刻的共情：理解 L1/L2 缓存行如何失效，理解向量单元如何在 SIMD 寄存器中广播，以及为何均摊复杂度上界在非平稳市场冲击下只是一场幻觉。
-            </p>
-
-            <h2>II. 终端之外的坐标</h2>
-            <p>
-                在形式化证明器、终端与编译器之外，我始终对那些要求同样极致专注的事物心怀敬畏。
-            </p>
-            <p>
-                在叙事艺术中 – 从《光与影：33号远征队》到《赛博朋克 2077》 – 我被那些构建得极其笃定、使每个抉择都具有真实道德重量的世界所吸引。我毫不犹豫地选择了 Verso 的结局；我目送宋昭美穿越黑墙、前往她所熟知世界之外的远方，因为以这般代价赢得的自由远胜于权宜的妥协。
-            </p>
-            <p>
-                在竞技领域，我关注《无畏契约》（Valorant）电竞赛事，同样源于对微秒级决策的欣赏。在巨大压力下，一个微小的误判就足以倾覆决胜局；其失误代价与光纤交叉连接上的丢包一样残酷。我为 EDG 战队喝彩，他们证明了持续的严谨、纪律与沉着终将重塑既有的秩序。
-            </p>
-            <p>
-                而在这一切之中，始终有音乐流淌 – 这是一门蕴含纯粹数学比例、节奏与人类情感的艺术。无论是学者、量化工程师还是匠人，我始终坚守不妥协的标准，并乐于享受攀登过程中的每一步。
-            </p>
-        </section>
-
-        <!-- Footer with GitHub on Right -->
-        <footer class="editorial-footer">
-            <div class="footer-left">
-                <span>Theo K Laurent • 新加坡、香港及全球</span>
-                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
-            </div>
-            <div class="footer-right">
-                <div class="footer-locales">
-                    <span style="color:var(--silver-faint);">语言 :</span>
-                    <a href="../about.html">EN</a> • 
-                    <a href="../fr/about.html">FR</a> • 
-                    <a href="about.html" class="active">中文</a>
-                </div>
-                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
-            </div>
-        </footer>
-    </div>
-    <script defer src="../js/terminal.js"></script>
-</body>
-</html>
+<link rel="stylesheet" href="../css/serpent.css?v=1">
+<link rel="stylesheet" href="../css/venom.css?v=3"></head><body class="archive-page about-page"><div class="atmosphere" aria-hidden="true"><canvas id="toxin-field"></canvas><div class="atmosphere-fallback"></div></div><div class="grain" aria-hidden="true"></div><header><a class="identity" href="index.html">Theo K Laurent</a><nav aria-label="Main navigation"><a href="index.html">首页</a><a href="systems.html">作品</a><a href="papers.html">笔记</a><a href="about.html" aria-current="page">关于</a><a href="index.html#contact">联系</a></nav></header><main id="top"><h1>关于</h1><section id="about"><section class="personal-section"><p class="lead">决定如何构建之前，我先问系统必须是什么。</p><p>关键工作发生在边界：组件之间，抽象与机器之间，通过测试与在压力下保持正确之间。我偏爱能够解释清楚的决定。</p><p>这也是量化开发及 Jane Street 这类公司吸引我的原因。精确与否有实际后果，细节不能交给运气。</p><h2>抽象之下</h2><p>内存布局、缓存行为、并发和数据移动的成本，比技术栈的长度更值得关注。清晰的接口很有用，理解它隐藏了什么则不可缺少。</p><h2>终端之外</h2><p>VALORANT 与 VCT 占据了我最多的游戏时间。我支持 EDG。一回合往往在开枪之前已经改变：保留的信息、让出的空间、过早的转点。</p><p>我最常玩 Fade、Clove 和 Sova。这个赛幕也多玩了 Chamber；阵容允许时仍会选择 Vyse。更多时候，我补上其他四位玩家留下的位置。</p><p>Viper 不同。她是我最喜欢的特工，或许也是最喜欢的虚构角色。她的技能需要耐心与配合，排位却很少同时提供两者。我仍清楚自己想怎样使用她。</p></section></section></main><footer><span>© Theo K Laurent / 2026</span><div><a href="../about.html">EN</a><a href="../fr/about.html">FR</a><a href="../zh-cn/about.html">中文</a></div><a href="#top" aria-label="Back to top">顶部</a></footer><script src="../js/serpent.js?v=3" defer></script></body></html>

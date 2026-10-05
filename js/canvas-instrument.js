@@ -170,9 +170,20 @@
             ctx.shadowBlur = 0;
         }
 
+        const disclosure = canvas.closest('details');
+        let timer;
+        function syncPlayback() {
+            clearInterval(timer);
+            resize();
+            render();
+            if (!document.hidden && (!disclosure || disclosure.open)) {
+                timer = setInterval(step, 50);
+            }
+        }
         window.addEventListener('resize', resize);
-        resize();
-        setInterval(step, 50);
+        disclosure?.addEventListener('toggle', syncPlayback);
+        document.addEventListener('visibilitychange', syncPlayback);
+        syncPlayback();
     }
 
     if (document.readyState === 'loading') {

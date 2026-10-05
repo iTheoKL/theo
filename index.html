@@ -3,171 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theo K Laurent – Quantitative Systems & Formal Architecture</title>
-    <meta name="description" content="Personal domain and research index of Theo K Laurent. Low-latency systems, mechanical sympathy, deterministic execution, and mathematical rigor.">
-    
+    <title>Theo K Laurent</title>
+    <meta name="description" content="Systems, decisions, and writing by Theo K Laurent.">
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="css/design-system.css">
     <!-- OpenGraph & Social Metadata -->
     <meta property="og:site_name" content="Theo K Laurent">
-    <meta property="og:title" content="Theo K Laurent – Quantitative Systems & Formal Architecture">
-    <meta property="og:description" content="Personal domain and research index of Theo K Laurent. Low-latency systems, mechanical sympathy, deterministic execution, and mathematical rigor.">
+    <meta property="og:title" content="Theo K Laurent">
+    <meta property="og:description" content="Systems, decisions, and writing by Theo K Laurent.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="pfp.jpeg">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Theo K Laurent – Quantitative Systems & Formal Architecture">
-    <meta name="twitter:description" content="Personal domain and research index of Theo K Laurent. Low-latency systems, mechanical sympathy, deterministic execution, and mathematical rigor.">
+    <meta name="twitter:title" content="Theo K Laurent">
+    <meta name="twitter:description" content="Systems, decisions, and writing by Theo K Laurent.">
     <meta name="twitter:image" content="pfp.jpeg">
     <!-- KaTeX Math Typesetting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
-</head>
-<body>
-
-    <div class="page-wrap">
-        <!-- Masthead -->
-        <header class="masthead">
-            <div class="masthead-identity">
-                <div class="masthead-brand">
-                    <img src="pfp.jpeg" alt="Theo K Laurent" class="masthead-avatar">
-                    <a href="index.html" class="masthead-title">Theo K Laurent</a>
+<link rel="stylesheet" href="css/serpent.css?v=1">
+<link rel="stylesheet" href="css/venom.css?v=3"></head><body><div class="atmosphere" aria-hidden="true"><canvas id="toxin-field"></canvas><div class="atmosphere-fallback"></div></div><div class="grain" aria-hidden="true"></div><a class="skip-link" href="#work">Skip to content</a>
+<header><a class="identity" href="#index">Theo K Laurent</a><nav aria-label="Main navigation"><a href="#index">Index</a><a href="#work">Work</a><a href="#notes">Notes</a><a href="#about">About</a><a href="#contact">Contact</a></nav></header>
+<main><section class="opening" id="index"><div class="name"><h1><span>Theo K</span><em>Laurent</em></h1></div></section>
+<section class="threshold"><p>Software is a kind of architecture.<br>A building ought not be ugly.</p></section>
+<section class="work-section" id="work"><div class="section-label"><span>01</span>Selected work</div>
+<article class="project project-0" id="cipher-cli"><span class="project-index">01</span><div class="project-content"><p class="metadata">Go / Cryptography</p><h2>Cipher CLI</h2><p class="description">A command-line tool in Go for encrypting local files. AES-256-GCM authenticates the ciphertext; Argon2id derives the key from a password. The key is never stored.</p><a class="text-link" href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer">GitHub</a></div><div class="project-mark" aria-hidden="true">∴</div></article>
+<a class="archive-link" href="systems.html">All work</a></section>
+<section class="notes-section" id="notes"><div class="section-label"><span>02</span>Writing</div><article class="poem" id="to-fall"><div class="poem-title"><p class="metadata">2026.08 / Verse</p><h2>To Fall</h2></div><div class="poem-text"><div class="verse-block">
+                <div class="verse-stanza">
+                    <p>What is a fall</p>
+                    <p>But the memory of a height</p>
+                    <p>Once touched?</p>
                 </div>
-                <span class="masthead-meta">Quantitative Systems • Formal Verification • Latency Determinism</span>
-            </div>
-            <div class="masthead-controls">
-                <button class="cmd-trigger" title="Command Palette (⌘K)">⌘K</button>
-                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                    <span class="menu-bar"></span>
-                </button>
-            </div>
-            <nav class="masthead-nav-wrap" id="masthead-nav-wrap">
-                <ul class="masthead-nav">
-                    <li><a href="index.html" class="active">Index</a></li>
-                    <li><a href="systems.html">Systems</a></li>
-                    <li><a href="papers.html">Monographs & Verse</a></li>
-                    <li><a href="about.html">The Architect</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Opening Thesis with Architecture Quote -->
-        <section>
-            <p class="lead">
-                I study the mechanical limits of silicon and the mathematical structures of execution. Most software is designed for median-case convenience; I design exclusively for deterministic worst-case bounds.
-            </p>
-            <div class="annotation-block">
-                <div class="annotation-caption">§ Architectural Principle</div>
-                <p>"Software, I've come to believe, is a kind of architecture, and a building oughtn't be ugly."</p>
-            </div>
-        </section>
-
-        <!-- Continuous Phase-Space Instrument -->
-        <div class="canvas-frame">
-            <div class="canvas-header">
-                <span>SYNTHETIC DRIFT</span>
-                <span>TAP TO SHOCK</span>
-            </div>
-            <canvas id="phase-canvas"></canvas>
-        </div>
-        <p class="canvas-caption">// Utility: None. I built this because I was bored.</p>
-
-        <!-- Gateway Portals -->
-        <section style="margin-top: 4.5rem;">
-            <h2>Architectural Coordinates</h2>
-            
-            <table class="ledger-table">
-                <tbody>
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SECT.01</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="systems.html">Systems & Engineering Primitives</a>
-                            </div>
-                            <div class="ledger-desc">
-                                High-assurance cryptographic vaults in Go, client-side threat intelligence extensions in pure JavaScript, and zero-allocation AVX-512 limit order matching engines in C++23.
-                            </div>
-                            <div class="ledger-tech">
-                                <span>C++23</span>
-                                <span>AVX-512</span>
-                                <span>Go</span>
-                                <span>Argon2id</span>
-                                <span>JavaScript</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">4 Systems</span><br>
-                            <span style="color:var(--silver-faint);"><a href="systems.html">Enter Systems</a></span>
-                        </td>
-                    </tr>
-
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SECT.02</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="papers.html">Monographs & Verse</a>
-                            </div>
-                            <div class="ledger-desc">
-                                Formal treatises on architectural convergence under deadlines, structural failure modes across distributed teams, and philosophical verse on human ambition.
-                            </div>
-                            <div class="ledger-tech">
-                                <span>Architecture Post-Mortem</span>
-                                <span>Epistemology</span>
-                                <span>Verse</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">3 Works</span><br>
-                            <span style="color:var(--silver-faint);"><a href="papers.html">Read Monographs</a></span>
-                        </td>
-                    </tr>
-
-                    <tr class="ledger-row">
-                        <td class="ledger-cell ledger-id">SECT.03</td>
-                        <td class="ledger-cell">
-                            <div class="ledger-name">
-                                <a href="about.html">The Architect</a>
-                            </div>
-                            <div class="ledger-desc">
-                                Intellectual ethos, mechanical sympathy with silicon, the Jane Street quantitative baseline standard, and artistic coordinates beyond the terminal.
-                            </div>
-                            <div class="ledger-tech">
-                                <span>Ethos</span>
-                                <span>Silicon Sympathy</span>
-                                <span>Narrative Coordinates</span>
-                            </div>
-                        </td>
-                        <td class="ledger-cell ledger-spec">
-                            <span class="stat">Profile</span><br>
-                            <span style="color:var(--silver-faint);"><a href="about.html">View Ethos</a></span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Footer -->
-        <footer class="editorial-footer">
-            <div class="footer-left">
-                <span>Theo K Laurent • Singapore, Hong Kong, and Global</span>
-                <a href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a>
-            </div>
-            <div class="footer-right">
-                <div class="footer-locales">
-                    <span style="color:var(--silver-faint);">LOCALE:</span>
-                    <a href="index.html" class="active">EN</a> • 
-                    <a href="fr/index.html">FR</a> • 
-                    <a href="zh-cn/index.html">中文</a>
+                <div class="verse-stanza">
+                    <p>Who is Daedalus,</p>
+                    <p>But a name remembered</p>
+                    <p>Because Icarus fell?</p>
                 </div>
-                <a href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub // iTheoKL</a>
+                <div class="verse-stanza">
+                    <p>Who are you but an artist,</p>
+                    <p>If you abandon your art</p>
+                    <p>When the art demands everything of you?</p>
+                </div>
+                <div class="verse-stanza">
+                    <p>For I do not seek death.</p>
+                    <p>I seek a life</p>
+                    <p>With an art so great that</p>
+                    <p>It demands everything of me.</p>
+                </div>
+                <div class="verse-stanza">
+                    <p>And if I fall,</p>
+                    <p>Let the earth remember</p>
+                    <p>How high I once was.</p>
+                </div>
             </div>
-        </footer>
-    </div>
-
-    <script src="js/canvas-instrument.js"></script>
-    <script defer src="js/terminal.js"></script>
-</body>
-</html>
+        </div></article>
+<a class="archive-link" href="papers.html">All writing</a></section>
+<section class="about-section" id="about"><div class="section-label"><span>03</span>About</div><div class="about-grid"><h2>A matter of<br>perspective.</h2><div><p>I care about the decisions beneath the result: what was assumed, what was measured, and what will happen when conditions change.<br><br>Outside software: VALORANT, VCT, EDG, and music. Viper holds a particular place. The patience matters as much as the strike.</p><a class="text-link" href="about.html">The longer account</a></div></div><blockquote class="earth-quote">One eye turned to the Earth,<br>the other to infinity.</blockquote><figure class="teacher"><blockquote>“The more personal, the more creative.”</blockquote><figcaption>Andrew V W.S. — A rare influence.</figcaption></figure></section>
+<section class="contact-section" id="contact"><div class="section-label"><span>04</span>Contact</div><h2>Write with intent.</h2><a class="email" href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a><a class="text-link" href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub</a></section></main><footer><span>© Theo K Laurent / 2026</span><div><a href="index.html">EN</a><a href="fr/index.html">FR</a><a href="zh-cn/index.html">中文</a></div><a href="#index" aria-label="Back to top">Top</a></footer><script src="js/serpent.js?v=3" defer></script></body></html>

@@ -1,0 +1,18 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {FileBlob,PresentationFile} from '@oai/artifact-tool';
+const root='/Users/theokl/Dev/theo';
+const tmp=path.join(root,'tmp/aegis-diagrams');
+const skill='/Users/theokl/.codex/plugins/cache/openai-primary-runtime/presentations/26.904.11930/skills/presentations';
+const source=path.join(root,'output/aegis-sih/AEGIS-SIH2026-Visual-Pitch.pptx');
+const p=await PresentationFile.importPptx(await FileBlob.load(source));
+const snap=await p.inspect({kind:'textbox',search:'ENTER REGISTERED TEAM ID',maxChars:5000});
+const hits=snap.ndjson.split('\n').filter(Boolean).map(JSON.parse).filter(r=>r.kind==='textbox'&&r.text?.includes('[ENTER REGISTERED TEAM ID]'));
+if(hits.length!==1)throw new Error('Expected one Team ID placeholder');
+p.resolve(hits[0].id).text.replace('[ENTER REGISTERED TEAM ID]','156766');
+const candidatePath=path.join(tmp,'candidate-team-156766.pptx');
+await(await PresentationFile.exportPptx(p)).save(candidatePath);
+const {finalizePresentation}=await import(path.join(skill,'container_tools/artifact_tool_utils.mjs'));
+await finalizePresentation({workspaceDir:root,candidatePath,finalPath:path.join(root,'output/aegis-sih/AEGIS-SIH2026-Team-156766.pptx'),explicitTotalSlideCount:6,requiredNativeTableOwnerSlides:[4],pythonExecutable:'/Users/theokl/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3',integrityValidatorPath:path.join(skill,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(skill,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-bullet-geometry','--validate-heading-fit','--require-native-table-slide','4'],fontPolicy:{basis:'reference',families:['Arial','Times New Roman','Calibri','TradeGothic'],referencePath:source,referenceSha256:crypto.createHash('sha256').update(await fs.readFile(source)).digest('hex')},verifyArtifactToolImport:true,receiptPath:path.join(tmp,'validation-team-156766.json')});
+console.log('Team ID updated');
