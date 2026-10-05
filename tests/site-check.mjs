@@ -29,7 +29,7 @@ for (const locale of ['', 'fr/', 'zh-cn/']) {
     if (page === 'index') {
       assert.deepEqual([...html.matchAll(/<article[^>]*id="([^"]+)"/g)].map(m => m[1]), ['cipher-cli', 'to-fall'], `${file}: featured selection`);
       assert(!/class="(?:descend|fine-rule|featured-essay)"/.test(html), `${file}: removed decorations or essay`);
-      assert(html.includes('Andrew V W.S.') && !html.includes('<small>'), `${file}: attribution`);
+      assert(!html.includes('Andrew V W.S.') && !html.includes('<small>'), `${file}: attribution`);
     }
   }
 }
