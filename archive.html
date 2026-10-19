@@ -1,26 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archive — Theo K Laurent</title>
-    <meta name="description" content="Systems, decisions, and writing by Theo K Laurent.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06080c">
+  <meta name="author" content="Theo K Laurent">
+  <link rel="canonical" href="https://itheokl.github.io/theo/archive.html">
+  <title>Archive — HUSH / 031 — Theo K Laurent</title>
+  <meta name="description" content="Additional projects and writing by Theo K Laurent, filed under Hush / Agent 031.">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300..900;1,300..900&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/hush.css?v=12">
+</head>
+<body>
+  <a class="skip" href="#work">Skip to the archive</a>
+  <div class="grain" aria-hidden="true"></div>
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+  <div class="scrollbar" aria-hidden="true"><span id="scrollbar"></span></div>
 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- OpenGraph & Social Metadata -->
-    <meta property="og:site_name" content="Theo K Laurent">
-    <meta property="og:title" content="Archive — Theo K Laurent">
-    <meta property="og:description" content="Systems, decisions, and writing by Theo K Laurent.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="pfp.jpeg">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Archive — Theo K Laurent">
-    <meta name="twitter:description" content="Systems, decisions, and writing by Theo K Laurent.">
-    <meta name="twitter:image" content="pfp.jpeg">
-    <!-- KaTeX Math Typesetting -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
-<link rel="stylesheet" href="css/serpent.css?v=1">
-<script>const hash=location.hash;const id=hash.slice(1);const work=['work','cipher-cli','threatlens','medbridge','aether-l3'];const dest=work.includes(id)?'systems.html':id==='about'?'about.html':'papers.html';location.replace(dest+(id==='aether-l3'?'#work':hash));</script></head><body class="archive-page"><main><h1>Archive</h1><p><a href="systems.html">Work</a> / <a href="papers.html">Notes</a> / <a href="about.html">About</a></p></main></body></html>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="index.html#index" data-cursor="link">
+      <span class="brand__text">HUSH<em>/031</em></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html#index"><i>01</i>Index</a>
+      <a href="index.html#record"><i>02</i>Work</a>
+      <a href="index.html#contact"><i>03</i>Contact</a>
+    </nav>
+    <span class="topbar__status">FILE <b>ARCHIVE</b></span>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu"><span></span><span></span><span class="sr">Menu</span></button>
+  </header>
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Main navigation, compact">
+      <a href="index.html#index"><i>01</i>Index</a>
+      <a href="index.html#record"><i>02</i>Work</a>
+      <a href="index.html#contact"><i>03</i>Contact</a>
+    </nav>
+    <p class="mono menu__foot">HUSH / 031 · THEO K LAURENT</p>
+  </div>
+
+  <main class="archive-page">
+    <section class="section-head" id="work">
+      <p class="mono section-head__no">ARCHIVE / 01</p>
+      <h1>Outside the <em>index</em></h1>
+      <p class="section-head__note mono">ADDITIONAL WORK · NOTES · VERSE</p>
+    </section>
+
+    <section aria-label="Additional work">
+      <article class="archive-entry" id="threatlens">
+        <p class="mono exhibit__no">P—002 / JAVASCRIPT · SECURITY</p>
+        <h3>ThreatLens</h3>
+        <p class="archive-entry__lead">A browser extension that examines suspicious links and explains its verdict.</p>
+        <p>Client-side heuristics distinguish safe, suspicious, and malicious URLs without disguising uncertainty. The result is a verdict with its cause, not a score without an account.</p>
+        <p><a href="https://github.com/iTheoKL/ThreatLens" target="_blank" rel="noopener noreferrer">Source code — github.com/iTheoKL/ThreatLens</a></p>
+      </article>
+      <article class="archive-entry" id="medbridge">
+        <p class="mono exhibit__no">P—003 / PYTHON · HEALTHCARE</p>
+        <h3>MedBridge</h3>
+        <p class="archive-entry__lead">A medication-management platform assembled under a hackathon deadline.</p>
+        <p>Prescription intake, interaction checks, and symptom cross-referencing were brought into one working system. The difficult part was not naming the components; it was deciding precisely what each could expect from the others.</p>
+        <p>OCR weights were loaded ahead of use to reduce cold-start delay. Session guards and interface changes connected the separate pieces. Integration exposed what isolated demonstrations concealed: an unexpected format, a missing check, a delay in the wrong place.</p>
+        <p>The lesson was not that coordination becomes unnecessary when one person writes enough code. It was that someone has to keep the whole system in view. Under a deadline, an unowned boundary does not stay harmless for long.</p>
+      </article>
+    </section>
+
+    <section class="archive-group" aria-label="Writing archive">
+      <div class="section-head">
+        <p class="mono section-head__no">ARCHIVE / 02</p>
+        <h2>Notes &amp; <em>verse</em></h2>
+        <p class="section-head__note mono">WRITING / THE STUDY</p>
+      </div>
+
+      <article class="archive-entry" id="to-fall">
+        <p class="mono exhibit__no">W—001 / VERSE · AUG 2026</p>
+        <h3>To Fall</h3>
+        <p class="archive-entry__lead">On Icarus, on Daedalus, and on what it costs to make something worthy of the name.</p>
+        <div class="verse-block">
+          <div class="verse-stanza"><p>What is a fall</p><p>But the memory of a height</p><p>Once touched?</p></div>
+          <div class="verse-stanza"><p>Who is Daedalus,</p><p>But a name remembered</p><p>Because Icarus fell?</p></div>
+          <div class="verse-stanza"><p>Who are you but an artist,</p><p>If you abandon your art</p><p>When the art demands everything of you?</p></div>
+          <div class="verse-stanza"><p>For I do not seek death.</p><p>I seek a life</p><p>With an art so great that</p><p>It demands everything of me.</p></div>
+          <div class="verse-stanza"><p>And if I fall,</p><p>Let the earth remember</p><p>How high I once was.</p></div>
+        </div>
+      </article>
+
+      <article class="archive-entry" id="first-principles">
+        <p class="mono exhibit__no">W—002 / NOTE · NOV 2025</p>
+        <h3>First principles</h3>
+        <p class="archive-entry__lead">A result is more convincing when its assumptions are visible.</p>
+        <p>I am interested in software whose behaviour can be explained: where the cost comes from, which conditions must hold, and what happens when they do not. Speed without that account is an observation, not yet an understanding.</p>
+        <p>The standard is straightforward. Know what you have built. Know where it stops being correct. Do not mistake an impressive demonstration for an answer to either question.</p>
+      </article>
+    </section>
+
+    <a class="archive-back" href="index.html#index">← RETURN TO INDEX</a>
+  </main>
+  <footer class="foot">
+    <div class="foot__left"><p class="mono">HUSH / 031 · THEO K LAURENT</p></div>
+    <p class="mono foot__mid">ADDITIONAL WORK · NOTES · VERSE</p>
+    <a class="mono foot__top" href="#work">ARCHIVE ↑</a>
+  </footer>
+  <script src="js/hush.js?v=6"></script>
+</body>
+</html>

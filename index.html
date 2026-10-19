@@ -1,64 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theo K Laurent</title>
-    <meta name="description" content="Systems, decisions, and writing by Theo K Laurent.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HUSH / 031 — Theo K Laurent</title>
+<meta name="description" content="Hush / Agent 031. The portfolio and working record of Theo K Laurent: software systems, projects, writing, and VALORANT.">
+<meta name="theme-color" content="#06080c">
+<meta name="author" content="Theo K Laurent">
+<link rel="canonical" href="https://itheokl.github.io/theo/">
 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- OpenGraph & Social Metadata -->
-    <meta property="og:site_name" content="Theo K Laurent">
-    <meta property="og:title" content="Theo K Laurent">
-    <meta property="og:description" content="Systems, decisions, and writing by Theo K Laurent.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="pfp.jpeg">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Theo K Laurent">
-    <meta name="twitter:description" content="Systems, decisions, and writing by Theo K Laurent.">
-    <meta name="twitter:image" content="pfp.jpeg">
-    <!-- KaTeX Math Typesetting -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
-<link rel="stylesheet" href="css/serpent.css?v=1">
-<link rel="stylesheet" href="css/venom.css?v=3"></head><body><div class="atmosphere" aria-hidden="true"><canvas id="toxin-field"></canvas><div class="atmosphere-fallback"></div></div><div class="grain" aria-hidden="true"></div><a class="skip-link" href="#work">Skip to content</a>
-<header><a class="identity" href="#index">Theo K Laurent</a><nav aria-label="Main navigation"><a href="#index">Index</a><a href="#work">Work</a><a href="#notes">Notes</a><a href="#about">About</a><a href="#contact">Contact</a></nav></header>
-<main><section class="opening" id="index"><div class="name"><h1><span>Theo K</span><em>Laurent</em></h1></div></section>
-<section class="threshold"><p>Software is a kind of architecture.<br>A building ought not be ugly.</p></section>
-<section class="work-section" id="work"><div class="section-label"><span>01</span>Selected work</div>
-<article class="project project-0" id="cipher-cli"><span class="project-index">01</span><div class="project-content"><p class="metadata">Go / Cryptography</p><h2>Cipher CLI</h2><p class="description">A command-line tool in Go for encrypting local files. AES-256-GCM authenticates the ciphertext; Argon2id derives the key from a password. The key is never stored.</p><a class="text-link" href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer">GitHub</a></div><div class="project-mark" aria-hidden="true">∴</div></article>
-<a class="archive-link" href="systems.html">All work</a></section>
-<section class="notes-section" id="notes"><div class="section-label"><span>02</span>Writing</div><article class="poem" id="to-fall"><div class="poem-title"><p class="metadata">2026.08 / Verse</p><h2>To Fall</h2></div><div class="poem-text"><div class="verse-block">
-                <div class="verse-stanza">
-                    <p>What is a fall</p>
-                    <p>But the memory of a height</p>
-                    <p>Once touched?</p>
-                </div>
-                <div class="verse-stanza">
-                    <p>Who is Daedalus,</p>
-                    <p>But a name remembered</p>
-                    <p>Because Icarus fell?</p>
-                </div>
-                <div class="verse-stanza">
-                    <p>Who are you but an artist,</p>
-                    <p>If you abandon your art</p>
-                    <p>When the art demands everything of you?</p>
-                </div>
-                <div class="verse-stanza">
-                    <p>For I do not seek death.</p>
-                    <p>I seek a life</p>
-                    <p>With an art so great that</p>
-                    <p>It demands everything of me.</p>
-                </div>
-                <div class="verse-stanza">
-                    <p>And if I fall,</p>
-                    <p>Let the earth remember</p>
-                    <p>How high I once was.</p>
-                </div>
-            </div>
-        </div></article>
-<a class="archive-link" href="papers.html">All writing</a></section>
-<section class="about-section" id="about"><div class="section-label"><span>03</span>About</div><div class="about-grid"><h2>A matter of<br>perspective.</h2><div><p>I care about the decisions beneath the result: what was assumed, what was measured, and what will happen when conditions change.<br><br>Outside software: VALORANT, VCT, EDG, and music. Viper holds a particular place. The patience matters as much as the strike.</p><a class="text-link" href="about.html">The longer account</a></div></div><blockquote class="earth-quote">I must create a system,<br>or be enslaved by another man’s.</blockquote></section>
-<section class="contact-section" id="contact"><div class="section-label"><span>04</span>Contact</div><h2>Write with intent.</h2><a class="email" href="mailto:theoklaurent@icloud.com">theoklaurent@icloud.com</a><a class="text-link" href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer">GitHub</a></section></main><footer><span>© Theo K Laurent / 2026</span><div><a href="index.html">EN</a><a href="fr/index.html">FR</a><a href="zh-cn/index.html">中文</a></div><a href="#index" aria-label="Back to top">Top</a></footer><script src="js/serpent.js?v=3" defer></script></body></html>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:site_name" content="HUSH / 031 — Theo K Laurent">
+<meta property="og:title" content="HUSH / 031 — Theo K Laurent">
+<meta property="og:description" content="Software systems. Cryptography. Concurrency. The details decide the outcome.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://itheokl.github.io/theo/">
+<meta property="og:image" content="assets/hush/web/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HUSH / 031 — Theo K Laurent">
+<meta name="twitter:description" content="Software systems. Cryptography. Concurrency. The details decide the outcome.">
+<meta name="twitter:image" content="assets/hush/web/og.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300..900;1,300..900&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/hush.css?v=12">
+</head>
+<body>
+<a class="skip" href="#profile">Skip to the profile</a>
+
+<div class="grain" aria-hidden="true"></div>
+<canvas id="field" aria-hidden="true"></canvas>
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+<div class="scrollbar" aria-hidden="true"><span id="scrollbar"></span></div>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="#index" data-cursor="link">
+    <span class="brand__text">HUSH<em>/031</em></span>
+  </a>
+
+  <nav class="nav" aria-label="Sections">
+    <a href="#profile" data-cursor="link"><i>01</i>Profile</a>
+    <a href="#capabilities" data-cursor="link"><i>02</i>Capabilities</a>
+    <a href="#record" data-cursor="link"><i>03</i>Field record</a>
+    <a href="#analysis" data-cursor="link"><i>04</i>The read</a>
+    <a href="#sources" data-cursor="link"><i>05</i>Sources</a>
+    <a href="#contact" data-cursor="link"><i>06</i>Contact</a>
+  </nav>
+
+  <div class="topbar__status">FILE <b>ACTIVE</b></div>
+
+  <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu" data-cursor="link">
+    <span></span><span></span><span class="sr">Menu</span>
+  </button>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Sections, mobile">
+    <a href="#profile"><i>01</i>Profile</a>
+    <a href="#capabilities"><i>02</i>Capabilities</a>
+    <a href="#record"><i>03</i>Field record</a>
+    <a href="#analysis"><i>04</i>The read</a>
+    <a href="#sources"><i>05</i>Sources</a>
+    <a href="#contact"><i>06</i>Contact</a>
+  </nav>
+  <p class="mono menu__foot">HUSH / 031 · THEO K LAURENT</p>
+</div>
+
+<main>
+  <!-- ============================================================ HERO -->
+  <section class="hero" id="index">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/hush/web/title-alley.jpg" alt="" data-parallax="0.12">
+      <div class="hero__scrim"></div>
+      <div class="hero__glow"></div>
+    </div>
+
+    <div class="hero__word" aria-hidden="true">HUSH</div>
+
+    <figure class="hero__figure" data-parallax="-0.06">
+      <img src="assets/hush/web/cutout.png" alt="VALORANT character Hush, a telekinetic Duelist, with a pistol and suspended debris.">
+      <figcaption class="mono">FIG. 00 — HUSH / AGENT 031</figcaption>
+    </figure>
+
+    <div class="hero__copy">
+      <p class="eyebrow mono reveal">AGENT 031</p>
+      <h1 class="reveal" aria-label="Hush — Theo K Laurent"><span class="hero__type" aria-hidden="true">Hush</span><span class="hero__cursor" aria-hidden="true"></span></h1>
+      <p class="hero__line reveal">Software systems. Cryptography. Concurrency.<br>The details decide the outcome.</p>
+      <div class="hero__actions reveal">
+        <a class="btn btn--primary" href="#record" data-cursor="link">Selected work <span aria-hidden="true">↓</span></a>
+        <a class="btn btn--ghost" href="#profile" data-cursor="link">Open the profile <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+
+    <dl class="hero__meta mono">
+      <div><dt>Designation</dt><dd>031</dd></div>
+      <div><dt>Codename</dt><dd>Hush</dd></div>
+      <div><dt>Field</dt><dd>Software systems</dd></div>
+      <div><dt>Record</dt><dd>Work · writing</dd></div>
+    </dl>
+
+  </section>
+
+  <!-- ======================================================== STATEMENT -->
+  <section class="statement" id="statement">
+    <h2 class="statement__en reveal">Rise <em>and</em> fall.</h2>
+    <div class="statement__body reveal">
+      <p>Pressure removes the ornamental. What remains is the decision, the cost, and whether the system holds.</p>
+      <p>This file records the work in those terms: what was built, what was learned, and the details that decide the outcome.</p>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>HUSH / 031</span><i>◆</i><span>SYSTEMS UNDER STRAIN</span><i>◆</i><span>VALORANT / VCT</span><i>◆</i><span>THE DETAILS DECIDE</span><i>◆</i>
+        <span>HUSH / 031</span><i>◆</i><span>SYSTEMS UNDER STRAIN</span><i>◆</i><span>VALORANT / VCT</span><i>◆</i><span>THE DETAILS DECIDE</span><i>◆</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== PROFILE -->
+  <section class="profile paper" id="profile">
+    <div class="paper__grid" aria-hidden="true"></div>
+
+    <div class="section-head section-head--dark">
+      <p class="mono section-head__no">01 — Personnel</p>
+      <h2>Subject <em>profile</em></h2>
+      <p class="section-head__note mono">FILE STATUS: ACTIVE · AGENT 031</p>
+    </div>
+
+    <div class="profile__grid">
+      <figure class="profile__photo reveal">
+        <img src="assets/hush/web/portrait.png" alt="VALORANT character Hush in dark clothing, framed as the visual identity for Agent 031.">
+        <figcaption class="mono">FIG. 01 — HUSH / FIELD IDENTITY</figcaption>
+        <span class="stamp" aria-hidden="true">ACTIVE</span>
+      </figure>
+
+      <div class="profile__text">
+        <p class="profile__lead reveal">Software is a kind of architecture. First: what must the system be? Then: how should it be built?</p>
+
+        <p class="reveal">The answer is in the fit of its parts, the assumptions at its boundaries, and whether it is honest about what it does. A clean interface matters. Knowing what it hides matters more.</p>
+
+        <p class="reveal">Memory layout, cache behaviour, concurrency, and the cost of moving data hold my attention. C++, Rust, Go, and Python are instruments; none is a substitute for understanding the system.</p>
+
+        <p class="reveal">Outside the terminal: VALORANT, VCT, and music. The round before the shot is often the more interesting one: information withheld, space conceded, a rotation made too early.</p>
+
+        <dl class="dossier">
+          <div class="dossier__row reveal"><dt>Designation</dt><dd>Agent 031</dd></div>
+          <div class="dossier__row reveal"><dt>Codename</dt><dd>Hush</dd></div>
+          <div class="dossier__row reveal"><dt>Legal name</dt><dd><span class="redact" data-redact tabindex="0" title="Hover or click to reveal">Theo K Laurent</span></dd></div>
+          <div class="dossier__row reveal"><dt>Languages</dt><dd>C++ · Rust · Go · Python</dd></div>
+          <div class="dossier__row reveal"><dt>Interests</dt><dd>Systems · VALORANT · VCT · music</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="traits">
+      <article class="trait reveal">
+        <p class="mono trait__no">i.</p>
+        <h3>What matters</h3>
+        <p>A result without its assumptions is incomplete. The first question is what remains true when conditions change.</p>
+      </article>
+      <article class="trait reveal">
+        <p class="mono trait__no">ii.</p>
+        <h3>The method</h3>
+        <p>Start at the boundary. Follow the data. Measure what moves, what waits, and what it costs.</p>
+      </article>
+      <article class="trait reveal">
+        <p class="mono trait__no">iii.</p>
+        <h3>The tell</h3>
+        <p>The round before the shot. The system before the failure. The decision is usually visible before the result.</p>
+      </article>
+    </div>
+
+    <blockquote class="pull reveal">
+      <p>“One eye turned to the Earth, the other to infinity.”</p>
+    </blockquote>
+  </section>
+
+  <!-- ===================================================== CAPABILITIES -->
+  <section class="capabilities" id="capabilities">
+    <div class="section-head">
+      <p class="mono section-head__no">02 — Capabilities</p>
+      <h2>The working <em>set</em></h2>
+      <p class="section-head__note mono">LANGUAGES · SYSTEMS · INFRASTRUCTURE</p>
+    </div>
+
+    <p class="capabilities__intro reveal">The working set is deliberately small. The useful distinction is not between fashionable tools, but between what a system promises and what it can prove.</p>
+
+    <div class="abilities capability-list">
+      <article class="ability reveal">
+        <div class="ability__key mono">01</div>
+        <div class="ability__main">
+          <div class="ability__title"><h3>Languages</h3><p class="mono">IMPLEMENTATION</p></div>
+          <p class="ability__note">C++ · Rust · Go · Python. Choose the tool for the constraints; keep the reasoning visible.</p>
+        </div>
+      </article>
+      <article class="ability reveal">
+        <div class="ability__key mono">02</div>
+        <div class="ability__main">
+          <div class="ability__title"><h3>Systems</h3><p class="mono">BEHAVIOUR</p></div>
+          <p class="ability__note">Memory layout, cache models, concurrency, distributed systems, and the cost of moving data between boundaries.</p>
+        </div>
+      </article>
+      <article class="ability reveal">
+        <div class="ability__key mono">03</div>
+        <div class="ability__main">
+          <div class="ability__title"><h3>Infrastructure</h3><p class="mono">OPERATIONS</p></div>
+          <p class="ability__note">Linux · networking and sockets · gRPC · Kafka · PostgreSQL · Redis · Docker.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ======================================================= FIELD RECORD -->
+  <section class="record" id="record">
+    <div class="section-head">
+      <p class="mono section-head__no">03 — Field record</p>
+      <h2>Two <em>records</em></h2>
+      <p class="section-head__note mono">SELECTED WORK · SELECTED WRITING</p>
+    </div>
+
+    <article class="exhibit reveal">
+      <figure class="exhibit__media exhibit__visual term-figure">
+        <div class="term">
+          <div class="term__bar" aria-hidden="true"><span></span><span></span><span></span><b class="mono">cipher — zsh</b></div>
+<pre class="term__body" role="img" aria-label="Terminal session: cipher encrypt samples/example.txt derives a key with Argon2id, seals the file with AES-256-GCM, and writes output/example.enc."><span class="t-pink">$</span> cipher encrypt samples/example.txt
+<span class="t-dim">passphrase</span> <span class="t-dim">············</span>
+<span class="t-cyan">[argon2id]</span>     deriving key
+<span class="t-cyan">[aes-256-gcm]</span>  sealing samples/example.txt
+<span class="t-pink">✓</span> wrote <span class="t-cyan">output/example.enc</span> <span class="t-dim">· 0.31s</span></pre>
+        </div>
+        <figcaption class="mono">P—001 / SESSION · CIPHER CLI</figcaption>
+      </figure>
+      <div class="exhibit__body">
+        <p class="mono exhibit__no">P—001 / GO · CRYPTOGRAPHY</p>
+        <h3>Cipher CLI</h3>
+        <p class="exhibit__lede">A command-line tool for encrypting local files. The key is derived when needed; it is never stored.</p>
+        <p>A password feeds Argon2id. The resulting key protects the file with AES-256-GCM, which authenticates the ciphertext as well as encrypting it.</p>
+        <p class="exhibit__small"><span class="tag mono">Source</span> <a href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer" data-cursor="link">github.com/iTheoKL/cipher-cli</a></p>
+      </div>
+    </article>
+
+    <article class="exhibit exhibit--flip reveal">
+      <figure class="exhibit__media exhibit__visual verse-figure">
+        <div class="verse-mark" role="img" aria-label="Opening lines of the poem To Fall: What is a fall but the memory of a height once touched?">
+          <p class="verse-mark__lead">What is a fall</p>
+          <p>But the memory of a height</p>
+          <p>Once touched?</p>
+        </div>
+        <figcaption class="mono">W—001 / VERSE · AUG 2026</figcaption>
+      </figure>
+      <div class="exhibit__body">
+        <p class="mono exhibit__no">W—001 / VERSE</p>
+        <h3>To Fall</h3>
+        <p class="exhibit__lede">On Icarus, on Daedalus, and on what it costs to make something worthy of the name.</p>
+        <p>A poem about height, inheritance, and choosing the work even when it asks everything in return.</p>
+        <p class="exhibit__small"><span class="tag mono">Read</span> <a href="archive.html#to-fall" data-cursor="link">Read the full text</a></p>
+      </div>
+    </article>
+
+    <a class="archive-link mono" href="archive.html" data-cursor="link">THE FULL ARCHIVE <span aria-hidden="true">↘</span></a>
+  </section>
+
+  <!-- ========================================================== ANALYSIS -->
+  <section class="analysis" id="analysis">
+    <div class="section-head">
+      <p class="mono section-head__no">04 — The read</p>
+      <h2>What <em>remains</em></h2>
+      <p class="section-head__note mono">A WORKING PRINCIPLE</p>
+    </div>
+
+    <div class="analysis__lead">
+      <p class="reveal">The surface is rarely the whole system. Start with the boundary: what enters, what is assumed, and what must still hold when the conditions change.</p>
+      <p class="reveal">In a round, the same discipline applies. Information withheld. Space conceded. A rotation made too early. The visible outcome arrives last; the decision was there first.</p>
+    </div>
+
+    <div class="columns">
+      <article class="col reveal">
+        <p class="mono col__no">I.</p>
+        <h3>In systems</h3>
+        <ul>
+          <li>Make assumptions explicit.</li>
+          <li>Keep the cost of data movement visible.</li>
+          <li>Test the boundary, not only the happy path.</li>
+        </ul>
+      </article>
+      <article class="col reveal">
+        <p class="mono col__no">II.</p>
+        <h3>In a round</h3>
+        <ul>
+          <li>Read the space before taking it.</li>
+          <li>Notice what the opponent has stopped showing.</li>
+          <li>Do not confuse a quiet round with an empty one.</li>
+        </ul>
+      </article>
+      <article class="col reveal">
+        <p class="mono col__no">III.</p>
+        <h3>In the work</h3>
+        <ul>
+          <li>Build for the conditions that actually exist.</li>
+          <li>Prefer a precise explanation to an impressive claim.</li>
+          <li>Leave enough evidence for the next person to verify it.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="closing reveal">
+      <p class="closing__kicker mono">STANDARD</p>
+      <p class="closing__text">The claim is not the result. The method, its limits, and the evidence belong beside it.</p>
+    </div>
+  </section>
+
+  <!-- =========================================================== SOURCES -->
+  <section class="sources" id="sources">
+    <div class="section-head">
+      <p class="mono section-head__no">05 — Sources</p>
+      <h2>Paper <em>trail</em></h2>
+      <p class="section-head__note mono">PROJECTS · WRITING · VISUAL REFERENCES</p>
+    </div>
+
+    <div class="sources__grid">
+      <div class="sources__col">
+        <p class="mono sources__label">WORK</p>
+        <ul>
+          <li><a href="https://github.com/iTheoKL/cipher-cli" target="_blank" rel="noopener noreferrer" data-cursor="link">Cipher CLI <span>↗</span></a><span class="mono">GO · AES-256-GCM · ARGON2ID</span></li>
+          <li><a href="archive.html#work" data-cursor="link">Additional work <span>↘</span></a><span class="mono">ARCHIVE</span></li>
+        </ul>
+      </div>
+      <div class="sources__col">
+        <p class="mono sources__label">WRITING</p>
+        <ul>
+          <li><a href="archive.html#to-fall" data-cursor="link">To Fall <span>↘</span></a><span class="mono">VERSE · AUG 2026</span></li>
+          <li><a href="archive.html#first-principles" data-cursor="link">First principles <span>↘</span></a><span class="mono">NOTE · NOV 2025</span></li>
+        </ul>
+      </div>
+      <div class="sources__col">
+        <p class="mono sources__label">CREDITS</p>
+        <ul class="credits">
+          <li><span class="mono">HUSH / VALORANT</span><p>Riot Games</p></li>
+          <li><span class="mono">ART DIRECTION</span><p>Independent portfolio · unofficial fan use</p></li>
+          <li><span class="mono">TYPE</span><p>Archivo · Instrument Serif · JetBrains Mono</p></li>
+          <li><span class="mono">BUILD</span><p>Hand-written HTML, CSS and JS · no framework, no build step</p></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="sources__disclaimer">Hush and VALORANT are properties of Riot Games. This is an independent, unofficial portfolio and is not affiliated with or endorsed by Riot Games.</p>
+  </section>
+
+  <!-- ============================================================ CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-head">
+      <p class="mono section-head__no">06 — Contact</p>
+      <h2>Direct <em>line</em></h2>
+      <p class="section-head__note mono">NO FORM · NO INTERMEDIARY</p>
+    </div>
+    <p class="contact__lead reveal">For a considered conversation, write.</p>
+    <a class="contact__link reveal" href="mailto:theoklaurent@icloud.com" data-cursor="link">theoklaurent@icloud.com</a>
+    <a class="contact__link contact__github reveal" href="https://github.com/iTheoKL" target="_blank" rel="noopener noreferrer" data-cursor="link">GitHub</a>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__left">
+    <p class="mono">HUSH / 031 · THEO K LAURENT</p>
+  </div>
+  <p class="mono foot__mid">WORK · NOTES · SYSTEMS</p>
+  <a class="mono foot__top" href="#index" data-cursor="link">TOP ↑</a>
+</footer>
+
+<script src="js/hush.js?v=6"></script>
+</body>
+</html>
