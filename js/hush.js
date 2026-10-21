@@ -68,6 +68,12 @@
       document.body.classList.toggle("is-locked", open);
     };
     menuButton.addEventListener("click", () => setMenu(menu.hidden));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !menu.hidden) {
+        setMenu(false);
+        menuButton.focus();
+      }
+    });
     $$("a", menu).forEach((link) => link.addEventListener("click", () => setMenu(false)));
   }
 

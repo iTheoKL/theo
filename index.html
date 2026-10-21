@@ -25,8 +25,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300..900;1,300..900&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/hush.css?v=12">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300..900;1,300..900&amp;family=Noto+Serif+SC:wght@400;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&amp;family=JetBrains+Mono:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/hush.css?v=17">
 </head>
 <body>
 <a class="skip" href="#profile">Skip to the profile</a>
@@ -50,7 +50,7 @@
     <a href="#contact" data-cursor="link"><i>06</i>Contact</a>
   </nav>
 
-  <div class="topbar__status">FILE <b>ACTIVE</b></div>
+  <div class="topbar__status"><span class="cjk" lang="zh-Hant">檔案</span> <b class="cjk" lang="zh-Hant">現役</b></div>
 
   <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu" data-cursor="link">
     <span></span><span></span><span class="sr">Menu</span>
@@ -112,6 +112,17 @@
       <p>Pressure removes the ornamental. What remains is the decision, the cost, and whether the system holds.</p>
       <p>This file records the work in those terms: what was built, what was learned, and the details that decide the outcome.</p>
     </div>
+
+    <div class="voice reveal" role="img" aria-label="In the trailer Hush speaks the title in two beats: 起 — Rise! — then 落 — …And fall.">
+      <span class="voice__beat">
+        <span class="voice__han" lang="zh-Hans">起</span>
+        <span class="voice__gloss mono">Rise!</span>
+      </span>
+      <span class="voice__beat">
+        <span class="voice__han" lang="zh-Hans">落</span>
+        <span class="voice__gloss mono">…And fall.</span>
+      </span>
+    </div>
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
         <span>HUSH / 031</span><i>◆</i><span>SYSTEMS UNDER STRAIN</span><i>◆</i><span>VALORANT / VCT</span><i>◆</i><span>THE DETAILS DECIDE</span><i>◆</i>
@@ -127,14 +138,14 @@
     <div class="section-head section-head--dark">
       <p class="mono section-head__no">01 — Personnel</p>
       <h2>Subject <em>profile</em></h2>
-      <p class="section-head__note mono">FILE STATUS: ACTIVE · AGENT 031</p>
+      <p class="section-head__note mono"><span class="cjk" lang="zh-Hant">檔案狀態：現役</span> · AGENT 031</p>
     </div>
 
     <div class="profile__grid">
       <figure class="profile__photo reveal">
         <img src="assets/hush/web/portrait.png" alt="VALORANT character Hush in dark clothing, framed as the visual identity for Agent 031.">
         <figcaption class="mono">FIG. 01 — HUSH / FIELD IDENTITY</figcaption>
-        <span class="stamp" aria-hidden="true">ACTIVE</span>
+        <span class="stamp" aria-hidden="true" lang="zh-Hant">現役</span>
       </figure>
 
       <div class="profile__text">
@@ -158,17 +169,17 @@
 
     <div class="traits">
       <article class="trait reveal">
-        <p class="mono trait__no">i.</p>
+        <p class="mono trait__no" lang="zh-Hant">一</p>
         <h3>What matters</h3>
         <p>A result without its assumptions is incomplete. The first question is what remains true when conditions change.</p>
       </article>
       <article class="trait reveal">
-        <p class="mono trait__no">ii.</p>
+        <p class="mono trait__no" lang="zh-Hant">二</p>
         <h3>The method</h3>
         <p>Start at the boundary. Follow the data. Measure what moves, what waits, and what it costs.</p>
       </article>
       <article class="trait reveal">
-        <p class="mono trait__no">iii.</p>
+        <p class="mono trait__no" lang="zh-Hant">三</p>
         <h3>The tell</h3>
         <p>The round before the shot. The system before the failure. The decision is usually visible before the result.</p>
       </article>
@@ -279,7 +290,7 @@
 
     <div class="columns">
       <article class="col reveal">
-        <p class="mono col__no">I.</p>
+        <p class="mono col__no" lang="zh-Hant">一</p>
         <h3>In systems</h3>
         <ul>
           <li>Make assumptions explicit.</li>
@@ -288,7 +299,7 @@
         </ul>
       </article>
       <article class="col reveal">
-        <p class="mono col__no">II.</p>
+        <p class="mono col__no" lang="zh-Hant">二</p>
         <h3>In a round</h3>
         <ul>
           <li>Read the space before taking it.</li>
@@ -297,7 +308,7 @@
         </ul>
       </article>
       <article class="col reveal">
-        <p class="mono col__no">III.</p>
+        <p class="mono col__no" lang="zh-Hant">三</p>
         <h3>In the work</h3>
         <ul>
           <li>Build for the conditions that actually exist.</li>
@@ -340,7 +351,7 @@
         <ul class="credits">
           <li><span class="mono">HUSH / VALORANT</span><p>Riot Games</p></li>
           <li><span class="mono">ART DIRECTION</span><p>Independent portfolio · unofficial fan use</p></li>
-          <li><span class="mono">TYPE</span><p>Archivo · Instrument Serif · JetBrains Mono</p></li>
+          <li><span class="mono">TYPE</span><p>Archivo · Source Serif 4 · Noto Serif SC · JetBrains Mono</p></li>
           <li><span class="mono">BUILD</span><p>Hand-written HTML, CSS and JS · no framework, no build step</p></li>
         </ul>
       </div>
@@ -370,6 +381,6 @@
   <a class="mono foot__top" href="#index" data-cursor="link">TOP ↑</a>
 </footer>
 
-<script src="js/hush.js?v=6"></script>
+<script src="js/hush.js?v=7"></script>
 </body>
 </html>
